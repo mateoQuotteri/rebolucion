@@ -1,0 +1,31 @@
+*{
+    font-family: Copperplate , sans-serif;
+}
+
+.bg-color-blue-dark{
+    background-color: #251D3A;
+}
+.bg-color-blue{
+    background-color: #2A2550;
+}
+.bg-color-or{
+    background-color: #FF7700;
+}
+.bg-color-gey{
+    background-color: #909090;
+}
+
+
+.color-blue-dark{
+    color: #251D3A;
+}
+.color-blue{
+    color: #2A2550;
+}
+.color-or{
+    color: #FF7700;
+}
+
+.color-grey{
+    color: #909090;
+}
