@@ -8,22 +8,19 @@
 
     <div class="big-container bg-color-blue-dark">
         <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
-        <h2  class="color-or">¡Registrate!</h2>
-        <form action="/user/register" class="form"method="POST"id="formulario" 
+        <h2  class="color-or">Inicia sesion</h2>
+        <form action="/user/login" class="form"method="POST"id="formulario" 
         enctype="multipart/form-data">
             
             <input type="email" required class="input-from-register" placeholder="Correo electronico"  id="email" name="email">
 
-            
-            <input type="text" required class="input-from-register"placeholder="Nombre completo" id="name" name="name">
-
-
             <input type="password" required class="input-from-register" placeholder="Contraseña" id="pass" name="pass">
 
-            <p class="color-or p-from-register ">Si ya tienes cuenta 
-                <a class="a-from-register color-or" href="/user/login">inicia sesion</a></p>
+            <p class="color-or p-from-register ">Si aun no tienes cuenta <a 
+                class="a-from-register color-or" href="/user/register">create una</a></p>
            
-            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Registrarme</button>
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">
+                Iniciar</button>
         </form>
         
     </div>
