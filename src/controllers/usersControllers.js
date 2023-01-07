@@ -3,15 +3,17 @@ module.exports = {
         res.render("register")
     },
     createNewUser: (req,res)=>{
-        const newUser = req.body;
-        console.log(newUser);
-        res.render("login")
+        console.log("ESTOY AQUI")
+        console.log(req.body)
+        res.redirect("/user/login")
     },
     showLogin : (req,res)=>{
         res.render("login")
     },
     login: (req,res)=>{
-        /*CODIGO DEL LOGIN*/ 
+        console.log("ESTOY AQUI")
+        console.log(req.body)
+        res.redirect("/user/register")
     },
 
 }
