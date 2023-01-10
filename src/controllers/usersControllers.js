@@ -4,7 +4,8 @@ module.exports = {
     },
     createNewUser: (req,res)=>{
         console.log("ESTOY AQUI")
-        console.log(req.body)
+        const user = JSON.parse(JSON.stringify(req.body))
+        console.log(user);
         res.redirect("/user/login")
     },
     showLogin : (req,res)=>{
