@@ -3,7 +3,6 @@ module.exports = {
         res.render("register")
     },
     createNewUser: (req,res)=>{
-        console.log("ESTOY AQUI")
         const user = JSON.parse(JSON.stringify(req.body))
         console.log(user);
         res.redirect("/user/login")
