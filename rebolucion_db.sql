@@ -3,15 +3,15 @@ USE rebolucion_db;
 
 
 CREATE TABLE Teacher (
-    email VARCHAR(255) NOT NULL,
-    name VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE Module (
-    title VARCHAR(255) NOT NULL,
+    title VARCHAR(100) NOT NULL,
     units INT NOT NULL,
     shortDescription VARCHAR(255) NOT NULL,
     difficulty VARCHAR(255) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE Module (
 );
 
 CREATE TABLE Unit (
-    title VARCHAR(255) NOT NULL,
+    title VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
     video VARCHAR(255) NOT NULL,
     id INT NOT NULL AUTO_INCREMENT,
@@ -29,14 +29,14 @@ CREATE TABLE Unit (
     foreign key (id_modulo) references Module(id)
 );
 CREATE TABLE User (
-    email VARCHAR(255) NOT NULL,
-    name VARCHAR(255) NOT NULL,
-    lastname VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    phone VARCHAR(255) NOT NULL,
-    city VARCHAR(255) NOT NULL,
-    state VARCHAR(255) NOT NULL,
-    country VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone INTEGER NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    state VARCHAR(100) NOT NULL,
+    country VARCHAR(100) NOT NULL,
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id)
 );
