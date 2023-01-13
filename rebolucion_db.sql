@@ -5,7 +5,6 @@ USE rebolucion_db;
 CREATE TABLE Teacher (
     email VARCHAR(100) NOT NULL,
     name VARCHAR(100) NOT NULL,
-    password VARCHAR(100) NOT NULL,
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id)
 );
