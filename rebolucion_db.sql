@@ -2,14 +2,14 @@ CREATE DATABASE rebolucion_db;
 USE rebolucion_db;
 
 
-CREATE TABLE Teacher (
+CREATE TABLE teachers (
     email VARCHAR(100) NOT NULL,
     name VARCHAR(100) NOT NULL,
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE Module (
+CREATE TABLE modules (
     title VARCHAR(100) NOT NULL,
     units INT NOT NULL,
     shortDescription VARCHAR(255) NOT NULL,
@@ -17,8 +17,7 @@ CREATE TABLE Module (
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id)
 );
-
-CREATE TABLE Unit (
+CREATE TABLE units (
     title VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
     video VARCHAR(255) NOT NULL,
@@ -27,7 +26,7 @@ CREATE TABLE Unit (
     PRIMARY KEY (id),
     foreign key (id_modulo) references Module(id)
 );
-CREATE TABLE User (
+CREATE TABLE users (
     email VARCHAR(100) NOT NULL,
     name VARCHAR(50) NOT NULL,
     lastname VARCHAR(50) NOT NULL,

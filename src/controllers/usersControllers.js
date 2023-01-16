@@ -10,9 +10,14 @@ module.exports = {
         db.Users.create({
             email: req.body.email,
             name: req.body.name,
+            lastname : req.body.lastaname,
             celular: req.body.phoneNumber,
             /*SE DEBERIA HASHEAR LA PASS*/ 
             password: req.body.password,
+            country : req.body.country,
+            state : req.body.state,
+            city : req.body.city
+
            
         }).then((user) => {
             res.redirect("/users/login")
