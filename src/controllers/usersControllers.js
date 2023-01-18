@@ -6,23 +6,23 @@ module.exports = {
     },
     createNewUser: (req,res)=>{
         const user = JSON.parse(JSON.stringify(req.body))
-        console.log(user);
-        db.Users.create({
-            email: req.body.email,
-            name: req.body.name,
-            lastname : req.body.lastaname,
-            celular: req.body.phoneNumber,
-            /*SE DEBERIA HASHEAR LA PASS*/ 
-            password: req.body.password,
-            country : req.body.country,
-            state : req.body.state,
-            city : req.body.city
-
+        const userPhone =  Number(user.phone);
+     db.Users.create({
+            email: user.email,
+            name: user.name,
+            lastname : user.lastname,
+            /*SE DEBERIA HASHEAR LA PASS*/
+            password: user.password,
+            country : user.country,
+            state : user.state,
+            city : user.city,
+           phone: Number(req.body.phone),
            
         }).then((user) => {
-            res.redirect("/users/login")
+            console.log("Todo hecho");
+            res.redirect("/user/login")
         })
-        res.redirect("/users/login")
+        
     },
     showLogin : (req,res)=>{
         res.render("login")
