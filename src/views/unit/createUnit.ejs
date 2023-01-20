@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="">
+
+    <div class="big-container bg-color-blue-dark">
+        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
+        <h2  class="color-or">Crea un nueva unidad</h2>
+        <form action="/unit/create" class="form" method="POST"id="formulario" 
+        enctype="">
+        <h2>Selecciona a que modulo pertenecera dicha unidad:</h2>
+        <% modules.forEach(module => {%>
+            <h3><%= module.id %> - <%= module.title %> </h3>
+
+            <% }); %>
+
+        <input type="number" required class="input-from-register" 
+        placeholder="Modulo numero..."  id="idm" name="idm">
+
+        <input type="text" required class="input-from-register" 
+        placeholder="Titulo de la unidad"  id="title" name="title">
+
+        <input type="text" required class="input-from-register" 
+        placeholder="Descripcion de la unidad"  id="description" name="description">
+
+
+        <input type="text" required class="input-from-register" 
+        placeholder="Video"  id="video" name="video">
+           
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>
+        </form>
+        
+    </div>
+</body>
+</html>

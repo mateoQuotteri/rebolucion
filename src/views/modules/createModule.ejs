@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="">
+
+    <div class="big-container bg-color-blue-dark">
+        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
+        <h2  class="color-or">Crea un nuevo modulo</h2>
+        <form action="/unit/create" class="form" method="POST"id="formulario" 
+        enctype="">
+        <input type="text" required class="input-from-register" 
+        placeholder="Titulo del modulo"  id="title" name="title">
+
+        <input type="text" required class="input-from-register" 
+        placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription">
+
+        <input type="number" required class="input-from-register" 
+        placeholder="Dificultad del 1 al 10"  id="difficulty" name="difficulty">
+
+        <input type="number" required class="input-from-register" 
+        placeholder="Cantidad de unidades"  id="units" name="units">
+
+        <input type="text" required class="input-from-register" 
+        placeholder="Imagen del modulo"  id="image" name="image">
+           
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>
+        </form>
+        
+    </div>
+</body>
+</html>

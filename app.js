@@ -3,7 +3,8 @@ const app = express();
 const methodOverride = require("method-override")
 const mainRoutes = require("./src/routes/mainRoutes");
 const userRoutes = require("./src/routes/userRoutes");
-const productRoutes = require("./src/routes/productRoutes")
+const productRoutes = require("./src/routes/productRoutes");
+const unitRoutes = require("./src/routes/unitRoutes")
 const bodyParser = require('body-parser')
 
 app.listen(3000, () => {
@@ -28,4 +29,5 @@ app.use(methodOverride("_method"));
 
 app.use('/', mainRoutes);
 app.use('/user', userRoutes)
-app.use('/product', productRoutes)
+app.use('/module', productRoutes)
+app.use("/unit", unitRoutes)

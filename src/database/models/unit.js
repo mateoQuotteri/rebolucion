@@ -2,15 +2,14 @@ module.exports = (sequelize, dataTypes) => {
     let cols = {
         id: { autoIncrement: true, primaryKey: true, type: dataTypes.INTEGER },
         title: { type: dataTypes.STRING },
-        units : { type: dataTypes.INTEGER },
-        shortDescription : { type: dataTypes.STRING },
-        difficulty : { type: dataTypes.INTEGER },
-        image : { type: dataTypes.STRING },
+        description : { type: dataTypes.STRING },
+        video : { type: dataTypes.STRING },
+        idm: { type: dataTypes.INTEGER },
 
     }
 
-    let config = { tableName: "modules", timestamps: false }
-    const Modules = sequelize.define("Modules", cols, config)
+    let config = { tableName: "units", timestamps: false }
+    const Units = sequelize.define("Units", cols, config)
 
   /*  Users.associate = function (models) {
         Users.belongsToMany(models.Products, {
@@ -21,5 +20,5 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false,
         })
     }*/
-    return Modules
+    return Units
 }

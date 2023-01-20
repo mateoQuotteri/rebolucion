@@ -1,14 +1,14 @@
 const express = require("express")
 const router = express.Router()
-const productController = require("../controllers/productController")
+const unitController = require("../controllers/unitController")
 /*const productController = require("../controllers/productsControllers")*/
 
-router.get("/", productController.index)
+router.get("/", unitController.showAllUnit)
 
 /*router.get("/adminpanel", mainController.admin)*/
 
-router.get("/create", productController.showCreateModule)
-router.post("/create", productController.createModule)
+router.get("/create", unitController.showCreateUnit)
+router.post("/create", unitController.createUnit)
 
 
 

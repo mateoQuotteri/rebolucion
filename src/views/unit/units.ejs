@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/register.css">
+</head>
+<body class="">
+
+    <div class="row fit notFlex">
+        <div class="col-md-10 indexFlex ">
+            <% units.forEach(unit => {%>
+            
+                <div class="p-3 justBorderIndex  bg-light tripCard">
+                    <article>
+            
+                        <p  height="fit-content" class="text-card"><%= unit.title %> </p>
+                        <%<!--- <button class="seeDetailsButton">*/%>
+                            <%/*  <a href="/module/<%= module.id %>">*/%>
+                                <%/*   <input class="seeDetailsInput" type="submit" 
+                                value="Ver detalles"> */%>
+                                <%/*  </a> -->/%>
+
+                       
+                        </button>
+                        <p  height="fit-content" 
+                        class="text-card">Descripcion de la unidad :<%= unit.description %>/10 </p>
+                        <p  height="fit-content" 
+                        class="text-card">ID de la unidad :<%= unit.id %></p>
+                        <p  height="fit-content" 
+                        class="text-card">Pertenece al modulo :<%= unit.idm %> </p>
+                    </article>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+  
+</body>
+</html>

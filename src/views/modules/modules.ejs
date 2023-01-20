@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/register.css">
+</head>
+<body class="">
+
+    <div class="row fit notFlex">
+        <div class="col-md-10 indexFlex ">
+            <% modules.forEach(module => {%>
+            
+                <div class="p-3 justBorderIndex  bg-light tripCard">
+                    <article>
+                        <div class="img-card">
+                            <img class="imgIndex" width="100%" 
+                            src="/images/modules-images/<%= module.image %>" 
+                            alt="<%= module.title %> " />
+                        </div>
+            
+                        <p  height="fit-content" class="text-card"><%= module.shortDescription %> </p>
+                        <button class="seeDetailsButton">
+                        <a href="/module/<%= module.id %>">
+                        <input class="seeDetailsInput" type="submit" value="Ver detalles"> 
+                        </a>
+
+                        <p  height="fit-content" class="text-card">Nivel de dificultad :<%= module.difficulty %>/10 </p>
+                        </button>
+                    </article>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+  
+</body>
+</html>
