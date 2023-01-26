@@ -16,17 +16,17 @@ module.exports = {
     },
     createUnit: (req,res)=>{
         const newUnit = req.body
-        console.log("Esta es la unidad a insertar" + newUnit);
-      /*  db.Units.create({
+        console.log(newUnit);
+      db.Units.create({
             title : newUnit.title,
-            description : newUnit.shortDescription,
-            video : newUnit.image,
-            idm : newUnit.idm
+            description : newUnit.description,
+            video : newUnit.video,
+            id_modulo : newUnit.id_modulo
         })
             .then((p) => {
                 return res.redirect("/unit")
             })
-            .catch((error) => res.send(error))*/
+            .catch((error) => res.send(error))
     },
 
 }

@@ -7,8 +7,8 @@ router.get("/", productController.index)
 
 /*router.get("/adminpanel", mainController.admin)*/
 
-router.get("/create", productController.showCreateModule)
-router.post("/create", productController.createModule)
+router.get("/createm", productController.showCreateModule)
+router.post("/createm", productController.createModule)
 
 
 

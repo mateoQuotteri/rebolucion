@@ -12,6 +12,7 @@ module.exports = {
     createModule: (req,res)=>{
         const newProduct = req.body
         console.log(newProduct)
+        
         db.Modules.create({
             title : newProduct.title,
             shortDescription : newProduct.shortDescription,

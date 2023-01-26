@@ -5,21 +5,19 @@ module.exports = (sequelize, dataTypes) => {
         units : { type: dataTypes.INTEGER },
         shortDescription : { type: dataTypes.STRING },
         difficulty : { type: dataTypes.INTEGER },
-        image : { type: dataTypes.STRING },
+        image : { type: dataTypes.TEXT },
 
     }
 
     let config = { tableName: "modules", timestamps: false }
     const Modules = sequelize.define("Modules", cols, config)
 
-  /*  Users.associate = function (models) {
-        Users.belongsToMany(models.Products, {
-            as: "products",
-            through: "users_products",
-            foreignKey: "users_id",
-            otherKey: "products_id",
+   Modules.associate = function (models) {
+        Modules.hasMany(models.Units, {
+            as: "unitss",
+            foreignKey: "id_modulo",
             timestamps: false,
         })
-    }*/
+    }
     return Modules
 }

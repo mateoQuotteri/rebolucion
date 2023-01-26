@@ -14,6 +14,7 @@ CREATE TABLE modules (
     units INT NOT NULL,
     shortDescription VARCHAR(255) NOT NULL,
     difficulty VARCHAR(255) NOT NULL,
+    image text DEFAULT NULL,
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id)
 );
@@ -24,7 +25,7 @@ CREATE TABLE units (
     id INT NOT NULL AUTO_INCREMENT,
     id_modulo INT DEFAULT NULL,
     PRIMARY KEY (id),
-    foreign key (id_modulo) references Module(id)
+    FOREIGN KEY (id_modulo) REFERENCES modules(id)
 );
 CREATE TABLE users (
     email VARCHAR(100) NOT NULL,
