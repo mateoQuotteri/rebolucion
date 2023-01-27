@@ -10,7 +10,7 @@
         <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
         <h2  class="color-or">Crea un nuevo modulo</h2>
         <form action="/module/createm" class="form" method="POST"id="formulario" 
-        enctype="">
+        enctype="multipart/form-data">
         <input type="text" required class="input-from-register" 
         placeholder="Titulo del modulo"  id="title" name="title">
 
@@ -23,7 +23,7 @@
         <input type="number" required class="input-from-register" 
         placeholder="Cantidad de unidades"  id="units" name="units">
 
-        <input type="text" required class="input-from-register" 
+        <input type="file" required class="input-from-register" 
         placeholder="Imagen del modulo"  id="image" name="image">
            
             <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>
