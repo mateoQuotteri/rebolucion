@@ -48,7 +48,7 @@ module.exports = {
         /*COMPARO SI EL USER QUE SE ESTA QUERIENDO REGISTRAR COINCIDE 
         CON EL EMAIL Y CONTRASEÑA QUE TENGO YO */
         if (user && bcrypt.compareSync(password, user.password)) {
-            /*req.session.loggedUser = user*/
+            req.session.loggedUser = user;
             res.redirect("/")
             return
         }
@@ -56,5 +56,8 @@ module.exports = {
             error: true,
         })
     },
-
+    logout: (req, res) => {
+        req.session.destroy()
+        return res.redirect("/")
+    },
 }
