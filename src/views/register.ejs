@@ -12,26 +12,75 @@
         <form action="/user/register" class="form" method="POST"id="formulario" 
         enctype="">
             
-            <input type="email" required class="input-from-register" placeholder="Correo electronico"  id="email" name="email">
 
+            <input type="email" required class="input-from-register" 
+            placeholder="Correo electronico"  id="email" name="email"
+            value="<%= locals.old && old.email %>" >
+            <% if (locals.errors && errors.email) { %>
+                <p style="color: white">
+                    <%= errors.email.msg %>
+                </p>
+                <% } %>
             
-            <input type="text" required class="input-from-register"placeholder="Nombre completo" id="name" name="name">
+            <input type="text" required class="input-from-register"
+            placeholder="Nombre completo" id="name" name="name"
+            value="<%= locals.old && old.name %>" >
+            <% if (locals.errors && errors.name) { %>
+                <p style="color: white">
+                    <%= errors.name.msg %>
+                </p>
+                <% } %>
 
-            <input type="text" required class="input-from-register"placeholder="Apellido" id="lastname" name="lastname">
+            <input type="text" required class="input-from-register"
+            placeholder="Apellido" id="lastname" name="lastname"
+            value="<%= locals.old && old.lastname %>" >
+            <% if (locals.errors && errors.lastname) { %>
+                <p style="color: white">
+                    <%= errors.lastname.msg %>
+                </p>
+                <% } %>
 
-            <input class="input-from-register phoneNumber" type="string" name="phone" placeholder="Ingresa tu número de celular">
+            <input class="input-from-register phoneNumber" type="string" name="phone"
+             placeholder="Ingresa tu número de celular"
+             value="<%= locals.old && old.phone %>" >
+            <% if (locals.errors && errors.phone) { %>
+                <p style="color: white">
+                    <%= errors.phone.msg %>
+                </p>
+                <% } %>
 
-            <input type="password" required class="input-from-register" placeholder="Contraseña" id="password" name="password">
+            <input type="password" required class="input-from-register" 
+            placeholder="Contraseña" id="password" name="password"
+            value="<%= locals.old && old.password %>" >
+            <% if (locals.errors && errors.password) { %>
+                <p style="color: white">
+                    <%= errors.password.msg %>
+                </p>
+                <% } %>
 
             <input type="text" required class="input-from-register"placeholder="Pais" id="country
-            " name="country"> 
+            " name="country" value="<%= locals.old && old.country %>" > 
+            <% if (locals.errors && errors.country) { %>
+                <p style="color: white">
+                    <%= errors.country.msg %>
+                </p>
+                <% } %>
 
             <input type="text" required class="input-from-register"placeholder="Estado o Provincia" 
-            id="state" name="state"> 
+            id="state" name="state" value="<%= locals.old && old.state %>" > 
+            <% if (locals.errors && errors.state) { %>
+                <p style="color: white">
+                    <%= errors.state.msg %>
+                </p>
+                <% } %>
 
             <input type="text" required class="input-from-register"placeholder="Ciudad" id="city
-            " name="city"> 
-
+            " name="city" value="<%= locals.old && old.city %>" > 
+            <% if (locals.errors && errors.city) { %>
+                <p style="color: white">
+                    <%= errors.city.msg %>
+                </p>
+                <% } %>
             <p class="color-or p-from-register ">Si ya tienes cuenta 
                 <a class="a-from-register color-or" href="/user/login">inicia sesion</a></p>
            

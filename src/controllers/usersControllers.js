@@ -1,11 +1,23 @@
 const db = require("../database/models")
 const bcrypt = require("bcryptjs")
+const { validationResult } = require("express-validator")
+
 
 module.exports = {
     register : (req,res)=>{
         res.render("register")
     },
     createNewUser: (req,res)=>{
+
+    const errors = validationResult(req)
+    console.log(errors)
+        if (!errors.isEmpty()) {
+            res.render("register", {
+                errors: errors.mapped(),
+                old: req.body,
+            })
+            return
+        }
         const user = JSON.parse(JSON.stringify(req.body))
         /*INSERTO USUARUIO CON SUS CARACTERISTICAS EN DB*/
      db.Users.create({
