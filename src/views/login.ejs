@@ -12,9 +12,27 @@
         <form action="/user/login" class="form" method="POST" id="formulario" 
         enctype="">
             
-            <input type="email" required class="input-from-register" placeholder="Correo electronico"  id="email" name="email">
+            <input type="email" required class="input-from-register"
+             placeholder="Correo electronico"  id="email" name="email"
+             value="<%= locals.old && old.email %>"
+             >
+             <% if (locals.errors && errors.email) { %>
+                <p style="color: white">
+                    <%= errors.email.msg %>
+                </p>
+                <% } %>
 
-            <input type="password" required class="input-from-register" placeholder="Contraseña" id="password" name="password">
+
+
+            <input type="password" required class="input-from-register" 
+            placeholder="Contraseña" id="password" name="password"
+            value="<%= locals.old && old.password %>">
+            <% if (locals.errors && errors.password) { %>
+                <p style="color: white">
+                    <%= errors.password.msg %>
+                </p>
+                <% } %>
+
 
             <p class="color-or p-from-register ">Si aun no tienes cuenta <a 
                 class="a-from-register color-or" href="/user/register">create una</a></p>

@@ -49,15 +49,7 @@
                 </p>
                 <% } %>
 
-            <input type="password" required class="input-from-register" 
-            placeholder="Contraseña" id="password" name="password"
-            value="<%= locals.old && old.password %>" >
-            <% if (locals.errors && errors.password) { %>
-                <p style="color: white">
-                    <%= errors.password.msg %>
-                </p>
-                <% } %>
-
+            
             <input type="text" required class="input-from-register"placeholder="Pais" id="country
             " name="country" value="<%= locals.old && old.country %>" > 
             <% if (locals.errors && errors.country) { %>
@@ -81,6 +73,26 @@
                     <%= errors.city.msg %>
                 </p>
                 <% } %>
+
+                <input type="password" required class="input-from-register" 
+            placeholder="Contraseña" id="password" name="password"
+            value="<%= locals.old && old.password %>" >
+            <% if (locals.errors && errors.password) { %>
+                <p style="color: white">
+                    <%= errors.password.msg %>
+                </p>
+                <% } %>
+
+
+                <input type="password" required class="input-from-register" 
+            placeholder="Repita su contraseña" id="rePassword" name="rePassword"
+            value="<%= locals.old && old.password %>" >
+            <% if (locals.errors && errors.rePassword) { %>
+                <p style="color: white">
+                    <%= errors.rePassword.msg %>
+                </p>
+                <% } %>
+
             <p class="color-or p-from-register ">Si ya tienes cuenta 
                 <a class="a-from-register color-or" href="/user/login">inicia sesion</a></p>
            

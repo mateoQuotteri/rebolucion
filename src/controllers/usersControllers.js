@@ -41,6 +41,18 @@ module.exports = {
         res.render("login")
     },
     login: async (req,res)=>{
+
+
+        /*VERIFICO QUE A LA HORA DE ENVIAR EL FORMULARIO DEL LOGIN NO HAYA ERRORES */
+        const errors = validationResult(req)
+         console.log(errors)
+        if (!errors.isEmpty()) {
+            res.render("login", {
+                errors: errors.mapped(),
+                old: req.body,
+            })
+            return
+        }
         const emailLogin = req.body.email
         const password = req.body.password
         /*BUSCO AL USUARIO EN LA DB */

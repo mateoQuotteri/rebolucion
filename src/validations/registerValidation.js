@@ -18,7 +18,16 @@ module.exports = [
     body('city')
         .notEmpty()
         .withMessage('Debes seleccionar la localidad en la que resides.'),
-   
+        body('rePassword').custom((value, extra) => {
+            if (value !== extra.req.body.password) {
+                throw new Error(
+                    'La contraseña repetida no coincide con la original'
+                )
+            }
+    
+
+            return true
+        }),
         
    
 ]
