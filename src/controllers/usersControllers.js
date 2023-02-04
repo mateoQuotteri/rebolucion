@@ -32,7 +32,7 @@ module.exports = {
            phone: Number(req.body.phone),
            
         }).then((user) => {
-            console.log("Todo hecho");
+            delete user.rePassword
             res.redirect("/user/login")
         })
         

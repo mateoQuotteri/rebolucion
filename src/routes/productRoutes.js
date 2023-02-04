@@ -4,8 +4,9 @@ const productController = require("../controllers/productController")
 const fileUpload = require("../middlewares/multer")
 /*const productController = require("../controllers/productsControllers")*/
 const moduleValidator = require("../validations/createModuleValidation")
+const authMiddleware = require("../middlewares/authMiddleware")
 
-router.get("/", productController.index);
+router.get("/", authMiddleware ,productController.index);
 
 /*router.get("/adminpanel", mainController.admin)*/
 

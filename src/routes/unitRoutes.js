@@ -3,8 +3,9 @@ const router = express.Router()
 const unitController = require("../controllers/unitController");
 const unitValidation = require("../validations/createUnitValidation")
 /*const productController = require("../controllers/productsControllers")*/
+const authMiddleware = require("../middlewares/authMiddleware")
 
-router.get("/", unitController.showAllUnit)
+router.get("/", authMiddleware ,unitController.showAllUnit)
 
 /*router.get("/adminpanel", mainController.admin)*/
 
