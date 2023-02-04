@@ -11,19 +11,44 @@
         <h2  class="color-or">Crea un nuevo modulo</h2>
         <form action="/module/createm" class="form" method="POST"id="formulario" 
         enctype="multipart/form-data">
-        <input type="text" required class="input-from-register" 
-        placeholder="Titulo del modulo"  id="title" name="title">
 
-        <input type="text" required class="input-from-register" 
-        placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription">
+        <input type="text"  class="input-from-register" 
+        placeholder="Titulo del modulo"  id="title" name="title"
+        value="<%= locals.old && old.title %>" >
+        <% if (locals.errors && errors.title) { %>
+            <p style="color: white">
+                <%= errors.title.msg %>
+            </p>
+            <% } %>
 
-        <input type="number" required class="input-from-register" 
-        placeholder="Dificultad del 1 al 10"  id="difficulty" name="difficulty">
+        <input type="text"  class="input-from-register" 
+        placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription"
+        value="<%= locals.old && old.shortDescription %>" >
+        <% if (locals.errors && errors.shortDescription) { %>
+            <p style="color: white">
+                <%= errors.shortDescription.msg %>
+            </p>
+            <% } %>
 
-        <input type="number" required class="input-from-register" 
-        placeholder="Cantidad de unidades"  id="units" name="units">
+        <input type="number"  class="input-from-register" 
+        placeholder="Dificultad del 1 al 10"  id="difficulty" name="difficulty"
+        value="<%= locals.old && old.difficulty %>" >
+        <% if (locals.errors && errors.difficulty) { %>
+            <p style="color: white">
+                <%= errors.difficulty.msg %>
+            </p>
+            <% } %>
 
-        <input type="file" required class="input-from-register" 
+        <input type="number"  class="input-from-register" 
+        placeholder="Cantidad de unidades"  id="units" name="units"
+        value="<%= locals.old && old.units %>" >
+        <% if (locals.errors && errors.units) { %>
+            <p style="color: white">
+                <%= errors.units.msg %>
+            </p>
+            <% } %>
+
+        <input type="file"  class="input-from-register" 
         placeholder="Imagen del modulo"  id="image" name="image">
            
             <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>

@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const { validationResult } = require("express-validator")
 
 
 module.exports = {
@@ -11,7 +12,16 @@ module.exports = {
         res.render("modules/createModule")
     },
     createModule: (req,res)=>{
-        const newProduct = req.body
+
+        const errors = validationResult(req)
+        console.log(errors)
+            if (!errors.isEmpty()) {
+                res.render("modules/createModule", {
+                    errors: errors.mapped(),
+                    old: req.body,
+                })
+                return
+            }
 
         let imageFile = req.file
         console.log(imageFile);
@@ -19,6 +29,7 @@ module.exports = {
             return res.send("Seleccione un archivo en formato imagen")
         }
         
+        const newProduct = req.body
         db.Modules.create({
             title : newProduct.title,
             shortDescription : newProduct.shortDescription,
