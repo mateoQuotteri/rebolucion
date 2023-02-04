@@ -1,4 +1,6 @@
-const db = require("../database/models")
+const db = require("../database/models");
+const { validationResult } = require("express-validator")
+
 
 module.exports = {
 
@@ -15,6 +17,17 @@ module.exports = {
         })
     },
     createUnit: (req,res)=>{
+        
+        const errors = validationResult(req)
+        console.log(errors)
+            if (!errors.isEmpty()) {
+                res.render("unit/createUnit", {
+                    errors: errors.mapped(),
+                    old: req.body,
+                })
+                return
+            }
+
         const newUnit = req.body
         console.log(newUnit);
       db.Units.create({

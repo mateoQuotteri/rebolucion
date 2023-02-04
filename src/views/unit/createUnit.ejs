@@ -18,17 +18,42 @@
             <% }); %>
 
         <input type="number" required class="input-from-register" 
-        placeholder="Modulo numero..."  id="id_modulo" name="id_modulo">
+        placeholder="Modulo numero..."  id="id_modulo" name="id_modulo"
+        value="<%= locals.old && old.id_modulo %>">
+        <% if (locals.errors && errors.id_modulo) { %>
+            <p style="color: white">
+                <%= errors.id_modulo.msg %>
+            </p>
+            <% } %>
 
         <input type="text" required class="input-from-register" 
-        placeholder="Titulo de la unidad"  id="title" name="title">
+        placeholder="Titulo de la unidad"  id="title" name="title"
+        value="<%= locals.old && old.title %>">
+        <% if (locals.errors && errors.title) { %>
+            <p style="color: white">
+                <%= errors.title.msg %>
+            </p>
+            <% } %>
+
 
         <input type="text" required class="input-from-register" 
-        placeholder="Descripcion de la unidad"  id="description" name="description">
+        placeholder="Descripcion de la unidad"  id="description" name="description"
+        value="<%= locals.old && old.description %>">
+        <% if (locals.errors && errors.description) { %>
+            <p style="color: white">
+                <%= errors.description.msg %>
+            </p>
+            <% } %>
 
 
         <input type="text" required class="input-from-register" 
-        placeholder="Video"  id="video" name="video">
+        placeholder="Video"  id="video" name="video" 
+        value="<%= locals.old && old.video %>">
+        <% if (locals.errors && errors.video) { %>
+            <p style="color: white">
+                <%= errors.video.msg %>
+            </p>
+            <% } %>
            
             <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>
         </form>
