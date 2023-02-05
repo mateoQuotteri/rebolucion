@@ -24,7 +24,6 @@ module.exports = {
             email: user.email,
             name: user.name,
             lastname : user.lastname,
-            /*SE DEBERIA HASHEAR LA PASS*/
             password: bcrypt.hashSync(req.body.password, 10),
             country : user.country,
             state : user.state,

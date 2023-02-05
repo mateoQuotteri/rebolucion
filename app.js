@@ -6,6 +6,7 @@ const userRoutes = require("./src/routes/userRoutes");
 const productRoutes = require("./src/routes/productRoutes");
 const unitRoutes = require("./src/routes/unitRoutes")
 const bodyParser = require('body-parser')
+const userAuth = require("./src/middlewares/userAuth")
 
 app.listen(3000, () => {
   console.log("rebolucion is starting");
@@ -18,7 +19,7 @@ app.use(express.urlencoded({extended:false}))
  app.use(express.json())
 
 
-
+app.use(userAuth)
 // parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded())
 
