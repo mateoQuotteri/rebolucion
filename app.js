@@ -7,6 +7,7 @@ const productRoutes = require("./src/routes/productRoutes");
 const unitRoutes = require("./src/routes/unitRoutes")
 const bodyParser = require('body-parser')
 const userAuth = require("./src/middlewares/userAuth")
+let session = require("express-session")
 
 app.listen(3000, () => {
   console.log("rebolucion is starting");
@@ -19,7 +20,16 @@ app.use(express.urlencoded({extended:false}))
  app.use(express.json())
 
 
+ app.use(
+  session({
+      secret: "mensaje secreto",
+      resave: false,
+      saveUninitialized: false,
+  })
+)
+
 app.use(userAuth)
+
 // parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded())
 

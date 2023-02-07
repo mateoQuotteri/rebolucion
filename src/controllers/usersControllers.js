@@ -19,7 +19,7 @@ module.exports = {
             return
         }
         const user = JSON.parse(JSON.stringify(req.body))
-        /*INSERTO USUARUIO CON SUS CARACTERISTICAS EN DB*/
+        /*INSERTO USUARIO CON SUS CARACTERISTICAS EN DB*/
      db.Users.create({
             email: user.email,
             name: user.name,

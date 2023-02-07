@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
         email: { type: dataTypes.STRING },
         name: { type: dataTypes.STRING },
         lastname :  { type: dataTypes.STRING },
-        celular: { type: dataTypes.INTEGER },
+        phone: { type: dataTypes.INTEGER },
         password: { type: dataTypes.STRING },
         city : { type: dataTypes.STRING },
         state : { type: dataTypes.STRING },

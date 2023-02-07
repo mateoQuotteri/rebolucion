@@ -11,9 +11,9 @@
         <h2  class="color-or">Crea un nueva unidad</h2>
         <form action="/unit/create" class="form" method="POST"id="formulario" 
         enctype="">
-        <h2>Selecciona a que modulo pertenecera dicha unidad:</h2>
+        <h2 style="color: aliceblue;">Selecciona a que modulo pertenecera dicha unidad:</h2>
         <% modules.forEach(module => {%>
-            <h3><%= module.id %> - <%= module.title %> </h3>
+            <h3 style="color: aliceblue;"><%= module.id %> - <%= module.title %> </h3>
 
             <% }); %>
 

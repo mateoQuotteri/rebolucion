@@ -42,5 +42,23 @@ module.exports = {
             })
             .catch((error) => res.send(error))
     },
+    showModuleDetail : async (req,res)=>{
+        const idSearched = req.params.id
+        const module = await db.Modules.findOne({
+            where: { id: idSearched },
+            include : [ "unitss"],
+            raw : true,
+            nest : true
+        })
+       
+
+        if (module) {
+            res.render("modules/moduleDetail", {
+               module 
+            })
+        } else {
+            res.render("not-found")
+        }
+    },
 
 }

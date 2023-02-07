@@ -10,6 +10,8 @@ router.get("/", authMiddleware ,productController.index);
 
 /*router.get("/adminpanel", mainController.admin)*/
 
+router.get("/:id" ,  productController.showModuleDetail)
+
 router.get("/createm", productController.showCreateModule);
 
 router.post("/createm",
