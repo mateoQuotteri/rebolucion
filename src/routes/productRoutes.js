@@ -5,6 +5,7 @@ const fileUpload = require("../middlewares/multer")
 /*const productController = require("../controllers/productsControllers")*/
 const moduleValidator = require("../validations/createModuleValidation")
 const authMiddleware = require("../middlewares/authMiddleware")
+/*const adminMiddleware = require("../middlewares/adminMiddleware");*/
 
 router.get("/", authMiddleware ,productController.index);
 
@@ -12,7 +13,7 @@ router.get("/", authMiddleware ,productController.index);
 
 router.get("/:id" ,  productController.showModuleDetail)
 
-router.get("/createm", productController.showCreateModule);
+router.get("/createm", /*adminMiddleware,*/ productController.showCreateModule);
 
 router.post("/createm",
 fileUpload.single("image"), 

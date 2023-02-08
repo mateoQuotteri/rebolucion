@@ -33,7 +33,7 @@ module.exports = {
         }).then((user) => {
             delete user.rePassword
             res.redirect("/user/login")
-        })
+        }).catch((error) => res.send(error))
         
     },
     showLogin : (req,res)=>{

@@ -6,18 +6,19 @@
 </head>
 <body class="">
 
-    <div>
+    <div style="display: block;" >
         <h1 style="display: block;">El modulo que has seleccionado es el <%= module.title %> </h1>
 
         <br>
 
         <h4 style="display: block;"> Su descripcion es:</h4>
         <h5 style="display: block;" > <%= module.shortDescription %> </h5>
-    </div>
-
-    <div>
+    
         <h3>Sus unidades son : </h3>
         <h1><%= module.unitss.title %>  </h1>
+        <p style="display: block;">
+            <%= module.unitss.description %>
+        </p>
     </div>
   
 </body>
