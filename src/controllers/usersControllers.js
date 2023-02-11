@@ -63,7 +63,7 @@ module.exports = {
             res.redirect("/")
             return
         }
-        res.render("users/login", {
+        res.render("login", {
             error: true,
         })
     },
