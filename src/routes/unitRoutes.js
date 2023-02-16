@@ -13,5 +13,8 @@ router.get("/create",adminMiddleware, unitController.showCreateUnit)
 router.post("/create", unitValidation ,unitController.createUnit)
 
 
+router.get("/:id",  unitController.showUnitDetail)
+
+
 
 module.exports = router

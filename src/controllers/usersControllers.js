@@ -67,6 +67,10 @@ module.exports = {
             error: true,
         })
     },
+    showMyProfile: (req, res) => { 
+        console.log(req.session.loggedUser);
+        res.send(req.session.loggedUser)
+    },
     logout: (req, res) => {
         req.session.destroy()
         return res.redirect("/")
