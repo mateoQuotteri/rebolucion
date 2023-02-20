@@ -46,15 +46,16 @@ module.exports = {
         const idSearched = req.params.id
         const unit = await db.Units.findOne({
             where: { id: idSearched },
-            include : [ "modules"],
-            raw : true,
-            nest : true
         })
        
+        const idModuleOfUnit = unit.id_modulo;
 
-        if (unit) {
+        const moduleOfUnit =  await db.Modules.findOne({
+            where: { id: idModuleOfUnit },
+        })
+       if (unit) {
             res.render("unit/unitDetail", {
-               unit 
+               unit , module: moduleOfUnit
             })
         } else {
             res.render("not-found")
