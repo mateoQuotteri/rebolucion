@@ -68,11 +68,62 @@ module.exports = {
         })
     },
     showMyProfile: (req, res) => { 
-        console.log(req.session.loggedUser);
-        res.send(req.session.loggedUser)
+       const user =req.session.loggedUser;
+
+       console.log(user);
+       if (user) {
+        res.render("user/userProfile", {
+           user
+        })
+    } else {
+        res.render("not-found")
+    }
     },
-    logout: (req, res) => {
+    logout: (req, res) => { 
+        /*TODAVIA NO SE COMO HACER ESTO HACIENDO QUE CIERRE SESION DESDE USERPROFILE.EJS */
         req.session.destroy()
         return res.redirect("/")
     },
+    showEditMyProfile: (req, res) => {
+        const user =req.session.loggedUser;
+
+        console.log(user);
+        if (user) {
+         res.render("user/editUserProfile", {
+            user
+         })
+     } else {
+         res.render("not-found")
+     }
+     
+    },
+    editMyProfile: (req, res) => {
+        const user =req.session.loggedUser;
+
+        console.log(req.body);
+
+if (user) {
+    db.Users.update(
+        {
+            id : user.id,
+            name: req.body.name,
+            email: req.body.email,
+            celular: req.body.phone,
+            password: bcrypt.hashSync(req.body.password, 10),
+            city : req.body.city,
+            state : req.body.state,
+            country : req.body.country
+        },
+        {
+            where: { id: user.id },
+        }
+    ).then((u) => {
+        res.redirect("/")
+    })
+}
+
+        
+    
+    },
+
 }

@@ -15,6 +15,9 @@ router.post("/login",  loginValidation ,userController.login)
 
 router.get("/my-profile", authMiddleware ,userController.showMyProfile)
 
+router.get("/my-profile/edit", authMiddleware ,userController.showEditMyProfile)
+router.post("/my-profile/edit", authMiddleware ,userController.editMyProfile)
+
 
 
 

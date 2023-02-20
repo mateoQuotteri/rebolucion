@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Mi perfil</title>
+</head>
+<body>
+    <h2 style="display: block;">Mis datos:</h2>
+    <h4 style="display: block;">Email: <%= user.email%></h4>
+    <h4 style="display: block;">Nombre:<%=  user.name %></h4>
+    <h4 style="display: block;">Apellido:<%=  user.lastname %></h4>
+    <h4 style="display: block;">Celular:<%=   user.phone%></h4>
+    <h4 style="display: block;">Ciudad:<%=   user.city%></h4>
+    <h4 style="display: block;">Estado o provincia:<%=   user.state%></h4>
+    <h4 style="display: block;">Pais:<%=   user.country%></h4>
+
+    <button><a href="/user/my-profile/edit">Editar datos</a></button>
+    <button><a href="/">Cerrar session</a></button>
+
+</body>
+</html>
