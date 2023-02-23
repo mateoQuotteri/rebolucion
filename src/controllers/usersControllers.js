@@ -86,21 +86,25 @@ module.exports = {
     },
     showEditMyProfile: async(req, res) => {
         const user =req.session.loggedUser;
+        console.log("LOGGED USER:" + user);
+
+        /*
 
         const idOfUser = user.id;
 
-        const userLogged = await db.Users.findOne({ where: { id: idOfUser } })
+        const userLogged = await  db.Users.findByPk(idOfUser);
         console.log("ESTE ES EL USER LOGGED: " + userLogged);
-       
+       */
         if (user) {
          res.render("user/editUserProfile", {
-            user : userLogged
+            user /*: userLogged*/
          })
      }
     },
     editMyProfile: (req, res) => {
         const user =req.session.loggedUser;
 
+        console.log("Usuario que se esta modificando:" + user);
 
 if (user) {
  
