@@ -84,25 +84,26 @@ module.exports = {
         req.session.destroy()
         return res.redirect("/")
     },
-    showEditMyProfile: (req, res) => {
+    showEditMyProfile: async(req, res) => {
         const user =req.session.loggedUser;
 
-        console.log(user);
+        const idOfUser = user.id;
+
+        const userLogged = await db.Users.findOne({ where: { id: idOfUser } })
+        console.log("ESTE ES EL USER LOGGED: " + userLogged);
+       
         if (user) {
          res.render("user/editUserProfile", {
-            user
+            user : userLogged
          })
-     } else {
-         res.render("not-found")
      }
-     
     },
     editMyProfile: (req, res) => {
         const user =req.session.loggedUser;
 
-        console.log(req.body);
 
 if (user) {
+ 
     db.Users.update(
         {
             id : user.id,

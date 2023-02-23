@@ -7,7 +7,7 @@
 <body>
     <h2 style="display: block;">Edita tus datos:</h2>
 
-    <form action="/user/my-profile/edit" method="post">
+    <form action="/user/my-profile/edit?_method=PUT" method="POST">
         <label for="">Email</label>
         <input name="email" type="text" value="<%= user.email%>">
         <label for="">Nombre</label>
