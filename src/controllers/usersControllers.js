@@ -85,33 +85,27 @@ module.exports = {
         return res.redirect("/")
     },
     showEditMyProfile: async(req, res) => {
-        const user =req.session.loggedUser;
-        console.log("LOGGED USER:" + user);
+        const userId = req.session.loggedUser.id
 
-        /*
 
-        const idOfUser = user.id;
 
-        const userLogged = await  db.Users.findByPk(idOfUser);
-        console.log("ESTE ES EL USER LOGGED: " + userLogged);
-       */
-        if (user) {
+        const userLogged = await  db.Users.findOne({ where: { id: userId } })
+       
+        if (userLogged) {
          res.render("user/editUserProfile", {
-            user /*: userLogged*/
+            user : userLogged
          })
      }
     },
     editMyProfile: (req, res) => {
-        const user =req.session.loggedUser;
+       
 
-        console.log("Usuario que se esta modificando:" + user);
 
-if (user) {
- 
     db.Users.update(
         {
-            id : user.id,
+           
             name: req.body.name,
+            lastname : req.body.lastname,
             email: req.body.email,
             celular: req.body.phone,
             password: bcrypt.hashSync(req.body.password, 10),
@@ -120,15 +114,22 @@ if (user) {
             country : req.body.country
         },
         {
-            where: { id: user.id },
+            where: { id: req.session.loggedUser.id },
         }
     ).then((u) => {
-        res.redirect("/")
-    })
-}
+        req.session.loggedUser.name = req.body.name;
+        req.session.loggedUser.email = req.body.email;
+        req.session.loggedUser.lastname = req.body.lastname;
+        req.session.loggedUser.phone = req.body.phone;
+        req.session.loggedUser.country = req.body.country;
+        req.session.loggedUser.state = req.body.state;
+        req.session.loggedUser.city = req.body.city;
+
+
+        res.redirect("/user/my-profile")
+    });
 
         
     
     },
-
 }
