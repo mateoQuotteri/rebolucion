@@ -132,4 +132,59 @@ module.exports = {
         
     
     },
+
+    showEditPassword : async (req, res) => {
+        const userId = req.session.loggedUser.id
+
+
+
+        const userLogged = await  db.Users.findOne({ where: { id: userId } })
+       
+        if (userLogged) {
+         res.render("user/editUserPassword", {
+            user : userLogged
+         })
+     } },
+
+     editPassword :async (req,res)=>{
+
+        const errors = validationResult(req)
+        console.log(errors)
+            if (!errors.isEmpty()) {
+                res.render("user/editUserPassword", {
+                    errors: errors.mapped(),
+                    old: req.body,
+                })
+                return
+            }
+
+            const userId = req.session.loggedUser.id
+
+
+
+            const userLogged = await  db.Users.findOne({ where: { id: userId } })
+            const password = req.body.password
+            
+
+            if (userLogged && bcrypt.compareSync(password, userLogged.password)) {
+                console.log("Estoy aqui");
+                db.Users.update (
+                    {
+                       password : bcrypt.hashSync(req.body.rePassword, 10),
+                    },
+                    {
+                        where: { id: userId },
+                    }
+                ).then((u) => {
+                    req.session.loggedUser.password =req.body.rePassword
+                    res.redirect("/user/my-profile")
+                });
+            
+
+                console.log(req.session.loggedUser);
+            }
+        
+        },
+
+
 }
