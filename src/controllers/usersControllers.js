@@ -167,13 +167,13 @@ module.exports = {
             if(bcrypt.compareSync(oldPass, userLogged.password)){
                 db.Users.update(
                     {
-                        password : newPass
+                        password : bcrypt.hashSync(newPass, 10),
                     },
                     {
                         where: { id: req.session.loggedUser.id },
                     }
                 ).then((u) => {
-                    req.session.loggedUser.password = newPass
+                    req.session.loggedUser.password = bcrypt.hashSync(newPass, 10),
             
             
                     res.redirect("/user/my-profile")
