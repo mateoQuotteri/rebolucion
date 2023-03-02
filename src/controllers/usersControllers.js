@@ -1,5 +1,6 @@
 const db = require("../database/models")
 const bcrypt = require("bcryptjs")
+
 const { validationResult } = require("express-validator")
 
 
@@ -158,33 +159,28 @@ module.exports = {
                 return
             }
 
-            const userId = req.session.loggedUser.id
+            const oldPass = req.body.password;
+            const newPass = req.body.newPassword;
+            const userId = req.session.loggedUser.id;
+            const userLogged = await  db.Users.findOne({ where: { id: userId } });
 
-
-
-            const userLogged = await  db.Users.findOne({ where: { id: userId } })
-            const password = req.body.password
-            
-
-            if (userLogged && bcrypt.compareSync(password, userLogged.password)) {
-                console.log("Estoy aqui");
-                db.Users.update (
+            if(bcrypt.compareSync(oldPass, userLogged.password)){
+                db.Users.update(
                     {
-                       password : bcrypt.hashSync(req.body.rePassword, 10),
+                        password : newPass
                     },
                     {
-                        where: { id: userId },
+                        where: { id: req.session.loggedUser.id },
                     }
                 ).then((u) => {
-                    req.session.loggedUser.password =req.body.rePassword
+                    req.session.loggedUser.password = newPass
+            
+            
                     res.redirect("/user/my-profile")
                 });
-            
-
-                console.log(req.session.loggedUser);
             }
         
         },
 
-
 }
+
