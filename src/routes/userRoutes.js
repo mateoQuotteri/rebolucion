@@ -23,7 +23,7 @@ router.put("/my-profile/edit", authMiddleware ,userController.editMyProfile)
 router.get("/my-profile/edit/my-password" , authMiddleware, userController.showEditPassword)
 router.put("/my-profile/edit/my-password" , changePassValidation, authMiddleware, userController.editPassword)
 
-
+router.get("/my-profile/logout", userController.logout)
 
 
 

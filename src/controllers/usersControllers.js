@@ -81,9 +81,15 @@ module.exports = {
     }
     },
     logout: (req, res) => { 
-        /*TODAVIA NO SE COMO HACER ESTO HACIENDO QUE CIERRE SESION DESDE USERPROFILE.EJS */
-        req.session.destroy()
-        return res.redirect("/")
+      req.session./*loggedUser.*/destroy((error)=>{
+        if (error) {
+            console.log(error);
+            res.send("Nothing had happened") 
+      }else{
+        res.redirect("/")
+      }
+   })
+
     },
     showEditMyProfile: async(req, res) => {
         const userId = req.session.loggedUser.id
