@@ -1,4 +1,5 @@
-const isEmpty = (input) => input.value.trim() != ""
+const isEmpty = (input) => input.value.trim() != "";
+const isNumber = (input)=> input.value.isNaN() == false;
 
 const validations = [
     {
@@ -32,7 +33,7 @@ const validations = [
         inputName: "phone",
         validations: [
             {
-                validator: isEmpty,
+                validator: isEmpty, isNumber,
                 errorMsg: "1-Debes agregar un telefono",
             },
         ],
@@ -85,7 +86,7 @@ const validations = [
 ]
 
 window.onload = function () {
-    const formulario = document.querySelector("#formulario")
+    const formulario = document.getElementById("formulario")
     //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
     //-------------------DE REGISTRO DE PELÍCULAS------------------//
 
