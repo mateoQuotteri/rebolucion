@@ -5,6 +5,8 @@
     <title>Mi perfil</title>
 </head>
 <body>
+    <main>
+    <section>
     <h2 style="display: block;">Mis datos:</h2>
     <h4 style="display: block;">Email: <%= locals.loggedUser.email  %></h4>
     <h4 style="display: block;">Nombre:<%= locals.loggedUser.name  %></h4>
@@ -17,6 +19,7 @@
     <button><a href="/user/my-profile/edit/">Editar datos</a></button>
     <button><a href="/user/my-profile/edit/my-password">Cambiar contraseña</a></button>
     <button><a href="/user/my-profile/logout">Cerrar session</a></button>
-
+</section>
+</main>
 </body>
 </html>
