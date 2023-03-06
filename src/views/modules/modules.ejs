@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="/styles/register.css">
 </head>
 <body class="">
-
-    <div class="row fit notFlex">
-        <div class="col-md-10 indexFlex ">
+    <main>
+    <section class="row fit notFlex">
+        <article class="col-md-10 indexFlex ">
             <% modules.forEach(module => {%>
             
                 <div class="p-3 justBorderIndex  bg-light tripCard">
-                    <article>
+                    <div>
                         <div class="img-card">
                             <img class="imgIndex" width="100%" 
                             src="/images/modules-images/<%= module.image %>" 
@@ -26,11 +26,11 @@
 
                         <p  height="fit-content" class="text-card">Nivel de dificultad :<%= module.difficulty %>/10 </p>
                         </button>
-                    </article>
+                    </div>
                 </div>
             <% }); %>
-        </div>
-    </div>
-  
+        </article>
+    </section>
+</main>
 </body>
 </html>

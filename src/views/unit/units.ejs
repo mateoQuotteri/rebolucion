@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="/styles/register.css">
 </head>
 <body class="">
-
-    <div class="row fit notFlex">
-        <div class="col-md-10 indexFlex ">
+<main>
+    <section class="row fit notFlex">
+        <article class="col-md-10 indexFlex ">
             <% units.forEach(unit => {%>
             
                 <div class="p-3 justBorderIndex  bg-light tripCard">
-                    <article>
+                    <div>
             
                         <p  height="fit-content" class="text-card"><%= unit.title %> </p>
                        
@@ -24,11 +24,11 @@
                         class="text-card">ID de la unidad :<%= unit.id %></p>
                         <p  height="fit-content" 
                         class="text-card">Pertenece al modulo :<%= unit.id_modulo %> </p>
-                    </article>
+                    </div>
                 </div>
             <% }); %>
-        </div>
-    </div>
-  
+        </article>
+    </section>
+</main>
 </body>
 </html>
