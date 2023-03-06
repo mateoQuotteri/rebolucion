@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%-include ("./partials/head") %> 
-    <!--<link rel="stylesheet" href="/styles/register.css">-->
+    <link rel="stylesheet" href="/styles/register.css">
     <script src="/js/userRegister.js"></script>
 </head>
 <body class="">
@@ -41,9 +41,10 @@
                 </p>
                 <% } %>
 
-            <input class="input-from-register phoneNumber" type="string" name="phone"
+            <input class="input-from-register phoneNumber" id="phone"type="string" name="phone"
              placeholder="Ingresa tu número de celular"
              value="<%= locals.old && old.phone %>" >
+             <span class="error" id="error"></span>
             <% if (locals.errors && errors.phone) { %>
                 <p style="color: white">
                     <%= errors.phone.msg %>
