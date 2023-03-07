@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <%-include ("./partials/head") %> 
+    <link rel="stylesheet" href="/styles/colors.css">
     <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="/styles/normalice.css">
 </head>
 <body class="">
-    <main>
-
+    <main class="background-blue">
+        <section>
+            <img src="/images/rebolucionLogoWeb.png" alt="" srcset="" class="imagen-register">
+        </section>
     <section class="big-container bg-color-blue-dark">
-        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
-        <h2  class="color-or">Inicia sesion</h2>
-        <form action="/user/login" class="form" method="POST" id="formulario" 
+        <div class="background-orange"></div>
+        <h2  class="lightblue">Inicia sesion</h2>
+        <div class="background-light-color-box-from-behind">
+        <form action="/user/login" class="form background-light-color" method="POST" id="formulario" 
         enctype="">
             
-            <input type="email" required class="input-from-register"
+            <input type="email" required class="input-from-register background-from-inputs"
              placeholder="Correo electronico"  id="email" name="email"
              value="<%= locals.old && old.email %>"
              >
@@ -25,7 +30,7 @@
 
 
 
-            <input type="password" required class="input-from-register" 
+            <input type="password" required class="input-from-register background-from-inputs" 
             placeholder="Contraseña" id="password" name="password"
             value="<%= locals.old && old.password %>">
             <% if (locals.errors && errors.password) { %>
@@ -41,7 +46,7 @@
             <button  class="button-from-register bg-color-blue-dark  bg-color-or" type="submit">
                 Iniciar</button>
         </form>
-        
+    </div>
     </section>
 </main>
 </body>

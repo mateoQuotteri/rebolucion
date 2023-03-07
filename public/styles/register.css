@@ -1,11 +1,9 @@
-body{
+main{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     height: 100vh;
-    background-image: url("../images/Copia\ de\ Copia\ de\ Copia\ de\ Copia\ de\ Presentación\ Empresarial\ Profesional\ Gris\ y\ Amarillo.jpg");
-
 }
 
 .big-container{
