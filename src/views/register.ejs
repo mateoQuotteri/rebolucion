@@ -5,101 +5,113 @@
     <link rel="stylesheet" href="/styles/register.css">
     <script src="/js/userRegister.js"></script>
 </head>
-<body class="">
-    <main>
-        <section class="big-container bg-color-blue-dark">
-        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
-        <h2  class="color-or">¡Registrate!</h2>
+<body class="background-blue">
+    <main >
+        <section class="section"> 
+            <img src="/images/rebolucionLogoWeb.png" alt="" srcset="" class="imagen-register">
+        </section>
+    <section class="big-container bg-color-blue-dark section">
+        <div class="title-container">
+        <div class="background-orange or-bar"></div>
+        <h1 class="lightblue">Register</h1>
+        </div>
+
+        <div class="false-box background-light-color-box-from-behind">
         <form action="/user/register" class="form" method="POST"id="formulario" 
         enctype="">
             
 
-            <input type="email" required class="input-from-register" 
+            <input type="email" required class="login-input" 
             placeholder="Correo electronico"  id="email" name="email"
             value="<%= locals.old && old.email %>" >
             <% if (locals.errors && errors.email) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.email.msg %>
                 </p>
                 <% } %>
             
-            <input type="text" required class="input-from-register"
+            <input type="text" required class="login-input"
             placeholder="Nombre completo" id="name" name="name"
             value="<%= locals.old && old.name %>" >
             <% if (locals.errors && errors.name) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.name.msg %>
                 </p>
                 <% } %>
 
-            <input type="text" required class="input-from-register"
+            <input type="text" required class="login-input"
             placeholder="Apellido" id="lastname" name="lastname"
             value="<%= locals.old && old.lastname %>" >
             <% if (locals.errors && errors.lastname) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.lastname.msg %>
                 </p>
                 <% } %>
 
-            <input class="input-from-register phoneNumber" id="phone"type="string" name="phone"
+            <input class="login-input phoneNumber" id="phone"type="string" name="phone"
              placeholder="Ingresa tu número de celular"
              value="<%= locals.old && old.phone %>" >
              <span class="error" id="error"></span>
             <% if (locals.errors && errors.phone) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.phone.msg %>
                 </p>
                 <% } %>
 
             
-            <input type="text" required class="input-from-register"placeholder="Pais" id="country
+            <input type="text" required class="login-input"placeholder="Pais" id="country
             " name="country" value="<%= locals.old && old.country %>" > 
             <% if (locals.errors && errors.country) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.country.msg %>
                 </p>
                 <% } %>
 
-            <input type="text" required class="input-from-register"placeholder="Estado o Provincia" 
+            <input type="text" required class="login-input"placeholder="Estado o Provincia" 
             id="state" name="state" value="<%= locals.old && old.state %>" > 
             <% if (locals.errors && errors.state) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.state.msg %>
                 </p>
                 <% } %>
 
-            <input type="text" required class="input-from-register"placeholder="Ciudad" id="city
+            <input type="text" required class="login-input"placeholder="Ciudad" id="city
             " name="city" value="<%= locals.old && old.city %>" > 
             <% if (locals.errors && errors.city) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.city.msg %>
                 </p>
                 <% } %>
 
-                <input type="password" required class="input-from-register" 
+                <input type="password" required class="login-input" 
             placeholder="Contraseña" id="password" name="password"
             value="<%= locals.old && old.password %>" >
             <% if (locals.errors && errors.password) { %>
-                <p style="color: white">
+                <p >
                     <%= errors.password.msg %>
                 </p>
                 <% } %>
 
 
-                <input type="password" required class="input-from-register" 
+                <input type="password" required class="login-input" 
             placeholder="Repita su contraseña" id="rePassword" name="rePassword"
             value="<%= locals.old && old.password %>" >
             <% if (locals.errors && errors.rePassword) { %>
-                <p style="color: white">
+                <p class="error" >
                     <%= errors.rePassword.msg %>
                 </p>
                 <% } %>
 
-            <p class="color-or p-from-register ">Si ya tienes cuenta 
-                <a class="a-from-register color-or" href="/user/login">inicia sesion</a></p>
+            <p class="white p-from-login ">Si ya tienes cuenta 
+                <a class="lightblue" href="/user/login">inicia sesion</a></p>
            
-            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Registrarme</button>
+                <div class="btn-container">
+                    <input type="submit" 
+                    name="sumbit" class="button lightblue background-orange "id="" 
+                    value="➜">
+                        </div>
         </form>
+    </div>
 </section>
 </main>
 </body>

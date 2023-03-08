@@ -90,6 +90,10 @@ form{
       font-size: 1.3em;
      
  }
+ .error{
+   color: red;
+   font-weight: bolder;
+ }
 
 @media(min-width: 480px){
     
