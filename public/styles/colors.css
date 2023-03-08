@@ -1,3 +1,11 @@
+* {
+   box-sizing: border-box;
+   font-family: 'Signika', sans-serif;
+ 
+}
+.white{
+    color: #ffffff;
+}
 .orange {
     color: #F09102;
 }
@@ -10,6 +18,9 @@
 }
 .background-orange{
     background-color:  #F09102
+}
+.background-white{
+    background-color:  #ffffff
 }
 .background-blue{
     background-color: #06071A;

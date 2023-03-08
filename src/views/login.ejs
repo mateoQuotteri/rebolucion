@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <%-include ("./partials/head") %> 
-    <link rel="stylesheet" href="/styles/colors.css">
-    <link rel="stylesheet" href="/styles/register.css">
-    <link rel="stylesheet" href="/styles/normalice.css">
+    <link rel="stylesheet" href="/styles/login.css">
 </head>
 <body class="">
     <main class="background-blue">
-        <section>
+        <section class="section"> 
             <img src="/images/rebolucionLogoWeb.png" alt="" srcset="" class="imagen-register">
         </section>
-    <section class="big-container bg-color-blue-dark">
-        <div class="background-orange"></div>
-        <h2  class="lightblue">Inicia sesion</h2>
-        <div class="background-light-color-box-from-behind">
-        <form action="/user/login" class="form background-light-color" method="POST" id="formulario" 
+    <section class="big-container bg-color-blue-dark section">
+        <div class="title-container">
+        <div class="background-orange or-bar"></div>
+        <h1 class="lightblue">Login</h1>
+        </div>
+       <div class="false-box background-light-color-box-from-behind">
+       <form action="/user/login" class="form background-light-color" method="POST" id="formulario" 
         enctype="">
             
-            <input type="email" required class="input-from-register background-from-inputs"
+            <input type="email" required class="login-input background-white"
              placeholder="Correo electronico"  id="email" name="email"
              value="<%= locals.old && old.email %>"
              >
@@ -30,7 +30,7 @@
 
 
 
-            <input type="password" required class="input-from-register background-from-inputs" 
+            <input type="password" required class="login-input background-white" 
             placeholder="Contraseña" id="password" name="password"
             value="<%= locals.old && old.password %>">
             <% if (locals.errors && errors.password) { %>
@@ -40,11 +40,13 @@
                 <% } %>
 
 
-            <p class="color-or p-from-register ">Si aun no tienes cuenta <a 
-                class="a-from-register color-or" href="/user/register">create una</a></p>
-           
-            <button  class="button-from-register bg-color-blue-dark  bg-color-or" type="submit">
-                Iniciar</button>
+            <p class="white p-from-login ">Si aun no tienes cuenta <a 
+                class="a-from-register lightblue" href="/user/register">create una</a></p>
+
+                <div class="btn-container">
+            <input type="submit" name="sumbit" class="button"id="" 
+            value="Iniciar sesion">
+                </div>
         </form>
     </div>
     </section>
