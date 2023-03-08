@@ -8,14 +8,14 @@ main{
 }
 .section{
    width: 100%;
-   height: 20%;
+   height: 17%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 .imagen-register{
-   width: 55%;
-   height: 120%;
+   width: 45%;
+   height: 140%;
 }
 .big-container{
     display: flex;
@@ -23,14 +23,14 @@ main{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 120%;
  }
  .big-container .title-container{
      display: flex;   
      flex-wrap: nowrap;
      justify-content: center;
      align-items: center;
-     width: 26%; 
+     width:25%; 
      height: 8%;
      margin-bottom: 1.5em;
  }
@@ -46,6 +46,7 @@ main{
      height: 100%;
      width: 80%;
      position: relative;
+     padding-bottom: 1em;
   }
   form{
     height: 100%;
@@ -97,29 +98,40 @@ main{
   }
  
  @media(min-width: 480px){
-     
+
+ }
+ @media(min-width: 560px){
+   .imagen-register{
+      width: 35%;
+      height: 140%;
+   }
  }
  
  @media(min-width: 680px){
-    .imagen-register{
-       width: 40%;
-       height: 120%;
-    }
+   .imagen-register{
+      width: 30%;
+      height: 120%;
+   }
  }
  
  @media(min-width: 768px){
-  
- }
+   .imagen-register{
+      width: 25%;
+      height: 140%;
+   }
+
+}
  
  
  @media(min-width: 1024px){
     .big-container{
        width: 75%;
     }
-    .imagen-register{
-       width: 30%;
-       height: 120%;
-    }
+   
+   .imagen-register{
+      width:  20%;
+      height: 120%;
+   }
  }
  
  
@@ -127,8 +139,10 @@ main{
     .big-container{
        width: 65%;
     }
-    .imagen-register{
-       width: 20%;
-       height: 120%;
-    }
+
+   
+   .imagen-register{
+      width: 15%;
+      height: 120%;
+   }
  }

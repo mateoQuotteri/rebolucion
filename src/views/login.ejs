@@ -24,7 +24,7 @@
              value="<%= locals.old && old.email %>"
              >
              <% if (locals.errors && errors.email) { %>
-                <p style="color: white">
+                <p class="error">
                     <%= errors.email.msg %>
                 </p>
                 <% } %>
@@ -35,7 +35,7 @@
             placeholder="Contraseña" id="password" name="password"
             value="<%= locals.old && old.password %>">
             <% if (locals.errors && errors.password) { %>
-                <p style="color: white">
+                <p class="error">
                     <%= errors.password.msg %>
                 </p>
                 <% } %>
