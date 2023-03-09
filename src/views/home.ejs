@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
+    <%-include ("./partials/head") %> 
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/header.css">
     <title>Document</title>
 </head>
-<body>
-    <a href="/user/register">Register</a>
-    <a href="/user/login">Login</a>
-    <a href="/user/my-profile">My profile</a>
-    
-    <a href="/module">Modulos</a>
-    <a href="/unit">Units</a>
+<body class="background-blue">
+    <header>
+        <!--INICIO DEL HEADER -->
+        <section class="img-container">
+            <img src="/images/miniLogo.png" alt="">
+        </section>
+
+        <nav class="mav-home">
+            <ul class="ul-ofNav-home">
+                <li class="orange">Contactanos</li>
+                <li class="orange">Aviso</li>
+                <li class="orange">FAQ</li>
+            </ul>
+        </nav>
+        <!--FIN DEL HEADER-->
+    </header>
+
+    <main>
+        <!--INICIO CARROUSEL BOOSTRAP-->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/images/homeImages/Rectangle 400.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/homeImages/Rectangle 391.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/homeImages/Rectangle 398.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!--FIN CARROUSEL BOOSTRAP-->
+    </main>
     
 </body>
 </html>
