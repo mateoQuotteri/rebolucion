@@ -30,7 +30,7 @@ main{
      flex-wrap: nowrap;
      justify-content: center;
      align-items: center;
-     width:25%; 
+     width:50%; 
      height: 8%;
      margin-bottom: 1.5em;
  }
@@ -65,9 +65,9 @@ main{
     
  }
  .login-input{
-     margin-bottom: 1em;
+     margin-bottom: .9em;
+     padding: .1em;
      outline: none;
-     padding: .2em;
      border-radius: .3em;
      width: 100%;
   }
@@ -85,21 +85,40 @@ main{
   }
  
   .btn-container .button{
-       border-radius: 1.2em;
-       outline: none;
-       border: none;
-       padding: .6em;
-       font-size: 1.3em;
+   border-radius: 1.5em;
+   outline: none;
+   border: none;
+   padding: .6em;
+   font-size: 1.3em;
       
   }
   .error{
-    color: red;
-    font-weight: bolder;
-  }
+   color: red;
+   font-weight: bolder;
+   margin: 0px;
+   padding: 0px;
+   font-size: 10px;
+ }
  
  @media(min-width: 480px){
 
  }
+ @media(min-width: 520px){
+   .big-container .title-container{
+      width: 26%; 
+      height: 12%;
+      margin-bottom: 1.5em;
+      
+  }
+  
+  .big-container .or-bar{
+      height: 60%;
+      width: 3%;
+  }
+  .error{
+   font-size: 16px
+   
+}
  @media(min-width: 560px){
    .imagen-register{
       width: 35%;
@@ -146,3 +165,4 @@ main{
       height: 120%;
    }
  }
+}

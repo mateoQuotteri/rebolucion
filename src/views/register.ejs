@@ -24,83 +24,113 @@
             <input type="email" required class="login-input" 
             placeholder="Correo electronico"  id="email" name="email"
             value="<%= locals.old && old.email %>" >
-            <% if (locals.errors && errors.email) { %>
-                <p >
-                    <%= errors.email.msg %>
-                </p>
-                <% } %>
+    
             
             <input type="text" required class="login-input"
             placeholder="Nombre completo" id="name" name="name"
             value="<%= locals.old && old.name %>" >
-            <% if (locals.errors && errors.name) { %>
-                <p >
-                    <%= errors.name.msg %>
-                </p>
-                <% } %>
+           
 
             <input type="text" required class="login-input"
             placeholder="Apellido" id="lastname" name="lastname"
             value="<%= locals.old && old.lastname %>" >
-            <% if (locals.errors && errors.lastname) { %>
-                <p >
-                    <%= errors.lastname.msg %>
-                </p>
-                <% } %>
-
+         
             <input class="login-input phoneNumber" id="phone"type="string" name="phone"
              placeholder="Ingresa tu número de celular"
              value="<%= locals.old && old.phone %>" >
              <span class="error" id="error"></span>
-            <% if (locals.errors && errors.phone) { %>
-                <p >
-                    <%= errors.phone.msg %>
-                </p>
-                <% } %>
+          
 
             
             <input type="text" required class="login-input"placeholder="Pais" id="country
             " name="country" value="<%= locals.old && old.country %>" > 
-            <% if (locals.errors && errors.country) { %>
-                <p >
-                    <%= errors.country.msg %>
-                </p>
-                <% } %>
+          
 
             <input type="text" required class="login-input"placeholder="Estado o Provincia" 
             id="state" name="state" value="<%= locals.old && old.state %>" > 
-            <% if (locals.errors && errors.state) { %>
-                <p >
-                    <%= errors.state.msg %>
-                </p>
-                <% } %>
-
+           
             <input type="text" required class="login-input"placeholder="Ciudad" id="city
             " name="city" value="<%= locals.old && old.city %>" > 
-            <% if (locals.errors && errors.city) { %>
-                <p >
-                    <%= errors.city.msg %>
-                </p>
-                <% } %>
+           
 
                 <input type="password" required class="login-input" 
             placeholder="Contraseña" id="password" name="password"
             value="<%= locals.old && old.password %>" >
-            <% if (locals.errors && errors.password) { %>
-                <p >
-                    <%= errors.password.msg %>
-                </p>
-                <% } %>
-
+          
 
                 <input type="password" required class="login-input" 
             placeholder="Repita su contraseña" id="rePassword" name="rePassword"
             value="<%= locals.old && old.password %>" >
-            <% if (locals.errors && errors.rePassword) { %>
-                <p class="error" >
-                    <%= errors.rePassword.msg %>
+
+            <!--MOSTRAR MSJ SI HAY ERRORES-->
+
+            <% if (locals.errors && errors.email) { %>
+                <p class="error"  >
+                    <%= errors.email.msg %>
                 </p>
                 <% } %>
+                
+            <% if (locals.errors && errors.email) { %>
+                    <p class="error"  >
+                        <%= errors.email.msg %>
+                    </p>
+                    <% } %>
+
+           <% if (locals.errors && errors.email) { %>
+                        <p class="error"  >
+                            <%= errors.email.msg %>
+                        </p>
+                        <% } %>
+           <% if (locals.errors && errors.name) { %>
+                            <p class="error"  >
+                                <%= errors.name.msg %>
+                            </p>
+                            <% } %>
+           <% if (locals.errors && errors.lastname) { %>
+                                <p class="error"  >
+                                    <%= errors.lastname.msg %>
+                                </p>
+                                <% } %>
+
+           <% if (locals.errors && errors.phone) { %>
+                                    <p class="error"  >
+                                        <%= errors.phone.msg %>
+                                    </p>
+                                    <% } %>
+
+           <% if (locals.errors && errors.country) { %>
+                                        <p class="error"  >
+                                            <%= errors.country.msg %>
+                                        </p>
+                                        <% } %>
+
+           <% if (locals.errors && errors.state) { %>
+                                            <p class="error"  >
+                                                <%= errors.state.msg %>
+                                            </p>
+                                            <% } %>
+
+           <% if (locals.errors && errors.city) { %>
+                                                <p class="error"  >
+                                                    <%= errors.city.msg %>
+                                                </p>
+                                                <% } %>
+
+           <% if (locals.errors && errors.password) { %>
+                                                    <p class="error"  >
+                                                        <%= errors.password.msg %>
+                                                    </p>
+                                                    <% } %>
+           <% if (locals.errors && errors.rePassword) { %>
+                                                        <p class="error"  >
+                                                            <%= errors.rePassword.msg %>
+                                                        </p>
+                                                        <% } %>
+
+
+
+
+            <!---FIN ERRORES-->
 
             <p class="white p-from-login ">Si ya tienes cuenta 
                 <a class="lightblue" href="/user/login">inicia sesion</a></p>
