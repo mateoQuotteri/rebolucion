@@ -93,7 +93,6 @@ main{
       
   }
   .error{
-   color: red;
    font-weight: bolder;
    margin: 0px;
    padding: 0px;
@@ -116,7 +115,8 @@ main{
       width: 3%;
   }
   .error{
-   font-size: 16px
+   font-size: 16px;
+   text-align: start;
    
 }
  @media(min-width: 560px){
