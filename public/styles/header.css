@@ -20,9 +20,10 @@ header{
 .nav-home{
     display: flex;
     justify-content:end ;
-    align-items: end;
+    align-items: flex-end;
     height: 100%;
     width: 80%;
+    background-color: hotpink;
  }
 
  .ul-ofNav-home{
@@ -30,10 +31,12 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    align-items: flex-end;
+    background-color: aquamarine;
  }
  .ul-ofNav-home li{
     list-style: none;
    font-weight: bold;
    font-size: 14px;
+   background-color: aliceblue;
  }
