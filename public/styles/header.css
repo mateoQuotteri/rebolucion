@@ -1,12 +1,12 @@
 header{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     height: 15%;
  }
 .img-container{
     height: 100%;
-    width: 8%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,26 +17,19 @@ header{
     width: 100%;
  }
 
-.nav-home{
-    display: flex;
-    justify-content:end ;
-    align-items: flex-end;
-    height: 100%;
-    width: 80%;
-    background-color: hotpink;
- }
 
- .ul-ofNav-home{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    background-color: aquamarine;
- }
- .ul-ofNav-home li{
+/*.ul-ofNav-home{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+   background-color: yellow;
+}*/
+
+  li{
     list-style: none;
    font-weight: bold;
    font-size: 14px;
-   background-color: aliceblue;
+
  }
