@@ -25,16 +25,17 @@
             placeholder="Correo electronico"  id="email" name="email"
             value="<%= locals.old && old.email %>" >
     
-            
+            <div class="input-flex-container">
             <input type="text" required class="login-input"
             placeholder="Nombre completo" id="name" name="name"
             value="<%= locals.old && old.name %>" >
-           
+            
 
             <input type="text" required class="login-input"
             placeholder="Apellido" id="lastname" name="lastname"
             value="<%= locals.old && old.lastname %>" >
-         
+            </div>
+            <div class="input-flex-container">
             <input class="login-input phoneNumber" id="phone"type="string" name="phone"
              placeholder="Ingresa tu número de celular"
              value="<%= locals.old && old.phone %>" >
@@ -44,15 +45,15 @@
             
             <input type="text" required class="login-input"placeholder="Pais" id="country
             " name="country" value="<%= locals.old && old.country %>" > 
-          
+            </div>
+            <div class="input-flex-container">
 
             <input type="text" required class="login-input"placeholder="Estado o Provincia" 
             id="state" name="state" value="<%= locals.old && old.state %>" > 
            
             <input type="text" required class="login-input"placeholder="Ciudad" id="city
             " name="city" value="<%= locals.old && old.city %>" > 
-           
-
+        </div>
                 <input type="password" required class="login-input" 
             placeholder="Contraseña" id="password" name="password"
             value="<%= locals.old && old.password %>" >

@@ -65,6 +65,17 @@ main{
     padding-bottom: 1em;
     
  }
+ .input-flex-container{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+.input-flex-container input{
+   width: 45%; 
+   
+}
  .login-input{
      margin-bottom: .9em;
      padding: .1em;
