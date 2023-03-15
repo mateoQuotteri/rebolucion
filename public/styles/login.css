@@ -51,7 +51,7 @@ form{
    height: 100%;
    width: 100%;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
@@ -75,7 +75,7 @@ form{
  }
 
  .btn-container {
-   width: 100%;
+   width: 150%;
    display: flex;
    justify-content: end;
    align-items: center;
@@ -83,6 +83,7 @@ form{
  }
 
  .btn-container .button{
+   width: 25%;
       border-radius: 1.5em;
       outline: none;
       border: none;
@@ -97,7 +98,9 @@ form{
    padding: 0px;
    font-size: 10px;
  }
-
+ h1{
+   margin: 0 !important;
+ }
 @media(min-width: 480px){
     
 }
@@ -121,11 +124,16 @@ form{
       width: 40%;
       height: 120%;
    }
+   h1{
+      font-size: 2em;
+   }
   
 }
 
 @media(min-width: 768px){
- 
+   .button{
+      width: 15%;
+    }
 }
 
 
