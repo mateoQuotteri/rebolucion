@@ -110,9 +110,7 @@ main{
    padding: 0px;
    font-size: 10px;
  }
- h1{
-   margin: 0 !important;
- }
+ 
  @media(min-width: 480px){
 
  }
@@ -155,6 +153,10 @@ main{
       width: 25%;
       height: 140%;
    }
+   .button{
+      width: 15%;
+    }
+   
 
 }
  
@@ -182,4 +184,4 @@ main{
       height: 120%;
    }
  }
-}
+}  
