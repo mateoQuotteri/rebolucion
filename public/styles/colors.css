@@ -25,6 +25,10 @@
 .background-blue{
     background-color: #06071A;
 }
+.background-blueForButtons{
+    background-color:   rgba(6, 7, 26, 0.4);
+}
+
 .background-light-color{
     background-color:  rgba(117, 137, 210, 0.13);
 }

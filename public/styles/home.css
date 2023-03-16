@@ -14,13 +14,121 @@
 
 .button-container button{
     padding: .6em;
-    border-radius: .5em;
+    border-radius: .3em;
     border: none;
     background-color:   rgba(6, 7, 26, 0.4);
-   }
+}
 
    .button-container button a {
     text-decoration: none;
     outline: none;
     font-weight: bold;
+}
+
+
+
+@media(min-width: 480px){
+    
+}
+@media(min-width: 520px){
+    .button-container{
+        padding-top: 2em;
+       }
+   
+}
+
+
+@media(min-width: 680px){
+    .button-container button{
+        padding: 1em;
+       }
+  
+}
+
+@media(min-width: 768px){
+    .button-container button{
+        padding: 1.2em;
+       }
+}
+@media(min-width: 850px){
+    .button-container{
+        padding-top: 4em;
+       }
+  
+}
+@media(min-width: 900px){
+    .button-container button{
+        padding: 1.4em;
+       }
+}
+@media(min-width: 1000px){
+    .button-container button{
+        padding: 1.5em;
+       }
+}
+
+
+@media(min-width: 1024px){
+    .button-container{
+        padding-top: 6em;
+       }
+       .button-container button{
+        padding: 1.7em;
+       }
+}
+
+
+@media(min-width:1280px){
+    .button-container{
+        padding-top: 8em;
+       }
+       .button-container button{
+        padding: 1.8em;
+       }
+}
+/*FIN CARROUSEL*/
+
+/*INICIO PRINCIPAL SECTION*/
+
+.principal-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 3em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.principal-section h2{
+    text-align: center;
+    flex-basis: 100%;
+    margin-bottom: 2em;
+}
+
+
+.false-box{
+    position: relative;
+    width: 30%;
+    padding-bottom: 6em;
+    margin-bottom: 5em;
+}
+
+.div-inside{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    padding: 2.2em;
+    left: 6px;
+    top: 10px;
+    display: flex;
+    text-align: flex start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.div-inside h6{
+  text-align: center;
 }

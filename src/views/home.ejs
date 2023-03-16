@@ -19,20 +19,20 @@
         <div id="carouselExample" class="carousel slide">
           
           <div class="button-container">
-          <button class=""><a href="http://localhost:3000/user/register" class="white">Registrate</a></button>
-          <button class=""><a href="http://localhost:3000/user/login" class="white">Inicia sesion</a></button>
+          <button class="background-blueForButtons  btn"><a href="http://localhost:3000/user/register" class="lightblue">Registrate</a></button>
+          <button class="background-blueForButtons btn"><a href="http://localhost:3000/user/login" class="lightblue">Inicia sesion</a></button>
           </div>
           
           
           <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/images/homeImages/Rectangle 400.png" class="d-block w-100" alt="...">
+                <img src="/images/homeImages/Rectangle 398.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
                 <img src="/images/homeImages/Rectangle 391.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="/images/homeImages/Rectangle 398.png" class="d-block w-100" alt="...">
+                <img src="/images/homeImages/Rectangle 400.png" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -45,25 +45,27 @@
             </button>
           </div>
         
-<!--
-        <section>
-          <h1>
+
+        <section class="principal-section">
+          <h2 class="lightblue ">
             Aprenderas sobre:
-          </h1>
+          </h2>
 
 
-          <article class="big-aricle-container">
+          <% thingsToLearn.forEach(thing => {%>
             <div class="false-box background-light-color-box-from-behind">
-              <div class="background-light-color">
-                <img src="/images/miniLogo.png" alt="">
+              <div class="background-light-color  div-inside">
+                <img src="/images/cardImages/<%= thing.image %>." alt="">   
 
-                <h3 class="white">Bitcoin</h3>
+                <h6 class="white"><%= thing.name %></h6>
               </div>
             </div>
-
-          </article>
+        <% }); %>
+          
+            
+  
         </section>
-        -->
+   
     </main>
 <!--
     <footer class="background-footer">
