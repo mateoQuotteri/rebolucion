@@ -65,6 +65,9 @@
     .button-container button{
         padding: 1.5em;
        }
+       .button-container button a {
+        font-size: 1.3em;
+    }
 }
 
 
@@ -132,3 +135,9 @@
 .div-inside h6{
   text-align: center;
 }
+
+.div-inside img{
+    width: 40%;
+    height: 40%;
+    z-index: 1;
+  }

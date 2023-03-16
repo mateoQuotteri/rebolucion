@@ -137,9 +137,17 @@ form{
       width: 25%;
       height: 140%;
    }
+   .login-input{
+      padding: .5em;
+   }
 }
 
-
+@media(min-width: 850px){
+   .login-input{
+      padding: .8em;
+   }
+ }
+   
 @media(min-width: 1024px){
    .big-container{
       width: 75%;
