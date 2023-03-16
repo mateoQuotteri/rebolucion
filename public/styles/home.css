@@ -1,0 +1,10 @@
+/*CARROUSEL*/
+#carouselExample{
+    position: relative;
+ }
+
+ .button-container{
+ position: absolute;
+ margin: auto; background-color: aliceblue;
+ z-index: 1;
+}
