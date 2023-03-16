@@ -3,22 +3,19 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: baseline;
  }
 
  .button-container{
  position: absolute;
  z-index: 1;
  padding-top: 1em;
- background-color: aliceblue;
- width: 75%;
 }
 
 .button-container button{
     padding: .6em;
     border-radius: .5em;
     border: none;
-    box-shadow: 1px 1px black, -.1em 0 .4em black;
    }
 
    .button-container button a {
