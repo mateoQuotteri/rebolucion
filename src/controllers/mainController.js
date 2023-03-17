@@ -4,7 +4,7 @@ module.exports = {
         const thingsToLearn= [{
             name: "Web3",
             image: "web3Card.png",
-            icon : "fa-regular fa-globe",
+            icon : "fa-sharp fa-solid fa-globe",
            },
            {
             name: "Blockchain",
@@ -19,7 +19,7 @@ module.exports = {
            {
             name: "Finanzas Descentralizadas",
             image: "defiCard.png",
-            icon : "fa-thin fa-chart-simple",
+            icon : "fa-solid fa-chart-column",
            },
            {
             name: "Bitcoin",
