@@ -220,6 +220,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 1em;
+    margin-top: .9em;
   }
 .btn-container .extra-button{
     width: 30%;
@@ -271,6 +272,12 @@
  } 
  .video-container iframe{
     width: 50%;
+  }
+  .extra-button{
+    width: 20%
+  }
+  .btn-container{
+    margin-top: 2em;
   }
 
 
