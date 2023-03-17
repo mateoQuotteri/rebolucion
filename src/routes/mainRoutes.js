@@ -6,4 +6,7 @@ const mainController = require("../controllers/mainController")
 router.get("/", mainController.index)
 /*router.get("/adminpanel", mainController.admin)*/
 
+router.get("/aviso", mainController.aviso)
+
+router.get("/aviso", mainController.contact)
 module.exports = router

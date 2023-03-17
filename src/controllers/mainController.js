@@ -33,5 +33,13 @@ module.exports = {
            },
         ]
         res.render("home", { thingsToLearn})
-    }
+    },
+    contact : (req,res)=>{
+        res.render("contact")
+},
+aviso : (req,res)=>{
+    res.render("aviso")
+}
+
+
 }
