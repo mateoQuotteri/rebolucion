@@ -68,7 +68,7 @@
 }
 @media(min-width: 1000px){
     .button-container button{
-        padding: 1.5em;
+        padding: 1.2em;
        }
        .button-container button a {
         font-size: 1.3em;
@@ -222,20 +222,23 @@
     padding-bottom: 1em;
     margin-top: .9em;
   }
-.btn-container .extra-button{
+.btn-container a{
     width: 30%;
     height: 20%;
     margin: 0 10px;
     border-radius: .5em;
     border: none;
     padding: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .btn-container .extra-button{
+      border: none;
+      background-color: transparent;
   }
 
-
-.extra-button a {
-    text-decoration: none;
-    font-weight: bold;
-}
 
  @media(min-width: 480px){
 
@@ -273,7 +276,7 @@
  .video-container iframe{
     width: 50%;
   }
-  .extra-button{
+  .btn-container a{
     width: 20%
   }
   .btn-container{
