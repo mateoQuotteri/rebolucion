@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
     <%-include ("./partials/head") %> 
-    <title>Contact</title>
+    <link rel="stylesheet" href="/styles/login.css">
 </head>
-<body>
-    <h1>Estas en la seccion de contacto</h1>
-    
+<body class="background-blue">
+    <main >
+        <section class="section"> 
+            <img src="/images/rebolucionLogoWeb.png" alt="" srcset="" class="imagen-register">
+        </section>
+    <section class="big-container bg-color-blue-dark section">
+        <div class="title-container">
+        <div class="background-orange or-bar"></div>
+        <h1 class="lightblue">Contactanos</h1>
+        </div>
+
+       <div class="false-box background-light-color-box-from-behind">
+       <form action="https://formsubmit.co/rebolucionpodcastl@gmail.com" class="form background-light-color" method="POST" id="formulario" 
+        enctype="">
+            
+            <input type="email" required class="login-input background-white"
+             placeholder="Correo electronico"  id="email" name="email">
+        
+
+
+            <input type="text" required class="login-input background-white" 
+            placeholder="Coloca tu mensaje aqui." id="message" name="message">
+
+
+            <p class="white p-from-login ">
+                Te responderemos a la brevedad.
+            </p>
+                <div class="btn-container">
+            <input type="submit" 
+            name="sumbit" class="button white background-orange "id="" 
+            value="➜">
+                </div>
+        </form>
+    </div>
+    </section>
+</main>
 </body>
 </html>

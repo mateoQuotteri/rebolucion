@@ -137,14 +137,14 @@ form{
       width: 25%;
       height: 140%;
    }
-   .login-input{
-      padding: .5em;
-   }
+
+
 }
 
 @media(min-width: 850px){
-   .login-input{
-      padding: .8em;
+
+   .p-from-login  {
+      padding-top: .6em;
    }
  }
    
@@ -155,6 +155,10 @@ form{
    .imagen-register{
       width: 30%;
       height: 120%;
+   }
+   .login-input{
+      outline: none;
+      padding: .4em;
    }
 }
 

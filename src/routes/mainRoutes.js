@@ -8,5 +8,5 @@ router.get("/", mainController.index)
 
 router.get("/aviso", mainController.aviso)
 
-router.get("/aviso", mainController.contact)
+router.get("/contact-us", mainController.contact)
 module.exports = router
