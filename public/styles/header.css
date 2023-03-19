@@ -2,7 +2,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15%;
+    height: 25%;
+    padding-top: .5em;
  }
 
  .img-container{
@@ -10,19 +11,21 @@ header{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 30%;
+    width: 40%;
  }
 .img-container img{
-    height: 120%;
+    height: 100%;
     width: 100%;
  }
 
- @media(min-width: 850px){
+@media(min-width: 900px){
    header{
-      height: 10%;
+      height: 20%;
+   }
+   .img-container{
+      width: 30%;
    }
 }
-
 @media(min-width: 1024px){
    header{
       height: 8%;
@@ -34,3 +37,20 @@ header{
    }
 }
 
+
+
+/*
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+ }
+
+ .img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+ }*/
