@@ -27,6 +27,24 @@
         </article>
         </section>
 
+        <section class="principal-section">  
+            <section class="sub-section">
+            <% modules.forEach(module => {%>
+              <div class="false-box background-light-color-box-from-behind">
+                <div class="background-light-color  div-inside">
+                  <img src="/images/modulesImages/ <%= module.image %>" alt="">
+                  <h5 class="white">
+                    <%= module.title %>
+                  </h5>
+                  <h6 class="white">
+                    <%= module.difficulty %>/10
+                  </h6>
+                </div>
+              </div>
+          <% }); %>
+            
+        </section>
+
         <!---
     <section class="row fit notFlex">
        <article class="col-md-10 indexFlex ">
