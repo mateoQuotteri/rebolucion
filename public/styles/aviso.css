@@ -4,7 +4,7 @@ main{
     justify-content: start;
     align-items: center;
     align-content: center;
-    height: 100vh;
+    height: 120vh;
 }
 .big-container{
     width: 50%;
@@ -45,13 +45,20 @@ h1{
 }
 
 .advice-container h3{
+    width: 100%;
     font-weight: bold;
     text-align: left;
+    padding: .5em;
 }
 .advice-container p{
     text-align: left;
     padding: .5em;
 }
+@media(min-width: 400px){
+    main  {
+       height: 100vh;
+    }
+  }
 
 @media(min-width: 700px){
 
@@ -64,6 +71,12 @@ h1{
 }
 
 
+@media(min-width: 600px){
+    main  {
+       height: 85vh;
+    }
+  }
+
 @media(min-width: 800px){
     .title-container .or-bar  {
        width: 1%;
@@ -71,9 +84,23 @@ h1{
   }
 
   @media(min-width: 950px){
+    main  {
+        height: 75vh;
+     }
+     .advice-container{
+        padding: 1.5em;
+    }
   }
 
-  @media(min-width: 1000px){
-
+  @media(min-width: 1024px){
+    main  {
+        height: 72vh;
+     }
+    
+  }
+  @media(min-width: 1280px){
+    main  {
+        height: 72vh;
+     }
     
   }
