@@ -11,7 +11,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .big-container .title-container{
@@ -38,81 +38,42 @@ h1{
     padding: 1em;
     width: 100%;
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-.false-box{
-    position: relative;
-    width: 80%;
-}
-
-.false-box div{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 10px;
-    left: 12px;
-}
-.false-box div p{
-    padding: 1.8em;
+.advice-container h3{
+    font-weight: bold;
     text-align: left;
 }
+.advice-container p{
+    text-align: left;
+    padding: .5em;
+}
 
-@media(min-width: 500px){
-    .advice-container{
+@media(min-width: 700px){
+
+    .advice-container p{
+        padding: 1em;
+    }
+    .big-container{
         margin-top: 2em;
-        padding: 1.5em;
-        width: 80%;
-    }
-    .false-box div p{
-        padding: 2em;
-    }
-    
-  }
+}
+}
 
-  @media(min-width: 700px){
-    .advice-container{
-        margin-top: 3em;
-        padding: 2em;
-        width: 70%;
-    }
-    .false-box div p{
-        padding: 2em;
-    }
-    
-  }
+
 @media(min-width: 800px){
     .title-container .or-bar  {
        width: 1%;
     }
-    .advice-container{
-        margin-top: 3em;
-        padding: 2em;
-        width: 60%;
-    }
-    .false-box div p{
-        padding: 2.5em;
-    }
-    
   }
 
   @media(min-width: 950px){
-    .advice-container{
-        width: 55%;
-    }
-    
   }
 
   @media(min-width: 1000px){
-    .advice-container{
-        margin-top: 3em;
-        padding: 2em;
-        width: 50%;
-    }
-    .false-box div p{
-        padding: 2.8em;
-    }
+
     
   }
