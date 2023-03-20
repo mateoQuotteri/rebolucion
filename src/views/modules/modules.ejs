@@ -2,12 +2,34 @@
 <html lang="en">
 <head>
     <%-include ("../partials/head") %> 
-    <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/aviso.css">
 </head>
-<body class="">
+<body class="background-blue">
+    <header>
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="http://localhost:3000">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
+    
     <main>
+        <section class="big-container">
+            <div class="title-container">
+                <div class="background-orange or-bar"></div>
+                <h1 class="lightblue">Modulos</h1>
+                </div>
+        </article>
+        </section>
+
+        <!---
     <section class="row fit notFlex">
-        <article class="col-md-10 indexFlex ">
+       <article class="col-md-10 indexFlex ">
             <% modules.forEach(module => {%>
             
                 <div class="p-3 justBorderIndex  bg-light tripCard">
@@ -31,6 +53,7 @@
             <% }); %>
         </article>
     </section>
+-->
 </main>
 </body>
 </html>
