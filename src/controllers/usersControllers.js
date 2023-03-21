@@ -11,7 +11,6 @@ module.exports = {
     createNewUser: async (req,res)=>{
 
     const errors = validationResult(req)
-    console.log(typeof(errors))
         if (!errors.isEmpty()) {
             res.render("register", {
                 errors: errors.mapped(),
@@ -24,10 +23,7 @@ module.exports = {
         const userIsRegister = await db.Users.findOne({ where: { email: user.email } })
 
         if (userIsRegister) {
-            objectOfErrors ={
-                msg : "El email que has colocado ya esta registrado."
-            }
-            res.render("register", objectOfErrors)
+            res.render("register", )
             return
         }
         /*INSERTO USUARIO CON SUS CARACTERISTICAS EN DB*/

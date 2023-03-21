@@ -37,7 +37,7 @@
             </div>
             <div class="input-flex-container">
             <input class="login-input phoneNumber" id="phone"type="string" name="phone"
-             placeholder="Ingresa tu número de celular"
+             placeholder="Telefono"
              value="<%= locals.old && old.phone %>" >
              <span class="error" id="error"></span>
           
@@ -128,11 +128,11 @@
                                                         </p>
                                                         <% } %>
 
-                                                        <% if (objectOfErrors) { %>
+                                                
                                                             <p class="error orange"  >
                                                                 <%= objectOfErrors.msg%>
                                                             </p>
-                                                            <% } %>
+                                                           
 
                                                         
                                                     
