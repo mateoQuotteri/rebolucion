@@ -93,30 +93,28 @@
         width: 40%;
         height: 35%;
     }
-    
+    .div-inside h5{
+        font-size: 1em;
+    }
+    .div-inside h6{
+        font-size: .8em;
+    }
 }
 
 @media(min-width: 768px){
-    .div-inside i{
-        font-size: 2.2em;
-        
-    }
-    
     .div-inside h5{
-        font-size: 1.1em;    
-     }
+        font-size: 1.2em;
+    }
+    .div-inside h6{
+        font-size: .8em;
+    }
 }
 
 @media(min-width: 1000px){
     .false-box{
         width: 30%;
-    }
-
-    .div-inside i{
-        font-size: 2.6em;
-        
-    }
-}
+    
+    }}
 
 
 @media(min-width: 1024px){
