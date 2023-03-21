@@ -45,11 +45,13 @@
     align-items: center;
 }
 
-.div-inside i{
+.div-inside .img-of-div-inside-container{
+    width: 90%;
+    height: 50%;
+}
+.img-of-div-inside-container img{
     width: 100%;
-    text-align: center;
-    font-size: 2em;
-    padding-bottom: .5em;
+    height: 100%;
 }
 .div-inside h5{
     width: 100%;
@@ -81,17 +83,19 @@
   text-align: center;
   
 }
-/*
-@media(min-width: 600px){
-    .div-inside h5{
-        font-size: 1.2em;
-    
+
+@media(min-width: 650px){
+    .sub-section{
+        justify-content: space-between;/*aca es*/
     }
-    .div-inside h6{
-        font-size: .9em;    
+    
+    .false-box{
+        width: 40%;
+        height: 35%;
+    }
+    
 }
-}
-*/
+
 @media(min-width: 768px){
     .div-inside i{
         font-size: 2.2em;
