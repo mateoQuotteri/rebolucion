@@ -20,12 +20,7 @@ module.exports = {
         }
         const user = JSON.parse(JSON.stringify(req.body))
         /*VERIFICO SI EL USUARIO YA ESTA REGISTRADO */
-        const userIsRegister = await db.Users.findOne({ where: { email: user.email } })
 
-        if (userIsRegister) {
-            res.render("register", )
-            return
-        }
         /*INSERTO USUARIO CON SUS CARACTERISTICAS EN DB*/
      db.Users.create({
             email: user.email,

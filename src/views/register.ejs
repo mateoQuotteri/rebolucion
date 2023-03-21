@@ -128,12 +128,16 @@
                                                         </p>
                                                         <% } %>
 
-                                                
+                                                        <% if (locals.errors && errors.reEmail) { %>
                                                             <p class="error orange"  >
-                                                                <%= objectOfErrors.msg%>
+                                                                <%= errors.reEmail.msg%>
                                                             </p>
-                                                           
-
+                                                            <% } %>
+                                                            <% if (listOfErrors) { %>
+                                                                <p class="error orange"  >
+                                                                    <%= listOfErrors.msg%>
+                                                                </p>
+                                                                <% } %>
                                                         
                                                     
 

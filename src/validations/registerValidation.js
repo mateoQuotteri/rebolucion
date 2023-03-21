@@ -1,5 +1,6 @@
 const { body } = require('express-validator')
 
+
 module.exports = [
     body('name').notEmpty().withMessage('Este campo debe estar completo.'),
     body('lastname').notEmpty().withMessage('Este campo debe estar completo.'),
@@ -28,6 +29,6 @@ module.exports = [
 
             return true
         }),
-        
+
    
 ]
