@@ -128,7 +128,11 @@
                                                         </p>
                                                         <% } %>
 
+                                                        <% if (locals.reEmailError) { %>
 
+                                                            <p class="orange error"><%= locals.reEmailError.msg %>
+                                                            </p>
+                                                          <% } %>
 
 
             <!---FIN ERRORES-->
