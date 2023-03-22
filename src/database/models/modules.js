@@ -6,6 +6,7 @@ module.exports = (sequelize, dataTypes) => {
         shortDescription : { type: dataTypes.STRING },
         difficulty : { type: dataTypes.INTEGER },
         image : { type: dataTypes.TEXT },
+        video : { type: dataTypes.STRING },
 
     }
 

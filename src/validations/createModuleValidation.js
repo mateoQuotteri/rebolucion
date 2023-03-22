@@ -5,5 +5,6 @@ module.exports = [
     body('shortDescription').notEmpty().withMessage('Coloca una corta descripcion para el modulo'),
     body('difficulty').notEmpty().withMessage('Coloca una dificultad para el modulo.'),
     body('units').notEmpty().withMessage('Coloca la cantidad de unidades del modulo'),
+    body('video').notEmpty().withMessage('Coloca el video del modulo'),
  
 ]

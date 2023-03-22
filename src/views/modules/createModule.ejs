@@ -48,6 +48,15 @@
             </p>
             <% } %>
 
+        <input type="text"  class="input-from-register" 
+        placeholder="Video"  id="video" name="video"
+        value="<%= locals.old && old.video %>" >
+        <% if (locals.errors && errors.video) { %>
+            <p style="color: white">
+                <%= errors.video.msg %>
+            </p>
+            <% } %>
+
         <input type="file"  class="input-from-register" 
         placeholder="Imagen del modulo"  id="image" name="image">
            

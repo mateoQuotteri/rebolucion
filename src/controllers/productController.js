@@ -36,6 +36,7 @@ module.exports = {
             image : imageFile.filename,
             difficulty : newProduct.difficulty,
             units : newProduct.units,
+            video : newProduct.video
         })
             .then((p) => {
                 return res.redirect("/module")
