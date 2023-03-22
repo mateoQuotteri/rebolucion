@@ -8,10 +8,9 @@ module.exports = {
     register : (req,res)=>{
         res.render("register")
     },
-    createNewUser: (req,res)=>{
+    createNewUser: async (req,res)=>{
 
     const errors = validationResult(req)
-    console.log(errors)
         if (!errors.isEmpty()) {
             res.render("register", {
                 errors: errors.mapped(),
@@ -20,6 +19,8 @@ module.exports = {
             return
         }
         const user = JSON.parse(JSON.stringify(req.body))
+        /*VERIFICO SI EL USUARIO YA ESTA REGISTRADO */
+
         /*INSERTO USUARIO CON SUS CARACTERISTICAS EN DB*/
      db.Users.create({
             email: user.email,
