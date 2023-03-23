@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="stylesheet" href="/styles/aviso.css">
     <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/moduleDetail.css">
 </head>
 <body class="background-blue">
     <header>
         <!--INICIO DEL HEADER -->
         <section class="button-of-header-container">
-         <a class="background-orange"href="http://localhost:3000/module">
+         <a class="background-orange"href="http://localhost:3000/modules">
             <button class="background-orange white">
                 ←
             </button>
@@ -28,14 +29,27 @@
         </article>
         </section>
 
-        <section class="principal-section">  
+        <section class="principal-section-of-module-detail"> 
+            <div class="video-container">
+                <iframe src="<%= module.video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div> 
+            <div class="false-box-of-module-detail background-light-color-box-from-behind">
+                <div class="background-light-color  div-inside-of-moduleDetail">
+                    <p class="lightblue short-description">
+                        <%= module.shortDescription %> 
+                    </p>
+                    <p class="lightblue difficulty">
+                        Dificultad: 
+                        <%= module.difficulty %>/10 
+                    </p>
+                </div>
+              </div>
             
             
         </section>
+  
 
-        <iframe src=" <%= module.video %>" frameborder="0"></iframe>
-</main>
-
+    
 </body>
 </html>
 
