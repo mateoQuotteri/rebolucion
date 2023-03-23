@@ -33,17 +33,18 @@
             <div class="video-container">
                 <iframe src="<%= module.video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div> 
-            <div class="false-box-of-module-detail background-light-color-box-from-behind">
-                <div class="background-light-color  div-inside-of-moduleDetail">
-                    <p class="lightblue short-description">
-                        <%= module.shortDescription %> 
-                    </p>
+            <div class="description-container">
+                <div class="background-orange or-bar"></div>
+                <p class="lightblue short-description">
+                    <%= module.shortDescription %> 
+                </p>
+                <div class="difficulty-container">
                     <p class="lightblue difficulty">
                         Dificultad: 
                         <%= module.difficulty %>/10 
                     </p>
                 </div>
-              </div>
+                </div>
             
             
         </section>
