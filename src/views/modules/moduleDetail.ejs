@@ -2,24 +2,54 @@
 <html lang="en">
 <head>
     <%-include ("../partials/head") %> 
-    <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/aviso.css">
+    <link rel="stylesheet" href="/styles/header2.css">
 </head>
-<body class="">
-    <main>
-    <section style="display: block;" >
-        <h1 style="display: block;">El modulo que has seleccionado es el <%= module.title %> </h1>
-
-        <br>
-
-        <h4 style="display: block;"> Su descripcion es:</h4>
-        <h5 style="display: block;" > <%= module.shortDescription %> </h5>
+<body class="background-blue">
+    <header>
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="http://localhost:3000/module">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
     
-        <h3>Sus unidades son : </h3>
-        <h1><%= module.unitss.title %>  </h1>
-        <p style="display: block;">
-            <%= module.unitss.description %>
-        </p>
-    </section>
+    <main>
+        <section class="big-container">
+            <div class="title-container">
+                <div class="background-orange or-bar"></div>
+                <h1 class="lightblue"> <%= module.title %></h1>
+                </div>
+        </article>
+        </section>
+
+        <section class="principal-section">  
+            
+            
+        </section>
+
+        <iframe src=" <%= module.video %>" frameborder="0"></iframe>
 </main>
+
 </body>
 </html>
+
+<!--<section style="display: block;" >
+    <h1 style="display: block;">El modulo que has seleccionado es el <%= module.title %> </h1>
+
+    <br>
+
+    <h4 style="display: block;"> Su descripcion es:</h4>
+    <h5 style="display: block;" > <%= module.shortDescription %> </h5>
+
+    <h3>Sus unidades son : </h3>
+    <h1><%= module.unitss.title %>  </h1>
+    <p style="display: block;">
+        <%= module.unitss.description %>
+    </p>
+</section>-->
