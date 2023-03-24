@@ -39,7 +39,8 @@
             <input class="login-input phoneNumber" id="phone"type="string" name="phone"
              placeholder="Telefono"
              value="<%= locals.old && old.phone %>" >
-             <span class="error" id="error"></span>
+            
+             
           
 
             
@@ -66,72 +67,95 @@
             <!--MOSTRAR MSJ SI HAY ERRORES-->
 
             <% if (locals.errors && errors.email) { %>
+                <div class="error-container background-button-error">
                 <p class="error orange"  >
                     <%= errors.email.msg %>
                 </p>
+                </div>
                 <% } %>
                 
             <% if (locals.errors && errors.email) { %>
+                <div class="error-container background-button-error">
                     <p class="error orange"  >
                         <%= errors.email.msg %>
                     </p>
+                </div>
                     <% } %>
 
            <% if (locals.errors && errors.email) { %>
+            <div class="error-container background-button-error">
                         <p class="error orange"  >
                             <%= errors.email.msg %>
                         </p>
+                    </div>
                         <% } %>
            <% if (locals.errors && errors.name) { %>
+            <div class="error-container background-button-error">
                             <p class="error orange"  >
                                 <%= errors.name.msg %>
                             </p>
+                        </div>
                             <% } %>
            <% if (locals.errors && errors.lastname) { %>
+            <div class="error-container background-button-error">
                                 <p class="error orange"  >
                                     <%= errors.lastname.msg %>
                                 </p>
+                            </div>
                                 <% } %>
 
            <% if (locals.errors && errors.phone) { %>
+            <div class="error-container background-button-error">
                                     <p class="error orange"  >
                                         <%= errors.phone.msg %>
                                     </p>
+                                </div>
                                     <% } %>
 
            <% if (locals.errors && errors.country) { %>
+            <div class="error-container background-button-error">
                                         <p class="error orange"  >
                                             <%= errors.country.msg %>
                                         </p>
+                                    </div>
                                         <% } %>
 
            <% if (locals.errors && errors.state) { %>
+            <div class="error-container background-button-error">
                                             <p class="error orange"  >
                                                 <%= errors.state.msg %>
                                             </p>
+                                        </div>
                                             <% } %>
 
            <% if (locals.errors && errors.city) { %>
+            <div class="error-container background-button-error">
                                                 <p class="error orange"  >
                                                     <%= errors.city.msg %>
                                                 </p>
+            </div>
                                                 <% } %>
 
            <% if (locals.errors && errors.password) { %>
+            <div class="error-container background-button-error">
                                                     <p class="error orange"  >
                                                         <%= errors.password.msg %>
                                                     </p>
+                                                </div>
                                                     <% } %>
            <% if (locals.errors && errors.rePassword) { %>
+            <div class="error-container background-button-error">
                                                         <p class="error orange"  >
                                                             <%= errors.rePassword.msg %>
                                                         </p>
+                                                    </div>
                                                         <% } %>
 
                                                         <% if (locals.reEmailError) { %>
-
+                                                            <div class="error-container background-button-error">
                                                             <p class="orange error"><%= locals.reEmailError.msg %>
                                                             </p>
+                                                        </div>
                                                           <% } %>
 
 

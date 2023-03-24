@@ -88,6 +88,7 @@ main{
   }
  
   .btn-container {
+   margin-top: .6em;
     width: 100%;
     display: flex;
     justify-content: end;
@@ -104,11 +105,21 @@ main{
    font-size: 1.3em;
       
   }
+  .error-container{
+   padding: .3em .3em .3em .3em;
+   display: flex;
+   justify-content: flex-end;
+   border-radius: .8em;
+   width: 100%;
+   margin-bottom: .8em;
+ }
   .error{
    font-weight: bolder;
    margin: 0px;
-   padding: 0px;
+   padding: .5em .5em .5em .1em;
    font-size: 10px;
+   text-align: left;
+   width: 100%;
  }
  
  @media(min-width: 480px){
@@ -126,11 +137,8 @@ main{
       height: 60%;
       width: 3%;
   }
-  .error{
-   font-size: 16px;
-   text-align: start;
+
    
-}
  @media(min-width: 560px){
    .imagen-register{
       width: 35%;
