@@ -12,7 +12,7 @@ module.exports = {
             icon : "fa-solid fa-cubes",
            },
            {
-            name: "Contartos inteligentes",
+            name: "Contratos inteligentes",
             image: "contratoCard.png",
             icon : "fa-solid fa-file-contract"
            },
