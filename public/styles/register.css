@@ -115,7 +115,6 @@ main{
  }
   .error{
    font-weight: bolder;
-   margin: 0px;
    padding: .5em .5em .5em .1em;
    font-size: 10px;
    text-align: left;

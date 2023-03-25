@@ -43,7 +43,7 @@ main{
 }
 
 .false-box{
-    height: 50%;
+    height: 60%;
     width: 80%;
     position: relative;
  }
@@ -52,15 +52,15 @@ form{
    width: 100%;
    display: flex;
    flex-direction: row;
-   justify-content: center;
-   align-items: center;
+   justify-content: flex-start;
+   align-items: flex-start;
    flex-wrap: wrap;
    flex-basis: 100%;
    padding: 2em;
    position: absolute;
    left: 8px;
    top: 12px;
-   
+   padding-bottom: 3em;
 }
 .login-input{
     outline: none;
@@ -69,6 +69,12 @@ form{
     width: 100%;
  }
 
+ .p-from-login  {
+   text-decoration: none;
+   margin: 0;
+   text-align: center;
+   width: 100%
+}
 .p-from-login a {
     text-decoration: none;
  }
@@ -91,17 +97,18 @@ form{
      
  }
  .error-container{
-   padding: .3em .3em .3em .3em;
+   padding: .3em;
    display: flex;
    justify-content: flex-end;
    border-radius: .8em;
    width: 100%;
+   margin-top: .5em;
    margin-bottom: .8em;
  }
   .error{
+     padding-left: .3em;
    font-weight: bolder;
-   margin: 0px;
-   padding: .5em .5em .5em .1em;
+   margin: 0px !important;
    font-size: 10px;
    text-align: left;
    width: 100%;
