@@ -43,8 +43,16 @@ header{
    padding-top: .3em;
    padding-bottom: .3em;
    border-radius: 1.5em;
+   transition: 1000ms all;
 }
 
+.button-with-bg:hover{
+   background-color: white;
+   color: #F09102;
+}
+.button-without-bg:hover{
+   color: #F09102;
+}
 @media(min-width: 410px){
    .header-btn-container{
       width: 45%;   
