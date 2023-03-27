@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/styles/aviso.css">
     <link rel="stylesheet" href="/styles/header2.css">
     <link rel="stylesheet" href="/styles/moduleDetail.css">
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 <body class="background-blue">
     <header>
@@ -35,18 +36,45 @@
             </div> 
             <div class="description-container">
                 <div class="background-orange or-bar"></div>
-                <p class="lightblue short-description">
+                
+                
+                <div class="description-and-difficulty-container">
+                <div class="description-container">
+                    <p class="lightblue short-description">
                     <%= module.shortDescription %> 
                 </p>
+            </div>
                 <div class="difficulty-container">
                     <p class="lightblue difficulty">
                         Dificultad: 
                         <%= module.difficulty %>/10 
                     </p>
                 </div>
+            </div>
                 </div>
             
             
+        </section>
+        <section class="principal-section">
+            <h2 class="lightblue ">
+              Unidades:
+            </h2>
+  
+  
+            <section class="sub-section">
+            <% module.unitss.forEach(unit => {%>
+              <div class="false-box background-light-color-box-from-behind">
+                <div class="background-light-color  div-inside">
+                  <h6 class="white">
+                    <%= unit.title %>
+                  </h6>
+                </div>
+              </div>
+          <% }); %>
+            
+        </section>
+    
+          </section>
         </section>
   
 
