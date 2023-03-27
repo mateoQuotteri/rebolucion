@@ -21,5 +21,5 @@ productController.createModule)
 
 
 
-router.get("/:id" ,  productController.showModuleDetail)
+router.get("/:id" , authMiddleware , productController.showModuleDetail)
 module.exports = router

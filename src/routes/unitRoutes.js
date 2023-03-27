@@ -10,10 +10,10 @@ router.get("/", authMiddleware ,unitController.showAllUnit)
 /*router.get("/adminpanel", mainController.admin)*/
 
 router.get("/create",adminMiddleware, unitController.showCreateUnit)
-router.post("/create", unitValidation ,unitController.createUnit)
+router.post("/create", adminMiddleware ,unitValidation ,unitController.createUnit)
 
 
-router.get("/:id",  unitController.showUnitDetail)
+router.get("/:id", authMiddleware  ,unitController.showUnitDetail)
 
 
 
