@@ -51,11 +51,13 @@ module.exports = {
             raw : true,
             nest : true
         })
-       
+        const unitsOfModule = await db.Units.findAll({
+            where: {id_modulo: idSearched}
+            })
 
         if (module) {
             res.render("modules/moduleDetail", {
-               module 
+               module , unitsOfModule
             })
         } else {
             res.render("not-found")
