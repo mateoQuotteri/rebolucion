@@ -1,12 +1,12 @@
 const db = require("../database/models")
 
 // Definir la función en tu controlador
-function verificarEmail(req, res, next) {
+async function verificarEmail(req, res, next) {
   const email = req.body.email; // Obtener el correo electrónico del req body
 
   // Buscar el correo electrónico en la base de datos
-  const user = db.Users.findOne({ where: { email: email } })
-
+  const user = await db.Users.findOne({ where: { email: email } })
+  console.log(user);
   if (user) {
     res.locals.reEmailError = {
         msg :'El correo electrónico ya está registrado.'
