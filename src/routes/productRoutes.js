@@ -14,12 +14,18 @@ router.get("/", authMiddleware ,productController.index);
 
 router.get("/createmodule", adminMiddleware, productController.showCreateModule);
 
+
+
 router.post("/createmodule",
 fileUpload.single("image"), 
 moduleValidator,
 productController.createModule)
 
+router.get("/showmodulestoedit", adminMiddleware, productController.showModulesToEdit);
 
-
+router.get("/editmodule/:id", adminMiddleware, productController.showEditModule);
+/*
+router.put("/editmodule", adminMiddleware, productController.editModule);
+*/
 router.get("/:id" , authMiddleware , productController.showModuleDetail)
 module.exports = router

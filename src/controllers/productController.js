@@ -64,4 +64,25 @@ module.exports = {
         }
     },
 
+    showModulesToEdit :  (req,res)=>{
+        db.Modules.findAll().then((modules) => {
+            res.render("modules/showModulesToEdit", { modules })
+        })
+    },
+
+    showEditModule : async (req,res)=>{
+        const moduleToEditId = req.params.id
+
+
+
+        const moduleToEdit = await  db.Modules.findOne({ where: { id: moduleToEditId } })
+        console.log(moduleToEdit);
+        if (moduleToEdit) {
+         res.render("modules/editModule", {
+            module : moduleToEdit
+         })
+     }
+    
+    },
+
 }
