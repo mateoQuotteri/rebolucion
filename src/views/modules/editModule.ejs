@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%-include ("../partials/head") %> 
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
 </head>
-<body>
-    <h1>Estas editando el modulo <%= module.title %></h1>
-    <h2>cuyo id es  <%= module.id %></h2>
+<body class="">
+    <main>
+    <section class="big-container bg-color-blue-dark">
+        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
+        <h2  class="color-or">Crea un nuevo modulo</h2>
+        <form  action="/module/editmodule/:id?_method=PUT" method="POST" class="form" id="formulario" 
+        enctype="multipart/form-data">
+
+        <input type="number"  class="input-from-register" 
+        placeholder="ID del modulo (<%= module.id %>)"  id="id" name="id"
+        value="<%= module.id %>" disabled >
+
+
+        <input type="text"  class="input-from-register" 
+        placeholder="Titulo del modulo (<%= module.title %>)"  id="title" name="title"
+        value="<%= module.title %>" >
+        <% if (locals.errors && errors.title) { %>
+            <p style="color: white">
+                <%= errors.title.msg %>
+            </p>
+            <% } %>
+
+        <input type="text"  class="input-from-register" 
+        placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription"
+        value="<%= module.shortDescription %>" >
+        <% if (locals.errors && errors.shortDescription) { %>
+            <p style="color: white">
+                <%= errors.shortDescription.msg %>
+            </p>
+            <% } %>
+
+        <input type="number"  class="input-from-register" 
+        placeholder="Dificultad del 1 al 10 (<%= module.difficulty %>)"  id="difficulty" name="difficulty"
+        value="<%= module.difficulty %>" >
+        <% if (locals.errors && errors.difficulty) { %>
+            <p style="color: white">
+                <%= errors.difficulty.msg %>
+            </p>
+            <% } %>
+
+        <input type="number"  class="input-from-register" 
+        placeholder="Cantidad de unidades (<%= module.units %>)"  id="units" name="units"
+        value="<%= module.units %>" >
+        <% if (locals.errors && errors.units) { %>
+            <p style="color: white">
+                <%= errors.units.msg %>
+            </p>
+            <% } %>
+
+        <input type="text"  class="input-from-register" 
+        placeholder="Video"  id="video" name="video"
+        value="<%= module.video %>" >
+        <% if (locals.errors && errors.video) { %>
+            <p style="color: white">
+                <%= errors.video.msg %>
+            </p>
+            <% } %>
+
+        <input type="file"  class="input-from-register" 
+        placeholder="Imagen del modulo"  id="image" name="image" value="module.image">
+           
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Editar modulo</button>
+        </form>
+        
+    </section>
+</main>
 </body>
 </html>

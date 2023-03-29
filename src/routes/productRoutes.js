@@ -24,8 +24,8 @@ productController.createModule)
 router.get("/showmodulestoedit", adminMiddleware, productController.showModulesToEdit);
 
 router.get("/editmodule/:id", adminMiddleware, productController.showEditModule);
-/*
-router.put("/editmodule", adminMiddleware, productController.editModule);
-*/
+
+router.put("/editmodule/:id", adminMiddleware, productController.editModule);
+
 router.get("/:id" , authMiddleware , productController.showModuleDetail)
 module.exports = router

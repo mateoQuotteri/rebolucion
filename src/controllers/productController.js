@@ -85,4 +85,30 @@ module.exports = {
     
     },
 
+    editModule : async (req,res)=>{
+        const moduleToEditId = req.body.id
+        console.log(moduleToEditId);
+
+        db.Modules.update(
+            {
+               
+                title: req.body.title,
+                units : req.body.units,
+                shortDescription : req.body.shortDescription,
+                difficulty : req.body.difficulty,
+                video : req.body.video,
+                image :req.body.image,
+
+
+            },
+            {
+                where: { id: moduleToEditId },
+            }
+        ).then((module) => {
+            res.redirect("/module/editmodule/" + moduleToEditId)
+        });
+    
+    
+    }
+
 }
