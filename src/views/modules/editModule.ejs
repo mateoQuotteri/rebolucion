@@ -9,12 +9,13 @@
     <section class="big-container bg-color-blue-dark">
         <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
         <h2  class="color-or">Crea un nuevo modulo</h2>
-        <form  action="/module/editmodule/:id?_method=PUT" method="POST" class="form" id="formulario" 
-        enctype="multipart/form-data">
+        <form  action="/module/editmodule/<%=module.id%>?_method=PUT" method="POST" 
+            class="form" id="formulario" 
+        enctype="">
 
         <input type="number"  class="input-from-register" 
         placeholder="ID del modulo (<%= module.id %>)"  id="id" name="id"
-        value="<%= module.id %>" disabled >
+        value="<%= module.id %>" readonly >
 
 
         <input type="text"  class="input-from-register" 
@@ -63,7 +64,7 @@
             <% } %>
 
         <input type="file"  class="input-from-register" 
-        placeholder="Imagen del modulo"  id="image" name="image" value="module.image">
+        placeholder="Imagen del modulo"  id="image" name="image" value="<%= module.image %>">
            
             <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Editar modulo</button>
         </form>

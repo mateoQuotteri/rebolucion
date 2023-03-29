@@ -86,26 +86,20 @@ module.exports = {
     },
 
     editModule : async (req,res)=>{
-        const moduleToEditId = req.body.id
-        console.log(moduleToEditId);
 
+   
+        const moduleToEditId = req.params.id
+        console.log(JSON.stringify(req.body));
         db.Modules.update(
             {
-               
-                title: req.body.title,
-                units : req.body.units,
-                shortDescription : req.body.shortDescription,
-                difficulty : req.body.difficulty,
-                video : req.body.video,
-                image :req.body.image,
-
-
+               ...req.body
             },
             {
-                where: { id: moduleToEditId },
+                where: {id : moduleToEditId },
             }
         ).then((module) => {
-            res.redirect("/module/editmodule/" + moduleToEditId)
+            console.log("Done");
+            res.redirect("/module/showmodulestoedit/")
         });
     
     
