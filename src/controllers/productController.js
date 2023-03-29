@@ -89,10 +89,18 @@ module.exports = {
 
    
         const moduleToEditId = req.params.id
-        console.log(JSON.stringify(req.body));
+        
         db.Modules.update(
             {
-               ...req.body
+               
+                title: req.body.title,
+                units : req.body.units,
+                shortDescription : req.body.shortDescription,
+                difficulty : req.body.difficulty,
+                video : req.body.video,
+                image :req.body.newImage,
+
+
             },
             {
                 where: {id : moduleToEditId },

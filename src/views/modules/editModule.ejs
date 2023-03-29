@@ -11,7 +11,7 @@
         <h2  class="color-or">Crea un nuevo modulo</h2>
         <form  action="/module/editmodule/<%=module.id%>?_method=PUT" method="POST" 
             class="form" id="formulario" 
-        enctype="">
+        enctype="multipart/form-data">
 
         <input type="number"  class="input-from-register" 
         placeholder="ID del modulo (<%= module.id %>)"  id="id" name="id"
@@ -64,7 +64,7 @@
             <% } %>
 
         <input type="file"  class="input-from-register" 
-        placeholder="Imagen del modulo"  id="image" name="image" value="<%= module.image %>">
+        placeholder="Imagen del modulo"  id="image" name="newImage" value="<%= module.image %>">
            
             <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Editar modulo</button>
         </form>
