@@ -66,5 +66,39 @@ module.exports = {
             res.render("unit/showUnitsToEdit", { units })
         })
     },
+    showEditUnit : async (req,res)=>{
+        const unitToEditID = req.params.id
+
+
+
+        const unitToEdit = await  db.Units.findOne({ where: { id: unitToEditID } })
+        console.log(unitToEdit);
+        if (unitToEdit) {
+         res.render("unit/editUnit", {
+            unit : unitToEdit
+         })
+     }
+    
+    },
+    editUnit : async (req,res)=>{
+
+   
+        const unitToEditId = req.params.id
+  
+        
+        db.Units.update(
+            {
+                ...req.body
+                },
+            {
+                where: {id : unitToEditId },
+            }
+        ).then((unit) => {
+            console.log("Done");
+            res.redirect("/unit/showunitstoedit/")
+        });
+    
+    
+    },
 
 }

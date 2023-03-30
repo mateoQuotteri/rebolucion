@@ -14,7 +14,11 @@ router.post("/create", adminMiddleware ,unitValidation ,unitController.createUni
 
 
 router.get("/showunitstoedit", adminMiddleware, unitController.showUnitsToEdit);
+router.get("/editunit/:id", adminMiddleware, unitController.showEditUnit);
 
+router.put("/editunit/:id",  
+ unitValidation,
+ unitController.editUnit);
 
 router.get("/:id", authMiddleware  ,unitController.showUnitDetail)
 

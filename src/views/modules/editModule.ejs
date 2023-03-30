@@ -13,11 +13,13 @@
             class="form" id="formulario" 
         enctype="multipart/form-data">
 
+        <label for="id">ID del modulo:</label>
+
         <input type="number"  class="input-from-register" 
         placeholder="ID del modulo (<%= module.id %>)"  id="id" name="id"
         value="<%= module.id %>" readonly >
 
-
+        <label for="title">Titulo del modulo:</label>
         <input type="text"  class="input-from-register" 
         placeholder="Titulo del modulo (<%= module.title %>)"  id="title" name="title"
         value="<%= module.title %>" >
@@ -27,6 +29,7 @@
             </p>
             <% } %>
 
+            <label for="shortDescription">Descripcion del modulo:</label>
         <input type="text"  class="input-from-register" 
         placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription"
         value="<%= module.shortDescription %>" >
@@ -36,6 +39,8 @@
             </p>
             <% } %>
 
+
+            <label for="difficulty">Dificultad del modulo:</label>
         <input type="number"  class="input-from-register" 
         placeholder="Dificultad del 1 al 10 (<%= module.difficulty %>)"  id="difficulty" name="difficulty"
         value="<%= module.difficulty %>" >
@@ -44,6 +49,8 @@
                 <%= errors.difficulty.msg %>
             </p>
             <% } %>
+
+            <label for="units">Cantidad de unidades del modulo:</label>
 
         <input type="number"  class="input-from-register" 
         placeholder="Cantidad de unidades (<%= module.units %>)"  id="units" name="units"
@@ -54,6 +61,8 @@
             </p>
             <% } %>
 
+
+            <label for="video">Video del modulo:</label>
         <input type="text"  class="input-from-register" 
         placeholder="Video"  id="video" name="video"
         value="<%= module.video %>" >
@@ -63,6 +72,7 @@
             </p>
             <% } %>
 
+            <label for="image">Imagen del modulo:</label>
         <input type="file"  class="input-from-register" 
         placeholder="Imagen del modulo"  id="image" name="newImage" value="<%= module.image %>">
            

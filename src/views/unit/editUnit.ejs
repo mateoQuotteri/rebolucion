@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="">
+    <main>
+    <section class="big-container bg-color-blue-dark">
+        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
+        <h2  class="color-or">Edita el modulo</h2>
+        <form  action="/unit/editunit/<%=unit.id%>?_method=PUT" method="POST" 
+            class="form" id="formulario" 
+        enctype="">
+
+        <label for="id">ID de la unidad:</label>
+        <input type="number"  class="input-from-register" 
+        placeholder="ID de la unidad (<%= unit.id %>)"  id="id" name="id"
+        value="<%= unit.id %>" readonly >
+
+<label for="title">Titulo de la unidad</label>
+        <input type="text"  class="input-from-register" 
+        placeholder="Titulo de la unidad (<%= unit.title %>)"  id="title" name="title"
+        value="<%= unit.title %>" >
+        <% if (locals.errors && errors.title) { %>
+            <p style="color: white">
+                <%= errors.title.msg %>
+            </p>
+            <% } %>
+
+
+        <label for="description">Descripcion de la unidad</label>
+        <input type="text"  class="input-from-register" 
+        placeholder="Descripcion de la unidad"  id="description" name="description"
+        value="<%= unit.description %>" >
+        <% if (locals.errors && errors.description) { %>
+            <p style="color: white">
+                <%= errors.description.msg %>
+            </p>
+            <% } %>
+
+            <label for="video">Video de la unidad</label>
+            <input type="text"  class="input-from-register" 
+            placeholder="Video de la unidad"  id="video" name="video"
+            value="<%= unit.video %>" >
+            <% if (locals.errors && errors.video) { %>
+                <p style="color: white">
+                    <%= errors.video.msg %>
+                </p>
+                <% } %>
+
+       
+                <label for="id_modulo">Id del modulo al que pertenece la unidad:</label>
+                <input type="number"  class="input-from-register" 
+                placeholder="Id del modulo al que pertenece la unidad"  id="id_modulo" name="id_modulo"
+                value="<%= unit.id_modulo %>" >
+                <% if (locals.errors && errors.id_modulo) { %>
+                    <p style="color: white">
+                        <%= errors.id_modulo.msg %>
+                    </p>
+                    <% } %>
+           
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Editar modulo</button>
+        </form>
+        
+    </section>
+</main>
+</body>
+</html>
