@@ -61,5 +61,10 @@ module.exports = {
             res.render("not-found")
         }
     },
+    showUnitsToEdit :  (req,res)=>{
+        db.Units.findAll().then((units) => {
+            res.render("unit/showUnitsToEdit", { units })
+        })
+    },
 
 }
