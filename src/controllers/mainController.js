@@ -39,7 +39,9 @@ module.exports = {
 },
 aviso : (req,res)=>{
     res.render("aviso")
-}
-
+},
+showAdminPanel : (req,res)=>{
+    res.render("adminPanel")
+},
 
 }
