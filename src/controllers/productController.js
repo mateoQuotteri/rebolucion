@@ -113,7 +113,7 @@ module.exports = {
     
     },
 
-    showModulesTodelete :  (req,res)=>{
+    showModulesToDelete :  (req,res)=>{
         db.Modules.findAll().then((modules) => {
             res.render("modules/showModulesToDelete", { modules })
         })
