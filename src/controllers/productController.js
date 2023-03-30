@@ -89,6 +89,7 @@ module.exports = {
 
    
         const moduleToEditId = req.params.id
+        console.log("Aqui esta la nueva imagen"+req.file.filename);
         
         db.Modules.update(
             {
@@ -98,7 +99,7 @@ module.exports = {
                 shortDescription : req.body.shortDescription,
                 difficulty : req.body.difficulty,
                 video : req.body.video,
-                image :req.body.newImage,
+                image :req.file.filename,
 
 
             },
