@@ -28,5 +28,11 @@ router.get("/showmodulestoedit", adminMiddleware, productController.showModulesT
 
 router.use("/editmodule/", editionOfModulesRoutes);
 
+
+router.get("/showmodulestodelete" , adminMiddleware,productController.showModulesToDelete)
+router.get("/deletemodule/:id" , adminMiddleware, productController.showDeleteModule)
+router.delete("/deletemodule/:id" , adminMiddleware, productController.deleteModule)
+
+
 router.get("/:id" , authMiddleware , productController.showModuleDetail)
 module.exports = router

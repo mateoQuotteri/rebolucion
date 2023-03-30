@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="">
+    <main>
+    <section class="big-container bg-color-blue-dark">
+        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
+        <h2  class="color-or">Elimina un nuevo modulo</h2>
+        <form  action="/module/deletemodule/<%=module.id%>?_method=DELETE" method="POST" 
+            class="form" id="formulario" 
+        enctype="">
+        <h4>El modulo que eliminaras es <%=module.title%>,  cuyo ID es <%=module.id%></h4>       
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Eliminar modulo</button>
+        </form>
+        
+    </section>
+</main>
+</body>
+</html>

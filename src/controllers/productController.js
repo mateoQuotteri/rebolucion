@@ -111,6 +111,45 @@ module.exports = {
         });
     
     
-    }
+    },
+
+    showModulesTodelete :  (req,res)=>{
+        db.Modules.findAll().then((modules) => {
+            res.render("modules/showModulesToDelete", { modules })
+        })
+    },
+
+    showDeleteModule : async (req,res)=>{
+        const moduleToEditId = req.params.id
+
+
+
+        const moduleToEdit = await  db.Modules.findOne({ where: { id: moduleToEditId } })
+        console.log(moduleToEdit);
+        if (moduleToEdit) {
+         res.render("modules/deleteModule", {
+            module : moduleToEdit
+         })
+     }
+     
+    
+    },
+    deleteModule : async (req,res)=>{
+
+   
+        const moduleToDeleteId = req.params.id
+
+
+        db.Modules.destroy(
+            {
+                where: {id : moduleToDeleteId },
+            }
+        ).then((module) => {
+            console.log("Done");
+            res.redirect("/module/showmodulestodelete/")
+        });
+    
+    
+    },
 
 }
