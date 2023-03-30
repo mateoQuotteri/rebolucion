@@ -140,7 +140,11 @@ module.exports = {
    
         const moduleToDeleteId = req.params.id
 
-
+        db.Units.destroy(
+            {
+                where: {id_modulo : moduleToDeleteId },
+            }
+        )
         db.Modules.destroy(
             {
                 where: {id : moduleToDeleteId },
