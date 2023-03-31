@@ -90,8 +90,13 @@
   }
 
 @media(min-width: 650px){
+    .principal-section{
+        justify-content: center;
+    }
+    
     .sub-section{
-        justify-content: space-between;/*aca es*/
+        justify-content: center;/*aca es*/
+        gap: 2em;
     }
     
     .false-box{
