@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/aviso.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+</head>
+<body class="background-blue">
+    <header>
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="http://localhost:3000">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
+    
+    <main>
+        <section class="big-container">
+            <div class="title-container">
+                <div class="background-orange or-bar"></div>
+                <h1 class="lightblue">Unidades</h1>
+                </div>
+        </article>
+        </section>
+
+        <section class="principal-section">  
+            <section class="sub-section">
+            <% units.forEach(unit => {%>
+              <div class="false-box background-light-color-box-from-behind">
+                <div class="background-light-color  div-inside">
+                  <h5 class="white">
+                    <%= unit.title %>
+                  </h5>
+                  <h6 class="white">
+                    ID: <%= unit.id %>
+                  </h6>
+                  <a class="background-orange  white" href="http://localhost:3000/unit/deleteunit/<%=unit.id %>">
+                    <button class="background-orange white">
+                        Eliminar
+                    </button>
+                  </a>
+                </div>
+              </div>
+          <% }); %>
+            
+        </section>
+      </section>
+
+
+       
+-->
+</main>
+
+</body>
+</html>

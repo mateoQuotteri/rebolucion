@@ -101,4 +101,43 @@ module.exports = {
     
     },
 
+    showUnitsToDelete :  (req,res)=>{
+        db.Units.findAll().then((units) => {
+            res.render("unit/showUnitsToDelete", { units })
+        })
+    },
+    showDeleteUnit : async (req,res)=>{
+        const unitIDToDelete = req.params.id
+
+
+
+        const unitToDelete = await  db.Units.findOne({ where: { id: unitIDToDelete } })
+        console.log(unitToDelete);
+        if (unitToDelete) {
+         res.render("unit/deleteUnit", {
+            unit : unitToDelete
+         })
+     }
+     
+    
+    },
+    deleteUnit : async (req,res)=>{
+
+   
+        const unitToDeleteId = req.params.id
+
+        db.Units.destroy(
+            {
+                where: {id : unitToDeleteId },
+            }
+        
+        ).then((unit) => {
+            console.log("Done");
+            res.redirect("/unit/showunitstodelete/")
+        });
+    
+    
+    },
+
+
 }
