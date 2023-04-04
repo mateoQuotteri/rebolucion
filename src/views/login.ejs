@@ -23,14 +23,7 @@
              placeholder="Correo electronico"  id="email" name="email"
              value="<%= locals.old && old.email %>"
              >
-             <% if (locals.errors && errors.email) { %>
-                <div class="error-container background-button-error">
-                <p class="error orange">
-                    <%= errors.email.msg %>
-                </p>
-                </div>
-                <% } %>
-
+          
 
 
             <input type="password" required class="login-input background-white" 
@@ -43,6 +36,13 @@
                 </p>
                 </div>
                 <% } %>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="error-container background-button-error">
+                    <p class="error orange">
+                        <%= errors.email.msg %>
+                    </p>
+                    </div>
+                    <% } %>
 
 
             <p class="white p-from-login ">Si aun no tienes cuenta <a 

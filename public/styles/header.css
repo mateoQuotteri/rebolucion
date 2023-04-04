@@ -21,20 +21,19 @@ header{
    height: 100%;
    width: 48%;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
 
+   
 }
-
-
-.header-a{
+.header-btn-container .header-a{
    text-decoration: none;
    font-weight: bold;
    border-radius: 1.5em;
 
 }
 
-.header-a button{
+.header-btn-container .header-a button{
    border: none;
    text-decoration: none;
    outline: none;
@@ -43,16 +42,47 @@ header{
    padding-top: .3em;
    padding-bottom: .3em;
    border-radius: 1.5em;
-   transition: 1000ms all;
+   transition: .9s all;
 }
 
 .button-with-bg:hover{
    background-color: white;
    color: #F09102;
+   animation:jello-diagonal .9s linear both
 }
 .button-without-bg:hover{
    color: #F09102;
+   animation:jello-diagonal .9s linear both
 }
+.header-btn-container-my-profile{
+   height: 100%;
+   width: 25%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding-right: 1em;
+
+}
+.header-btn-container-my-profile a { 
+   text-decoration: none;
+   border-radius: 1.5em;
+}
+.header-btn-container-my-profile a:hover{ 
+   animation:jello-diagonal .9s linear both
+}
+.header-btn-container-my-profile a button{
+   border: none;
+   text-decoration: none;
+   outline: none;
+   padding-right: 1em;
+   padding-left: 1em;
+   padding-top: .5em;
+   padding-bottom: .5em;
+   border-radius: 1.5em;
+   transition: 1000ms all;
+}
+@keyframes jello-diagonal{0%{transform:skew(0deg 0deg)}30%{transform:skew(25deg 25deg)}40%{transform:skew(-15deg,-15deg)}50%{transform:skew(15deg,15deg)}65%{transform:skew(-5deg,-5deg)}75%{transform:skew(5deg,5deg)}100%{transform:skew(0deg 0deg)}}
+
 @media(min-width: 410px){
    .header-btn-container{
       width: 45%;   
@@ -131,6 +161,14 @@ header{
    }
    .img-container{
       width: 30%;
+   }
+   .header-btn-container .header-a button{
+      padding: .7em .7em .7em .7em;
+   
+   }
+
+   .header-btn-container-my-profile .header-a button{
+      padding-right: 1.5em .9em 1.5em .9em;
    }
 }
 @media(min-width: 1000px){
