@@ -86,7 +86,7 @@ display: none;
         width: 75%;
         text-align: center;
         display: block;
-        font-size: 2em;
+        font-size: 2.7em;
         font-weight: bold;
     }
 }
@@ -146,14 +146,15 @@ display: none;
     padding-top: 2em;
     padding-bottom: 2em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;/*aca es*/
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 1em;
 }
 
 .false-box{
-    width: 45%;
-    height: 35%;
+    width: 75%;
+    height: 70%;
     position: relative;
     margin-bottom: 1.5em;
 }
@@ -164,26 +165,60 @@ display: none;
     position: relative;
     top: 10px;
     left: 8px;
-    padding: 1em;
-}
-
-.div-inside i{
-    width: 100%;
-    text-align: center;
-    font-size: 2em;
-    padding-bottom: .5em;
+    padding: 2em 1em 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .div-inside h6{
     width: 100%;
     text-align: center;
-    font-size: .9em;
+    font-size: 1.2em;
     font-weight: bold;
+    margin-top: .9em;
 }
 
-@media(min-width: 768px){
+.div-inside i{
+    width: 100%;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: bold;
+
+}
+
+@media(min-width: 520px){
+    .false-box{
+        width: 45%;
+        
+    }
+    .false-box .div-inside{
+        padding: 1.7em 1em 1.7em 1em;
+    }
+    .div-inside h6{
+        width: 100%;
+        text-align: center;
+        font-size: .9em;
+        font-weight: bold;
+        margin-top: .9em;
+    }
+    
     .div-inside i{
+        width: 100%;
+        text-align: center;
         font-size: 2.2em;
+        font-weight: bold;
+    
+    }
+}
+@media(min-width: 768px){
+    .false-box{
+        width: 35%;
+        height: 70%;
+    }
+    .div-inside i{
+        font-size: 2.4em;
         
     }
     
@@ -260,11 +295,16 @@ display: none;
     align-items: center;
     text-decoration: none;
   }
+  .btn-container a:hover{
+    animation:jello-diagonal .9s linear both
+
+  }
   .btn-container .extra-button{
       border: none;
       background-color: transparent;
   }
 
+  @keyframes jello-diagonal{0%{transform:skew(0deg 0deg)}30%{transform:skew(25deg 25deg)}40%{transform:skew(-15deg,-15deg)}50%{transform:skew(15deg,15deg)}65%{transform:skew(-5deg,-5deg)}75%{transform:skew(5deg,5deg)}100%{transform:skew(0deg 0deg)}}
 
  @media(min-width: 480px){
 

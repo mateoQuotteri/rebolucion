@@ -17,7 +17,7 @@ module.exports = {
             icon : "fa-solid fa-file-contract"
            },
            {
-            name: "Finanzas Descentralizadas",
+            name: "DeFi",
             image: "defiCard.png",
             icon : "fa-solid fa-chart-column",
            },
