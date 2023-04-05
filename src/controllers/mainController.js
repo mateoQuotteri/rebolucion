@@ -1,3 +1,5 @@
+const { validationResult } = require("express-validator")
+
 module.exports = {
     index : (req,res)=>{
 
@@ -43,5 +45,4 @@ aviso : (req,res)=>{
 showAdminPanel : (req,res)=>{
     res.render("adminPanel")
 },
-
 }

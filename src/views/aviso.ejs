@@ -6,10 +6,16 @@
     <title>Aviso</title>
 </head>
 <body class="background-blue">
-    <header>
+   <header>
         <!--INICIO DEL HEADER -->
         <section class="img-container">
             <img src="/images/rebolucionLogoWebHeader.png" alt="">
+        </section>
+
+        <section class="header-btn-container-my-profile" <% if (!locals.loggedUser) { %> style=" display: none;"    <% } %>>
+          <a class="header-a background-orange"href="http://localhost:3000/user/my-profile">
+            <button class="background-orange white button-with-bg"> <i class="fa-solid fa-user"></i></button>
+          </a>
         </section>
     <!--FIN DEL HEADER-->
     </header>
@@ -19,9 +25,9 @@
             <section class="big-container">
                 <div class="title-container">
                     <div class="background-orange or-bar"></div>
-                    <h1 class="lightblue">Aviso</h1>
+                    <h1 class="white">Aviso</h1>
                     </div>
-            </article>
+            
             </section>
             <article class="advice-container">
                 <h3  class="white">Recomendacion:</h3>

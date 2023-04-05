@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/aviso.css">
+    <link rel="stylesheet" href="/styles/userProfile.css">
     <title>Mi perfil</title>
 </head>
-<body>
+<body class="background-blue">
+    <header>
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="http://localhost:3000">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
     <main>
+        <section class="big-container">
+            <div class="title-container">
+                <div class="background-orange or-bar"></div>
+                <h1 class="white">Mi perfil</h1>
+                </div>
+        </section>
     <section>
+
+        <section class="sub-section">
+            
+              <div class="false-box background-light-color-box-from-behind">
+                <div class="background-light-color  div-inside">
+                    <h2 class="white"style="display: block;">Mis datos:</h2>
+                    <h4 class="white"style="display: block;">Email: <%= locals.loggedUser.email  %></h4>
+                  </a>
+                </div>
+              </div>
+            
+        </section>
+        <!--
     <h2 style="display: block;">Mis datos:</h2>
     <h4 style="display: block;">Email: <%= locals.loggedUser.email  %></h4>
     <h4 style="display: block;">Nombre:<%= locals.loggedUser.name  %></h4>
@@ -19,6 +52,8 @@
     <button><a href="/user/my-profile/edit/">Editar datos</a></button>
     <button><a href="/user/my-profile/edit/my-password">Cambiar contraseña</a></button>
     <button><a href="/user/my-profile/logout">Cerrar session</a></button>
+
+    -->
 </section>
 </main>
 </body>
