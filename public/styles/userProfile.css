@@ -99,10 +99,13 @@ margin-bottom: .6em;
     width: 120%;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
 }
 
 .container-ofButtons a{
-    width: 45%;
+    width: 55%;
     text-align: center;
 }
 
@@ -116,32 +119,72 @@ margin-bottom: .6em;
     text-align: center;
     border-radius: 1em;
 }
-@media(min-width: 650px){
-    .principal-section{
-        justify-content: center;
-    }
+
+@media(min-width: 400px){
+  
+}
+
+@media(min-width: 430px){
+   
+}
+@media(min-width: 450px){
     
-    .sub-section{
-        justify-content: center;/*aca es*/
-        gap: 2em;
-    }
-    
+}
+@media(min-width: 520px){
     .false-box{
-        width: 40%;
-        height: 35%;
+        width: 95%;
+        height: 75%;
+    
     }
+}
+
+@media(min-width: 600px){
+    .false-box{
+        width: 100%;    
+    }
+    .false-box .div-inside{
+        padding: 3em 6em 8em 6em;
+    }
+    .div-inside label{
+        width: 140%;
+
+    }
+    .div-inside input{
+        width: 140%;
+    }
+    .container-ofButtons{
+        flex-direction: row;
+        align-items: center;
+        gap: .5em;
+    }
+    
+    .container-ofButtons a{
+        width: 40%;
+    }
+    .container-ofButtons a button{
+      height: 6em;
+    }
+
+}
+@media(min-width: 650px){
   
 }
 
 @media(min-width: 768px){
-
+    .false-box .div-inside{
+        padding: 3em 9em 8em 9em;
+    }
+    .container-ofButtons{
+        margin-top: 3em;
+    }
+    
 }
 
 @media(min-width: 1000px){
-    .false-box{
-        width: 30%;
-    
-    }}
+    .false-box .div-inside{
+        padding: 2em 10em 9em 10em;
+    }
+}
 
 
 @media(min-width: 1024px){
