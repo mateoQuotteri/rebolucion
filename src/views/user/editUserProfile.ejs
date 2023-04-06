@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <title>Edita tu perfil</title>
+    <%-include ("../partials/head") %> 
+
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+    <script src="/js/userRegister.js"></script>
 </head>
-<body>
-    <main>
-        <section>
-    <h2 style="display: block;">Edita tus datos:</h2>
 
-    <form action="/user/my-profile/edit?_method=PUT" method="POST">
-        <label for="">Email</label>
-        <input name="email" type="text" value="<%= user.email%>">
-        <label for="">Nombre</label>
-        <input name="name"type="text" value="<%= user.name%>">
-        <label for="">Apellido</label>
-        <input name="lastname"type="text" value="<%= user.lastname%>">
-        <label for="">Celular</label>
-        <input name="phone"type="text" value="<%= user.phone%>">
-        <label for="">Pais</label>
-        <input name="country"type="text" value="<%= user.country%>">
+    <body class="background-blue">
+        <main >
+            <section class="big-container bg-color-blue-dark ">
+                <div class="false-box background-light-color-box-from-behind">
+                    <form action="/user/my-profile/edit?_method=PUT" method="POST" class="form background-light-color"id="formulario" 
+                    enctype="">
+                    <h1 class="orange">¡Edita tus datos!</h1>
+                
+                <label class="white"  for="email">Email:</label>
+                <input type="email" required class="login-input" 
+               id="email" name="email"
+                value="<%= user.email %>" >
+                
+                <label class="white"  for="name">Nombre:</label>
+                <input type="text" required class="login-input" 
+                  id="name" name="name"
+                value="<%= user.name %>" >
 
-        <label for="">Estado o provincia</label>
-        <input name="state"type="text" value="<%= user.state%>">
-        <label for="">Ciudad</label>
-        <input name="city"type="text" value="<%= user.city%>">
+                <label class="white" for="lastname">Apellido:</label>
+                <input type="text" required class="login-input" 
+                  id="lastname" name="lastname"
+                value="<%= user.lastname %>" >
 
-        <label for="">Password</label>
-        <input name="password" type="text" value="<%= user.password%>">
+                <label class="white" for="phone">Celular:</label>
+                <input type="phone" required class="login-input" 
+                 id="phone" name="phone"
+                value="<%= user.phone %>" >
 
-        <input type="submit" value="Editar">
-    </form>
-</section>
-</main>
-</body>
+                <label class="white" for="country">Pais:</label>
+                <input type="text" required class="login-input" 
+                  id="country" name="country"
+                value="<%= user.country %>" >
+
+                <label class="white" for="state">Estado o Provincia:</label>
+                <input type="text" required class="login-input" 
+                 id="state" name="state"
+                value="<%= user.state %>" >
+
+                <label class="white" for="city">Ciudad:</label>
+                <input type="text" required class="login-input" 
+                  id="city" name="city"
+                value="<%= user.city %>" >
+        
+               
+                    <div class="btn-container">
+                        <input type="submit" 
+                        name="sumbit" class="button white background-orange "id="" 
+                        value="➜">
+                            </div>
+            </form>
+        </div>
+    </section>
+    </main>
+    </body>
+
+  
+
 </html>

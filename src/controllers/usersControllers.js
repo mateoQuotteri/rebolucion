@@ -117,7 +117,6 @@ module.exports = {
             lastname : req.body.lastname,
             email: req.body.email,
             celular: req.body.phone,
-            password: bcrypt.hashSync(req.body.password, 10),
             city : req.body.city,
             state : req.body.state,
             country : req.body.country
