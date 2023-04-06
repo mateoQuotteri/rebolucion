@@ -32,9 +32,44 @@
             
               <div class="false-box background-light-color-box-from-behind">
                 <div class="background-light-color  div-inside">
-                    <h2 class="white"style="display: block;">Mis datos:</h2>
-                    <h4 class="white"style="display: block;">Email: <%= locals.loggedUser.email  %></h4>
-                  </a>
+
+                    <div class="icon-container">
+                        <div class="icon">
+                            <i class=" orange fa-solid fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="name-container">
+                        <h3 class="white">¡Hola, <%= locals.loggedUser.name  %>!</h3>
+                    </div>
+                      <label class="white"for="">Nombre:</label>
+                    <input type="text" readonly value="<%= locals.loggedUser.name  %>">
+
+                    <label class="white"for="">Apellido:</label>
+                    <input type="text" readonly value="<%= locals.loggedUser.lastname  %>">
+
+                    <label class="white"for="">Email:</label>
+                    <input type="text" readonly value="<%= locals.loggedUser.email  %>">
+
+                    <label class="white"for="">País:</label>
+                    <input type="text" readonly value="<%= locals.loggedUser.country  %>">
+
+                    <label class="white"for="">Estado:</label>
+                    <input type="text" readonly value="<%= locals.loggedUser.state  %>">
+                    
+                    <label class="white"for="">Ciudad:</label>
+                    <input type="text" readonly value="<%= locals.loggedUser.city  %>">
+
+
+                    <div class="container-ofButtons">
+                        <a href="http://localhost:3000/user/my-profile/edit">
+                            <button class="background-orange white">Editar datos</button>
+                        </a>
+
+                        <a href="http://localhost:3000/user/my-profile/edit/my-password">
+                            <button class="background-orange white">Cambiar contraseña</button>
+                        </a>
+                    </div>
                 </div>
               </div>
             

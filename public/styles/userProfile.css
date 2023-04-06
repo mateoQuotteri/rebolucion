@@ -30,6 +30,8 @@
     height: 75%;
     position: relative;
     margin-bottom: 1.5em;
+    border-radius: .8em;
+
 }
 
 .false-box .div-inside{
@@ -38,16 +40,82 @@
     position: relative;
     top: 10px;
     left: 8px;
-    padding: 10em 3em 10em 3em;
+    padding: 3em 4em 8em 4em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: .8em;
 }
 
+.div-inside .icon-container{
+    height: 9em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-inside .icon-container .icon{
+    width: 20%;
+    height: 40%;
+    border-radius: 5em;
+    border: .2em solid #F09102;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+}
 
+.icon i {
+    font-size: 3em;
+}
 
+.name-container{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: .6em;
+}
+.name-container h3 {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+.div-inside label{
+    width: 120%;
+    text-align: left;
+}
+.div-inside input{
+    width: 120%;
+    border-radius: .3em;
+    outline: none;
+    margin-bottom: .5em;
+}
 
+.container-ofButtons{
+    margin-top: 1em;
+    width: 120%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-ofButtons a{
+    width: 45%;
+    text-align: center;
+}
+
+.container-ofButtons a button{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: .8em;
+    font-weight: bold;
+    padding: 1em 1.5em 1em 1.5em;
+    text-align: center;
+    border-radius: 1em;
+}
 @media(min-width: 650px){
     .principal-section{
         justify-content: center;
@@ -62,21 +130,11 @@
         width: 40%;
         height: 35%;
     }
-    .div-inside h5{
-        font-size: 1em;
-    }
-    .div-inside h6{
-        font-size: .8em;
-    }
+  
 }
 
 @media(min-width: 768px){
-    .div-inside h5{
-        font-size: 1.2em;
-    }
-    .div-inside h6{
-        font-size: .8em;
-    }
+
 }
 
 @media(min-width: 1000px){
