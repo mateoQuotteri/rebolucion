@@ -114,6 +114,7 @@ main .error-container{
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        padding: 3em;
     }
     .icon-hidden-v2{
         display: none;
