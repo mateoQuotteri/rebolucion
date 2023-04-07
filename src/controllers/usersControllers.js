@@ -168,6 +168,7 @@ module.exports = {
 
             const oldPass = req.body.password;
             const newPass = req.body.newPassword;
+            console.log(newPass);
             const userId = req.session.loggedUser.id;
             const userLogged = await  db.Users.findOne({ where: { id: userId } });
 
