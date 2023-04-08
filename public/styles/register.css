@@ -176,8 +176,10 @@ main{
     }
 
 }
-@media(min-width: 850px){
-
+@media(min-width: 800px){
+   .input-flex-container::placeholder{
+      padding-left: .5em;   
+   }
 
 }
  @media(min-width: 1024px){

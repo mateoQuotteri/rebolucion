@@ -7,6 +7,7 @@ const changePassValidation = require("../validations/changePassValidation")
 const guestMiddleware = require("../middlewares/guestMiddleware")
 const authMiddleware = require("../middlewares/authMiddleware")
 const reEmailMiddleware = require("../middlewares/reEmailMiddleware")
+const editionDataValidation = require("../validations/editionDataValidation")
 
 router.get("/register", guestMiddleware ,userController.register)
 router.post("/register", registerValidation, reEmailMiddleware, userController.createNewUser)
@@ -18,11 +19,11 @@ router.post("/login",  loginValidation ,userController.login)
 router.get("/my-profile", authMiddleware , userController.showMyProfile)
 
 router.get("/my-profile/edit", authMiddleware ,userController.showEditMyProfile)
-router.put("/my-profile/edit", authMiddleware ,userController.editMyProfile)
+router.put("/my-profile/edit", authMiddleware , editionDataValidation ,userController.editMyProfile)
 
 
 router.get("/my-profile/edit/my-password" , authMiddleware, userController.showEditPassword)
-router.put("/my-profile/edit/my-password" , changePassValidation, authMiddleware, userController.editPassword)
+router.put("/my-profile/edit/my-password" , authMiddleware, changePassValidation, userController.editPassword)
 
 router.get("/my-profile/logout", userController.logout)
 
