@@ -107,7 +107,15 @@ module.exports = {
      }
     },
     editMyProfile: (req, res) => {
-       
+        const errors = validationResult(req)
+        console.log(errors)
+       if (!errors.isEmpty()) {
+           res.render("login", {
+               errors: errors.mapped(),
+               old: req.body,
+           })
+           return
+       }
 
 
     db.Users.update(
