@@ -82,7 +82,7 @@ form{
  .btn-container {
    width: 150%;
    display: flex;
-   justify-content: end;
+   justify-content: space-between;
    align-items: center;
    
  }
@@ -96,6 +96,17 @@ form{
       font-size: 1.3em;
      
  }
+ .btn-container i{
+   width: 25%;
+   padding: .6em;
+   cursor: pointer;
+   border-radius: 1.5em;
+   outline: none;
+   border: none;
+   font-size: 1.3em;
+   text-align: center;
+      
+  }
  .error-container{
    padding: .5em .3em .5em .3em;
    display: flex;
