@@ -65,10 +65,13 @@ module.exports = {
             req.session.loggedUser = user;
             res.redirect("/")
             return
+        }else {
+            res.locals.erorrOnRegister = {
+                msg :'Algun dato colocado es incorrecto.'
+            };
+            res.render("login", res.locals.erorrOnRegister)
         }
-        res.render("login", {
-            error: true,
-        })
+
     },
     showMyProfile: (req, res) => { 
        const user =req.session.loggedUser;

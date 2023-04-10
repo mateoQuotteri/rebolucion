@@ -43,6 +43,12 @@
                     </p>
                     </div>
                     <% } %>
+                    <% if (locals.erorrOnRegister) { %>
+                        <div class="error-container background-button-error">
+                        <p class="orange error"><%= locals.erorrOnRegister.msg %>
+                        </p>
+                    </div>
+                      <% } %>
 
 
             <p class="white p-from-login ">Si aun no tienes cuenta <a 
