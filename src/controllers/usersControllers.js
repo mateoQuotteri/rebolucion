@@ -66,10 +66,10 @@ module.exports = {
             res.redirect("/")
             return
         }else {
-            res.locals.erorrOnRegister = {
+            res.locals.erorrOnLogin = {
                 msg :'Algun dato colocado es incorrecto.'
             };
-            res.render("login", res.locals.erorrOnRegister)
+            res.render("login", res.locals.erorrOnLogin)
         }
 
     },
@@ -197,6 +197,11 @@ module.exports = {
             
                     res.redirect("/user/my-profile")
                 });
+            }else {
+                res.locals.errorOnEditPass = {
+                    msg :'La contraseña colocada no coincide con la actual!'
+                };
+                res.render("user/editUserPassword", res.locals.errorOnEditPass)
             }
         
         },
