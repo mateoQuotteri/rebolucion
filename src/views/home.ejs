@@ -25,8 +25,13 @@
 
 
         <section class="header-btn-container-my-profile" <% if (!locals.loggedUser) { %> style=" display: none;"    <% } %>>
-          <a class="header-a background-orange"href="http://localhost:3000/user/my-profile">
+                 
+          <a class="header-a "href="http://localhost:3000/user/my-profile">
             <button class="background-orange white button-with-bg"> <i class="fa-solid fa-user"></i></button>
+          </a>
+
+          <a class="header-a "href="">
+            <button style="background: transparent;" class=" orange button-with-bg"> <i style="background: transparent;" class="fa-brands fa-discord"></i></button>
           </a>
         </section>
     <!--FIN DEL HEADER-->
@@ -132,6 +137,11 @@
         <a href="http://localhost:3000/contact-us">
         <i class="fa-solid fa-envelope"></i>
       </a>
+      </section>
+      <section class="footer-section">
+        <a class="header-a "href="">
+           <i  class="fa-brands fa-discord"></i>
+        </a>
       </section>
     </footer>
 
