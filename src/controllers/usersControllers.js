@@ -91,6 +91,7 @@ module.exports = {
             console.log(error);
             res.send("Nothing had happened") 
       }else{
+        console.log("Destroyed");
         res.redirect("/")
       }
    })

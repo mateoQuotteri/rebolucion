@@ -17,6 +17,7 @@ router.post("/login",  loginValidation ,userController.login)
 
 
 router.get("/my-profile", authMiddleware , userController.showMyProfile)
+router.delete("/my-profile", userController.logout)
 
 router.get("/my-profile/edit", authMiddleware ,userController.showEditMyProfile)
 router.put("/my-profile/edit", authMiddleware , editionDataValidation ,userController.editMyProfile)
@@ -25,7 +26,6 @@ router.put("/my-profile/edit", authMiddleware , editionDataValidation ,userContr
 router.get("/my-profile/edit/my-password" , authMiddleware, userController.showEditPassword)
 router.put("/my-profile/edit/my-password" , authMiddleware, changePassValidation, userController.editPassword)
 
-router.get("/my-profile/logout", userController.logout)
 
 
 
