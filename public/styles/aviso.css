@@ -1,106 +1,80 @@
 main{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    align-content: center;
-    height: 120vh;
-}
-.big-container{
-    width: 50%;
+    margin-top: 3em;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 2em;
+    flex-wrap: wrap;
+    align-items:start
+    ;
 }
 
-.big-container .title-container{
+main .big-container{
     width: 100%;
-    height: 100%;
+    height: 5%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.title-container .or-bar{
-    width: 2%;
-    height: 100%;
-    border-radius: .6em;
+.big-container h1{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
 }
-h1{
-    margin: 0 !important;
-    padding-left: .2em;
-}
-
 
 .advice-container{
-    margin-top: 1em;
-    padding: 1em;
-    width: 100%;
+    padding: 0em 2em 1em 2em;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
+    height: 60%;
 }
 
 .advice-container h3{
     width: 100%;
-    font-weight: bold;
     text-align: left;
-    padding: .5em;
+    margin-bottom: 1em;
 }
-.advice-container p{
-    text-align: left;
-    padding: .5em;
+.advice-container .legal{
+    margin-top: 1em;
 }
+
 @media(min-width: 400px){
-    main  {
-       height: 100vh;
-    }
+    
   }
 
 @media(min-width: 700px){
-
-    .advice-container p{
-        padding: 1em;
+    .advice-container{
+        padding: 0em 3em 1.5em 3em;
+        width: 90%;
+       
     }
-    .big-container{
-        margin-top: 2em;
-}
+   
 }
 
 
 @media(min-width: 600px){
-    main  {
-       height: 85vh;
-    }
+
   }
 
-@media(min-width: 800px){
-    .title-container .or-bar  {
-       width: 1%;
+@media(min-width: 900px){
+    .advice-container{
+        width: 80%;
+       
     }
   }
 
   @media(min-width: 950px){
-    main  {
-        height: 75vh;
-     }
-     .advice-container{
-        padding: 1.5em;
-    }
+    
   }
 
   @media(min-width: 1024px){
-    main  {
-        height: 72vh;
-     }
+   
     
   }
   @media(min-width: 1280px){
-    main  {
-        height: 72vh;
-     }
+   
     
   }
