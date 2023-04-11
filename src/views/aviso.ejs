@@ -3,22 +3,22 @@
 <head>
     <%-include ("./partials/head") %> 
     <link rel="stylesheet" href="/styles/aviso.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+
     <title>Aviso</title>
 </head>
 <body class="background-blue">
-   <header>
-        <!--INICIO DEL HEADER -->
-        <section class="img-container">
-            <img src="/images/rebolucionLogoWebHeader.png" alt="">
-        </section>
-
-        <section class="header-btn-container-my-profile" <% if (!locals.loggedUser) { %> style=" display: none;"    <% } %>>
-          <a class="header-a background-orange"href="http://localhost:3000/user/my-profile">
-            <button class="background-orange white button-with-bg"> <i class="fa-solid fa-user"></i></button>
-          </a>
-        </section>
-    <!--FIN DEL HEADER-->
-    </header>
+  <header>
+    <!--INICIO DEL HEADER -->
+    <section class="button-of-header-container">
+     <a class="background-orange"href="http://localhost:3000">
+        <button class="background-orange white">
+            ←
+        </button>
+     </a>
+    </section>
+<!--FIN DEL HEADER-->
+</header>
 
     <main>
 

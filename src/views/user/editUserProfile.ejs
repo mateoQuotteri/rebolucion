@@ -60,29 +60,31 @@
                         <%= errors.name.msg %>
                     </p>
                     <% } %>
-                    <% if (locals.errors && errors.lastname { %>
+
+                    
+                    <% if(locals.errors && errors.lastname) { %>
                       <p style="color: red">
                           <%= errors.lastname.msg %>
                       </p>
                       <% } %>
 
-                      <% if (locals.errors && errors.phone { %>
+                      <% if (locals.errors && errors.phone) { %>
                         <p style="color: red">
                             <%= errors.phone.msg %>
                         </p>
                         <% } %>
 
-                        <% if (locals.errors && errors.city { %>
+                        <% if (locals.errors && errors.city) { %>
                           <p style="color: red">
                               <%= errors.city.msg %>
                           </p>
                           <% } %>
-                          <% if (locals.errors && errors.country { %>
+                          <% if (locals.errors && errors.country) { %>
                             <p style="color: red">
                                 <%= errors.country.msg %>
                             </p>
                             <% } %>
-                            <% if (locals.errors && errors.state { %>
+                            <% if (locals.errors && errors.state) { %>
                               <p style="color: red">
                                   <%= errors.state.msg %>
                               </p>
