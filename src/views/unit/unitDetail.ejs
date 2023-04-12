@@ -2,16 +2,36 @@
 <html lang="en">
 <head>
     <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/header2.css">
+    
     <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="/styles/unitDetail.css">
 </head>
-<body class="">
+<body class="background-blue">
+    <header>
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="http://localhost:3000/module">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
 <main>
-    <section style="display: block;" >
+
+    <section class="big-container" >
+        <div class="title-container">
+            <div class="background-orange or-bar"></div>
+            <h1 class="white"><%= unit.title %></h1>
+            </div>
+        <!---
         <h1 style="display: block;">La unidad que has seleccionado es:<%= unit.title %> </h1>
 
         <h1 style="display: block;">Pertenece al modulo: <%= module.title %> </h1>
 
-        <br>
+        <br> -->
     </section>
 </main>
 </body>

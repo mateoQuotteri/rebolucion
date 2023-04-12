@@ -1,0 +1,9 @@
+main{
+    margin-top: 3em;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:start
+    ;
+}
