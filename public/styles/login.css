@@ -34,7 +34,9 @@ main{
     height: 12%;
     margin-bottom: 1.5em;
 }
-
+.title-container h1{
+   font-weight: bold;
+ }
 .big-container .or-bar{
     height: 60%;
     width: 3%;
