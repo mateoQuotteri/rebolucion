@@ -14,3 +14,106 @@ main{
     justify-content: start;
     align-items: center;
 }
+
+.big-container h1{
+    font-weight: bold;
+    text-align: center;
+    width: 75%;
+}
+
+.info-container{
+    margin-top: 2em;
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+}
+
+.info-container .video{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video iframe{
+    width: 90%;
+    height: 85%;
+}
+
+.info{
+    display: flex;
+justify-content: center;
+align-items: space-around;
+flex-wrap:wrap ;
+height: 50%;
+}
+
+
+.info h4{
+    width: 85%;
+    margin: 0;
+}
+
+.info h6{
+    width: 85%;
+    text-align: right;
+}
+
+@media(min-width: 480px){
+    .info-container{
+        height: 60vh;
+    }
+    
+ }
+
+ @media(min-width: 550px){
+    .info-container{
+        height: 65vh;
+    }
+    .info-container .video{
+        height: 60%;
+    }
+    .info{
+    height: 40%;
+    }
+    
+ }
+
+ @media(min-width: 760px){
+    .info-container{
+        height: 70vh;
+    }
+    
+ }
+ @media(min-width: 860px){
+    .info-container{
+        height: 80vh;
+    }
+    
+ }
+
+@media(min-width: 960px){
+   .info-container{
+       height: 85vh;
+   }
+   
+}
+
+@media(min-width: 1060px){
+    .info-container{
+        height: 95vh;
+    }
+    
+ }
+
+ @media(min-width: 1200px){
+    .info-container{
+        height: 100vh;
+    }
+    
+ }
+ 
+ 
+

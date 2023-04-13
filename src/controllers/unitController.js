@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const db = require("../database/models");
 const { validationResult } = require("express-validator")
 
@@ -36,7 +37,7 @@ module.exports = {
             video : newUnit.video,
             id_modulo : newUnit.id_modulo
         })
-            .then((p) => {
+            .then(() => {
                 return res.redirect("/unit")
             })
             .catch((error) => res.send(error))
@@ -93,7 +94,7 @@ module.exports = {
             {
                 where: {id : unitToEditId },
             }
-        ).then((unit) => {
+        ).then(() => {
             console.log("Done");
             res.redirect("/unit/showunitstoedit/")
         });
@@ -131,7 +132,7 @@ module.exports = {
                 where: {id : unitToDeleteId },
             }
         
-        ).then((unit) => {
+        ).then(() => {
             console.log("Done");
             res.redirect("/unit/showunitstodelete/")
         });
