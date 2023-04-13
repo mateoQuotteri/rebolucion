@@ -22,16 +22,22 @@
 <main>
 
     <section class="big-container" >
-        <div class="title-container">
-            <div class="background-orange or-bar"></div>
             <h1 class="white"><%= unit.title %></h1>
-            </div>
-        <!---
-        <h1 style="display: block;">La unidad que has seleccionado es:<%= unit.title %> </h1>
 
-        <h1 style="display: block;">Pertenece al modulo: <%= module.title %> </h1>
 
-        <br> -->
+            <article class="info-container">
+                <iframe src="<%= unit.video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <div class="info">
+                    <h4>
+                        <%= unit.description %>
+                    </h4>
+
+                    <h6>Pertenece al modulo:  <%= module.title %></h6>
+
+
+                </div>
+            </article>
     </section>
 </main>
 </body>
