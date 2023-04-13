@@ -3,8 +3,9 @@
 <head>
     <%-include ("../partials/head") %> 
     <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="/styles/aviso.css">
+    <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/unitDetail.css">
     <link rel="stylesheet" href="/styles/moduleDetail.css">
 </head>
 <body class="background-blue">
@@ -21,59 +22,49 @@
     </header>
     
     <main>
-        <section class="big-container">
-            <div class="title-container">
-                <div class="background-orange or-bar"></div>
-                <h1 class="white title-module"> <%= module.title %></h1>
-                </div>
-        </article>
-        </section>
+        <section class="big-container" >
+            <h1 class="white"><%= module.title %></h1>
 
-        <section class="principal-section-of-module-detail"> 
-            <div class="video-container">
-                <iframe src="<%= module.video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div> 
-            <div class="description-container">
-                <div class="background-orange or-bar"></div>
-                
-                
-                <div class="description-and-difficulty-container">
-                <div class="description-container">
-                    <p class="white short-description">
-                    <%= module.shortDescription %> 
-                </p>
-            </div>
-                <div class="difficulty-container">
-                    <p class="white difficulty">
-                        Dificultad: 
-                        <%= module.difficulty %>/10 
-                    </p>
+
+            <article class="info-container">
+                <div class="video">
+                    <iframe src="<%= module.video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-            </div>
+
+                <div class="info">
+                    <h4  class="white">
+                        <%= module.shortDescription %>
+                    </h4>
+
+                    <h6 class="white">Dificultad:<%= module.difficulty %>/10</h6>
+
+
                 </div>
-            
-            
-        </section>
+            </article>
+    </section>
+      
         <section class="principal-section">  
-            <h3 class="white">Unidades:</h3>
+            <h3 class="white">Sus unidades:</h3>
+
             <section class="sub-section">
-            <% unitsOfModule.forEach(unit => {%>
-              <div class="false-box background-light-color-box-from-behind">
-                <div class="background-light-color  div-inside">
-                   
-                  <h6 class="white">
-                    <%= unit.title %>
-                  </h6>
-                  <a class="background-orange  white" href="http://localhost:3000/unit/<%= unit.id %>">
-                    <button class="background-orange white">
-                        Iniciar
-                    </button>
-                  </a>
-                </div>
-              </div>
-          <% }); %>
-            
-        </section>
+
+           
+                <% unitsOfModule.forEach(unit => {%>
+                  <div class="false-box background-light-color-box-from-behind">
+                    <div class="background-light-color  div-inside">
+                      <h6 class="white">
+                        <%= unit.title %>
+                      </h6>
+                      <a class="background-orange  white" href="http://localhost:3000/unit/<%= unit.id %>">
+                        <button class="background-orange white">
+                            Iniciar
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+              <% }); %>
+                
+            </section>
       </section>
 
     
