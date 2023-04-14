@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 const db = require("../database/models");
 const { validationResult } = require("express-validator")
+const { Op } = require("sequelize");
+
 
 
 module.exports = {
@@ -51,12 +53,21 @@ module.exports = {
        
         const idModuleOfUnit = unit.id_modulo;
 
+        const unitsSimilars = await db.Units.findAll({
+            where: { id_modulo: idModuleOfUnit,
+                id: { [Op.ne]: idSearched}
+
+             },
+        })
+
         const moduleOfUnit =  await db.Modules.findOne({
             where: { id: idModuleOfUnit },
         })
+
+        console.log("Estas son las smilares: " +typeof(unitsSimilars));
        if (unit) {
             res.render("unit/unitDetail", {
-               unit , module: moduleOfUnit
+               unit , module: moduleOfUnit , unitsSimilars
             })
         } else {
             res.render("not-found")

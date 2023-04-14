@@ -3,6 +3,8 @@
 <head>
     <%-include ("../partials/head") %> 
     <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/moduleDetail.css">
     <link rel="stylesheet" href="/styles/unitDetail.css">
 </head>
 <body class="background-blue">
@@ -39,6 +41,30 @@
                 </div>
             </article>
     </section>
+
+    <section class="principal-section">  
+        <h3 class="white">Unidades similares:</h3>
+
+        <section class="sub-section">
+
+       
+            <% unitsSimilars.forEach(unit => {%>
+              <div class="false-box background-light-color-box-from-behind">
+                <div class="background-light-color  div-inside">
+                  <h6 class="white">
+                    <%= unit.title %>
+                  </h6>
+                  <a class="background-orange  white" href="http://localhost:3000/unit/<%= unit.id %>">
+                    <button class="background-orange white">
+                        Iniciar
+                    </button>
+                  </a>
+                </div>
+              </div>
+          <% }); %>
+            
+        </section>
+  </section>
 </main>
 </body>
 </html>
