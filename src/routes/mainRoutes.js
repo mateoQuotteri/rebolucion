@@ -11,4 +11,7 @@ router.get("/aviso", authMiddleware ,mainController.aviso)
 
 router.get("/contact-us", authMiddleware,mainController.contact)
 router.get("/adminpanel", authMiddleware, adminMiddleware, mainController.showAdminPanel)
+
+router.get("/sponsors", authMiddleware, adminMiddleware, mainController.showSponsorsViews)
+
 module.exports = router
