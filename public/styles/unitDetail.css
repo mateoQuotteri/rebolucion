@@ -59,6 +59,8 @@ height: 50%;
 .info h6{
     width: 85%;
     text-align: right;
+    font-size: 1.2em;
+
 }
 .div-inside a {
     width: 45%;
