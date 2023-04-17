@@ -1,9 +1,14 @@
+h1{
+    margin: 0px;
+}
 .title-module {
     text-align: center;
     margin: 0px;
     width: auto;
 }
-
+.big-container{ 
+    width: 100%;
+}
 .principal-section-of-module-detail{ 
     width: 100%;
     height: 60%;
@@ -63,7 +68,6 @@
     align-items: flex-end;
 }
 /*
-
 .units-container {
     width
 }
@@ -241,7 +245,6 @@ text-align: center;
    
   
  }
-
  @media(min-width: 700px){
     .video-container{
         width: 80%;
@@ -250,7 +253,6 @@ text-align: center;
   
     } 
 }
-
  @media(min-width: 600px){
     .video-container{
         width: 80%
