@@ -46,7 +46,4 @@ showAdminPanel : (req,res)=>{
     res.render("adminPanel")
 },
 
-showSponsorsViews: (req,res)=>{
-    res.render("sponsors")
-},
 }
