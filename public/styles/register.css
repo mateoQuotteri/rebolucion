@@ -8,14 +8,14 @@ main{
 }
 .section{
    width: 100%;
-   height: 17%;
+   height: 20%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 .imagen-register{
-   width: 45%;
-   height: 140%;
+   width: 55%;
+   height: 120%;
 }
 .big-container{
     display: flex;
@@ -109,16 +109,11 @@ main{
       
   }
 
-  .btn-container i{
-   width: 25%;
-   padding: .6em;
-   cursor: pointer;
-   border-radius: 1.5em;
-   outline: none;
-   border: none;
-   font-size: 1.3em;
-   text-align: center;
-      
+  #showPass{
+   background-image: url(../images/eye-solid.svg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 1.5em;  
   }
   .error-container{
    padding: .5em .3em .5em .3em;
@@ -162,17 +157,10 @@ main{
 
    
  @media(min-width: 560px){
-   .imagen-register{
-      width: 35%;
-      height: 140%;
-   }
+
  }
  
  @media(min-width: 680px){
-   .imagen-register{
-      width: 30%;
-      height: 120%;
-   }
    h1{
       font-size: 2em;
    }
@@ -202,8 +190,9 @@ main{
        width: 75%;
     }
    
+   
    .imagen-register{
-      width:  20%;
+      width: 30%;
       height: 120%;
    }
  }
@@ -215,8 +204,8 @@ main{
     }
 
    
-   .imagen-register{
-      width: 15%;
+    .imagen-register{
+      width: 20%;
       height: 120%;
    }
  }

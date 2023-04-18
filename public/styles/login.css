@@ -96,10 +96,19 @@ form{
       border: none;
       padding: .6em;
       font-size: 1.3em;
-     
+     text-align: center;
  }
+
+ #showPass{
+   background-image: url(../images/eye-solid.svg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 1.5em;  
+  }
+ /*
  .btn-container i{
    width: 25%;
+   height: 100%;
    padding: .6em;
    cursor: pointer;
    border-radius: 1.5em;
@@ -108,7 +117,7 @@ form{
    font-size: 1.3em;
    text-align: center;
       
-  }
+  }*/
  .error-container{
    padding: .5em .3em .5em .3em;
    display: flex;
