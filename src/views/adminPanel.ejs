@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include ("./partials/head") %> 
+    <link rel="stylesheet" href="/styles/adminpanel.css">
+    
     <title>Admin Panel</title>
 </head>
-<body>
-    <a href="http://localhost:3000/module/showmodulestodelete">
-<button>Elimina modulos</button>
+<body class="background-blue">
 
-<a href="http://localhost:3000/module/showmodulestoedit">
-    <button>Edita modulos</button>
-</a>
+    <section class="container">
+        
+        <a class="background-orange" href="http://localhost:3000/module/showmodulestodelete">
+    <button class="white">Elimina modulos</button>
+        </a>
+    <a class="background-orange" href="http://localhost:3000/module/showmodulestoedit">
+        <button class="white">Edita modulos</button>
+    </a>
+    
+    
+    <a class="background-orange" href="http://localhost:3000/unit/showunitstoedit">
+        <button class="white">Edita unidades</button>
+    </a>
+    
+    <a class="background-orange" href="http://localhost:3000/unit/showunitstodelete">
+        <button class="white">Elimina unidades</button>
+    </a>
 
-
-<a href="http://localhost:3000/unit/showunitstoedit">
-    <button>Edita unidades</button>
-</a>
-
-<a href="http://localhost:3000/unit/showunitstodelete">
-    <button>Elimina unidades</button>
-</a>
+    </section>
 </body>
 </html>
