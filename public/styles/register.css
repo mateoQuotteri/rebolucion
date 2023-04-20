@@ -167,17 +167,31 @@ main{
    .error{
       font-size: 14px;
      }
+      .big-container .or-bar{
+     height: 80%
+ }
  }
  
  @media(min-width: 768px){
+     .big-container .or-bar{
+     height: 100%
+ }
    .imagen-register{
       width: 25%;
       height: 140%;
    }
+   
    .button{
       width: 15%;
     }
-
+     .false-box{
+     height: 200%;
+  }
+   .btn-container {
+   margin-top: 0em;
+    
+  }
+   
 }
 @media(min-width: 800px){
    .input-flex-container::placeholder{
