@@ -83,8 +83,11 @@ main{
      margin-bottom: .9em;
      padding: .1em;
      outline: none;
-     border-radius: .3em;
+     border-radius: .5em;
      width: 100%;
+}
+.login-input::placeholder{
+  padding-left: .2em;
 }
  .p-from-login a {
      text-decoration: none;
