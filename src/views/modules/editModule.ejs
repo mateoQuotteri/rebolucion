@@ -2,24 +2,61 @@
 <html lang="en">
 <head>
     <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+
     <!--<link rel="stylesheet" href="/styles/register.css">-->
 </head>
-<body class="">
-    <main>
-    <section class="big-container bg-color-blue-dark">
-        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
-        <h2  class="color-or">Edita el modulo</h2>
-        <form  action="/module/editmodule/<%=module.id%>?_method=PUT" method="POST" 
-            class="form" id="formulario" 
-        enctype="multipart/form-data">
+<body class="background-blue">
 
-        <label for="id">ID del modulo:</label>
+
+    <!--  <section  class="big-container bg-color-blue-dark ">
+
+        <div class="false-box background-light-color-box-from-behind">
+        <form  action="/module/deletemodule/<%=module.id%>?_method=DELETE" method="POST" 
+            class="form background-light-color"id="formulario" 
+        enctype="">
+        <h1 class="orange">¡Elimina Modulos!</h1>
+        <label class="white" for="lastname">El modulo que eliminaras es:</label>
+        <input type="text" required class="login-input" 
+          id="title" name="title"
+        value=" <%=module.title%>" >
+
+        <label class="white" for="lastname">Cuyo ID es:</label>
+        <input type="text" required class="login-input" 
+          id="title" name="title"
+        value=" <%=module.id%>" >    
+
+
+        <h5 class="white">Eliminaras tambien todas sus unidades correspondientes</h5>
+
+        <div class="btn-container">
+            <input type="submit" 
+            name="sumbit" class="button white background-orange "id="" 
+            value="Eliminar">
+                </div>
+        
+
+
+        </form>
+    </div>
+    </section>-->
+    <main>
+    <section class="big-container bg-color-blue-dark ">
+
+        <div class="false-box background-light-color-box-from-behind">
+
+        <form  action="/module/editmodule/<%=module.id%>?_method=PUT" method="POST" 
+            class="form background-light-color"id="formulario" 
+        enctype="multipart/form-data">
+        <h1 class="orange">¡Edita Modulos!</h1>
+
+        <label class="white" for="id">ID del modulo:</label>
 
         <input type="number"  class="input-from-register" 
         placeholder="ID del modulo (<%= module.id %>)"  id="id" name="id"
         value="<%= module.id %>" readonly >
 
-        <label for="title">Titulo del modulo:</label>
+        <label class="white" for="title">Titulo del modulo:</label>
         <input type="text"  class="input-from-register" 
         placeholder="Titulo del modulo (<%= module.title %>)"  id="title" name="title"
         value="<%= module.title %>" >
@@ -29,7 +66,7 @@
             </p>
             <% } %>
 
-            <label for="shortDescription">Descripcion del modulo:</label>
+            <label class="white" for="shortDescription">Descripcion del modulo:</label>
         <input type="text"  class="input-from-register" 
         placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription"
         value="<%= module.shortDescription %>" >
@@ -40,7 +77,7 @@
             <% } %>
 
 
-            <label for="difficulty">Dificultad del modulo:</label>
+            <label class="white"  for="difficulty">Dificultad del modulo:</label>
         <input type="number"  class="input-from-register" 
         placeholder="Dificultad del 1 al 10 (<%= module.difficulty %>)"  id="difficulty" name="difficulty"
         value="<%= module.difficulty %>" >
@@ -50,7 +87,7 @@
             </p>
             <% } %>
 
-            <label for="units">Cantidad de unidades del modulo:</label>
+            <label class="white" for="units">Cantidad de unidades del modulo:</label>
 
         <input type="number"  class="input-from-register" 
         placeholder="Cantidad de unidades (<%= module.units %>)"  id="units" name="units"
@@ -62,7 +99,7 @@
             <% } %>
 
 
-            <label for="video">Video del modulo:</label>
+            <label class="white" for="video">Video del modulo:</label>
         <input type="text"  class="input-from-register" 
         placeholder="Video"  id="video" name="video"
         value="<%= module.video %>" >
@@ -72,13 +109,21 @@
             </p>
             <% } %>
 
-            <label for="image">Imagen del modulo:</label>
+            <label class="white" for="image">Imagen del modulo:</label>
         <input type="file"  class="input-from-register" 
         placeholder="Imagen del modulo"  id="image" name="newImage" value="<%= module.image %>">
            
-            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Editar modulo</button>
+
+        <div class="btn-container">
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">
+                Editar modulo</button>
+                </div>
+            
         </form>
         
+        </div>
+
+
     </section>
 </main>
 </body>
