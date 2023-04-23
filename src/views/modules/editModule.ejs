@@ -52,12 +52,12 @@
 
         <label class="white" for="id">ID del modulo:</label>
 
-        <input type="number"  class="input-from-register" 
+        <input type="number"  class="login-input" 
         placeholder="ID del modulo (<%= module.id %>)"  id="id" name="id"
         value="<%= module.id %>" readonly >
 
         <label class="white" for="title">Titulo del modulo:</label>
-        <input type="text"  class="input-from-register" 
+        <input type="text"  class="login-input" 
         placeholder="Titulo del modulo (<%= module.title %>)"  id="title" name="title"
         value="<%= module.title %>" >
         <% if (locals.errors && errors.title) { %>
@@ -67,7 +67,7 @@
             <% } %>
 
             <label class="white" for="shortDescription">Descripcion del modulo:</label>
-        <input type="text"  class="input-from-register" 
+        <input type="text"  class="login-input" 
         placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription"
         value="<%= module.shortDescription %>" >
         <% if (locals.errors && errors.shortDescription) { %>
@@ -78,7 +78,7 @@
 
 
             <label class="white"  for="difficulty">Dificultad del modulo:</label>
-        <input type="number"  class="input-from-register" 
+        <input type="number"  class="login-input" 
         placeholder="Dificultad del 1 al 10 (<%= module.difficulty %>)"  id="difficulty" name="difficulty"
         value="<%= module.difficulty %>" >
         <% if (locals.errors && errors.difficulty) { %>
@@ -89,7 +89,7 @@
 
             <label class="white" for="units">Cantidad de unidades del modulo:</label>
 
-        <input type="number"  class="input-from-register" 
+        <input type="number"  class="login-input" 
         placeholder="Cantidad de unidades (<%= module.units %>)"  id="units" name="units"
         value="<%= module.units %>" >
         <% if (locals.errors && errors.units) { %>
@@ -100,7 +100,7 @@
 
 
             <label class="white" for="video">Video del modulo:</label>
-        <input type="text"  class="input-from-register" 
+        <input type="text"  class="login-input" 
         placeholder="Video"  id="video" name="video"
         value="<%= module.video %>" >
         <% if (locals.errors && errors.video) { %>
@@ -110,7 +110,7 @@
             <% } %>
 
             <label class="white" for="image">Imagen del modulo:</label>
-        <input type="file"  class="input-from-register" 
+        <input type="file"  class="login-input" 
         placeholder="Imagen del modulo"  id="image" name="newImage" value="<%= module.image %>">
            
 
