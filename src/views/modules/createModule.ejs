@@ -44,8 +44,7 @@
         <input type="number"  class="login-input" 
         placeholder="Cantidad de unidades"  id="units" name="units"
             value="<%= locals.old && old.units %>" >
-            
-            
+
             
             <label class="white" for="video">Video del modulo:</label>
             
@@ -60,6 +59,12 @@
             <input type="file"  class="login-input" 
             placeholder="Imagen del modulo"  id="image" name="image">
 
+            <% if (locals.errorImage) { %>
+                <div class="error-container background-button-error">
+                    <p class="orange error"><%= locals.errorImage.msg %>
+                    </p>
+                </div>
+                <% } %>
 
             <% if (locals.errors && errors.title) { %>
                 <p style="color: white">
@@ -89,7 +94,10 @@
                     </p>
                     <% } %>
            
-            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>
+                    <div class="btn-container">
+                        <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">
+                            Crear</button>
+                            </div>
         </form>
         </div>   
     </section>

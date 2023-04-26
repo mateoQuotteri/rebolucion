@@ -12,6 +12,7 @@ module.exports = {
         res.render("modules/createModule")
     },
     createModule: (req,res)=>{
+        console.log("Hola");
 
         const errors = validationResult(req)
         console.log(errors)
@@ -26,9 +27,11 @@ module.exports = {
         let imageFile = req.file
         console.log(imageFile);
         if (!imageFile) {
-            return res.send("Seleccione un archivo en formato imagen")
+            res.locals.errorImage = {
+                msg :'Coloca la imagen correspondiente..'
+            };
+            res.render("modules/createModule", res.locals.errorImage)
         }
-        
         const newProduct = req.body
         db.Modules.create({
             title : newProduct.title,
