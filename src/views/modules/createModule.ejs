@@ -2,67 +2,96 @@
 <html lang="en">
 <head>
     <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+
     <!--<link rel="stylesheet" href="/styles/register.css">-->
 </head>
-<body class="">
+<body class="background-blue">
     <main>
     <section class="big-container bg-color-blue-dark">
-        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
-        <h2  class="color-or">Crea un nuevo modulo</h2>
-        <form action="/module/createmodule" class="form" method="POST"id="formulario" 
-        enctype="multipart/form-data">
 
-        <input type="text"  class="input-from-register" 
+        <div class="false-box background-light-color-box-from-behind">
+
+        
+        <form action="/module/createmodule" class="form background-light-color"id="formulario" 
+        enctype="multipart/form-data">
+        <h1 class="orange">¡Crea Modulos!</h1>
+
+
+        <label class="white" for="title">Titulo del modulo:</label>
+
+        <input type="text"  class="login-input" 
         placeholder="Titulo del modulo"  id="title" name="title"
         value="<%= locals.old && old.title %>" >
-        <% if (locals.errors && errors.title) { %>
-            <p style="color: white">
-                <%= errors.title.msg %>
-            </p>
-            <% } %>
-
-        <input type="text"  class="input-from-register" 
+        
+        <label class="white" for="shortDescription">Descripcion corta:</label>
+        
+        <input type="text"  class="login-input" 
         placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription"
         value="<%= locals.old && old.shortDescription %>" >
-        <% if (locals.errors && errors.shortDescription) { %>
-            <p style="color: white">
-                <%= errors.shortDescription.msg %>
-            </p>
-            <% } %>
-
-        <input type="number"  class="input-from-register" 
+        
+        
+        
+        <label class="white" for="difficulty">Dificultad del modulo:</label>
+        
+        <input type="number"  class="login-input" 
         placeholder="Dificultad del 1 al 10"  id="difficulty" name="difficulty"
         value="<%= locals.old && old.difficulty %>" >
-        <% if (locals.errors && errors.difficulty) { %>
-            <p style="color: white">
-                <%= errors.difficulty.msg %>
-            </p>
-            <% } %>
-
-        <input type="number"  class="input-from-register" 
+        
+        
+        <label class="white" for="units">Cantidad de unidades:</label>
+        
+        <input type="number"  class="login-input" 
         placeholder="Cantidad de unidades"  id="units" name="units"
-        value="<%= locals.old && old.units %>" >
-        <% if (locals.errors && errors.units) { %>
-            <p style="color: white">
-                <%= errors.units.msg %>
-            </p>
-            <% } %>
+            value="<%= locals.old && old.units %>" >
+            
+            
+            
+            <label class="white" for="video">Video del modulo:</label>
+            
+            
+            <input type="text"  class="login-input" 
+            placeholder="Video"  id="video" name="video"
+            value="<%= locals.old && old.video %>" >
+            
+            
+            <label class="white" for="image">Imagen del modulo:</label>
+            
+            <input type="file"  class="login-input" 
+            placeholder="Imagen del modulo"  id="image" name="image">
 
-        <input type="text"  class="input-from-register" 
-        placeholder="Video"  id="video" name="video"
-        value="<%= locals.old && old.video %>" >
-        <% if (locals.errors && errors.video) { %>
-            <p style="color: white">
-                <%= errors.video.msg %>
-            </p>
-            <% } %>
 
-        <input type="file"  class="input-from-register" 
-        placeholder="Imagen del modulo"  id="image" name="image">
+            <% if (locals.errors && errors.title) { %>
+                <p style="color: white">
+                    <%= errors.title.msg %>
+                </p>
+                <% } %>
+            <% if (locals.errors && errors.shortDescription) { %>
+                <p style="color: white">
+                    <%= errors.shortDescription.msg %>
+                </p>
+                <% } %>
+                
+                <% if (locals.errors && errors.units) { %>
+                    <p style="color: white">
+                    <%= errors.units.msg %>
+                </p>
+                <% } %>
+                
+                <% if (locals.errors && errors.video) { %>
+                    <p style="color: white">
+                        <%= errors.video.msg %>
+                    </p>
+                    <% } %>
+                    <% if (locals.errors && errors.difficulty) { %>
+                    <p style="color: white">
+                        <%= errors.difficulty.msg %>
+                    </p>
+                    <% } %>
            
             <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>
         </form>
-        
+        </div>   
     </section>
 </main>
 </body>
