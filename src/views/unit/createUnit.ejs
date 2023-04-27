@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%-include ("../partials/head") %> 
+    <%-include ("../partials/head") %>
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+
     <!--<link rel="stylesheet" href="/styles/register.css">-->
 </head>
-<body class="">
+<body class="background-blue">
 <main>
     <section class="big-container bg-color-blue-dark">
-        <img src="/images/imagenRegister.png" alt="" srcset="" class="imagen-register">
-        <h2  class="color-or">Crea un nueva unidad</h2>
-        <form action="/unit/create" class="form" method="POST"id="formulario" 
+        
+
+        <div class="false-box background-light-color-box-from-behind">
+        
+
+        <form action="/unit/create" class="form background-light-color" method="POST"id="formulario" 
         enctype="">
-        <h2 style="color: aliceblue;">Selecciona a que modulo pertenecera dicha unidad:</h2>
+
+        <h1 class="orange">¡Crea Unidades!</h1>
+
+        <h6 class="white">Modulos existentes:</h6>
         <% modules.forEach(module => {%>
-            <h3 style="color: black;"><%= module.id %> - <%= module.title %> </h3>
+            <p class="white"><%= module.id %> - <%= module.title %> </p>
 
             <% }); %>
 
-        <input type="number" required class="input-from-register" 
+
+
+        <label class="white" for="id_modulo">Modulo de la unidad:</label>
+
+        <input type="number" required class="login-input" 
         placeholder="Modulo numero..."  id="id_modulo" name="id_modulo"
         value="<%= locals.old && old.id_modulo %>">
         <% if (locals.errors && errors.id_modulo) { %>
@@ -26,7 +38,10 @@
             </p>
             <% } %>
 
-        <input type="text" required class="input-from-register" 
+        <label class="white" for="title">Titulo de la unidad:</label>
+
+
+        <input type="text" required class="login-input" 
         placeholder="Titulo de la unidad"  id="title" name="title"
         value="<%= locals.old && old.title %>">
         <% if (locals.errors && errors.title) { %>
@@ -35,8 +50,9 @@
             </p>
             <% } %>
 
+            <label class="white" for="description">Descripcion de la unidad:</label>
 
-        <input type="text" required class="input-from-register" 
+        <input type="text" required class="login-input" 
         placeholder="Descripcion de la unidad"  id="description" name="description"
         value="<%= locals.old && old.description %>">
         <% if (locals.errors && errors.description) { %>
@@ -45,8 +61,9 @@
             </p>
             <% } %>
 
+            <label class="white" for="video">Video de la unidad:</label>
 
-        <input type="text" required class="input-from-register" 
+        <input type="text" required class="login-input" 
         placeholder="Video"  id="video" name="video" 
         value="<%= locals.old && old.video %>">
         <% if (locals.errors && errors.video) { %>
@@ -55,9 +72,12 @@
             </p>
             <% } %>
            
-            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Crear modulo</button>
+            <div class="btn-container">
+                <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">
+                    Crear</button>
+                    </div>
         </form>
-        
+        </div>
     </section>
 </main>
 </body>
