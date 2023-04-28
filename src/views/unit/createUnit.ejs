@@ -32,46 +32,58 @@
         <input type="number" required class="login-input" 
         placeholder="Modulo numero..."  id="id_modulo" name="id_modulo"
         value="<%= locals.old && old.id_modulo %>">
-        <% if (locals.errors && errors.id_modulo) { %>
-            <p style="color: white">
-                <%= errors.id_modulo.msg %>
-            </p>
-            <% } %>
-
+    
         <label class="white" for="title">Titulo de la unidad:</label>
 
 
         <input type="text" required class="login-input" 
         placeholder="Titulo de la unidad"  id="title" name="title"
         value="<%= locals.old && old.title %>">
-        <% if (locals.errors && errors.title) { %>
-            <p style="color: white">
-                <%= errors.title.msg %>
-            </p>
-            <% } %>
+       
 
             <label class="white" for="description">Descripcion de la unidad:</label>
 
         <input type="text" required class="login-input" 
         placeholder="Descripcion de la unidad"  id="description" name="description"
         value="<%= locals.old && old.description %>">
-        <% if (locals.errors && errors.description) { %>
-            <p style="color: white">
-                <%= errors.description.msg %>
-            </p>
-            <% } %>
-
+        
             <label class="white" for="video">Video de la unidad:</label>
 
         <input type="text" required class="login-input" 
         placeholder="Video"  id="video" name="video" 
         value="<%= locals.old && old.video %>">
         <% if (locals.errors && errors.video) { %>
-            <p style="color: white">
-                <%= errors.video.msg %>
-            </p>
+            <div class="error-container background-button-error">
+                <p class="error orange">
+                    <%= errors.video.msg %>
+                </p>
+            </div>
             <% } %>
-           
+            <% if (locals.errors && errors.description) { %>
+                <div class="error-container background-button-error">
+                    <p class="error orange">
+                        <%= errors.description.msg %>
+                    </p>
+                </div>
+                <% } %>
+                <% if (locals.errors && errors.title) { %>
+                    <div class="error-container background-button-error">
+                        <p class="error orange">
+                            <%= errors.title.msg %>
+                        </p>
+                    </div>
+                    <% } %>
+
+
+                    <% if (locals.errors && errors.id_modulo) { %>
+                        <div class="error-container background-button-error">
+                            <p class="error orange">
+                                <%= errors.id_modulo.msg %>
+
+                            </p>
+                        </div>
+                        <% } %>
+            
             <div class="btn-container">
                 <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">
                     Crear</button>
