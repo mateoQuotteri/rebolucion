@@ -9,10 +9,11 @@ module.exports = {
         })
     },
     showCreateModule : (req,res)=>{
+       
         res.render("modules/createModule")
     },
     createModule: (req,res)=>{
-        console.log("Hola");
+     
 
         const errors = validationResult(req)
         console.log(errors)
