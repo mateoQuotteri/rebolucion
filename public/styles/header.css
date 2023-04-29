@@ -67,9 +67,7 @@ header{
    text-decoration: none;
    border-radius: 1.5em;
 }
-.header-btn-container-my-profile a:hover{ 
-   animation:jello-diagonal .9s linear both
-}
+
 .header-btn-container-my-profile a button{
    border: none;
    text-decoration: none;
@@ -81,7 +79,6 @@ header{
    border-radius: 1.5em;
    transition: 1000ms all;
 }
-@keyframes jello-diagonal{0%{transform:skew(0deg 0deg)}30%{transform:skew(25deg 25deg)}40%{transform:skew(-15deg,-15deg)}50%{transform:skew(15deg,15deg)}65%{transform:skew(-5deg,-5deg)}75%{transform:skew(5deg,5deg)}100%{transform:skew(0deg 0deg)}}
 
 @media(min-width: 410px){
    .header-btn-container{
