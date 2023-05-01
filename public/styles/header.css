@@ -132,6 +132,11 @@ header{
    .header-btn-container{
       width: 25%;   
    }
+   .header-btn-container .header-a button{
+      padding: .8em;
+      border-radius: 2em;
+   
+   }
  
 }
 @media(min-width: 810px){
