@@ -2,13 +2,55 @@
 <html lang="en">
 <head>
     <%-include ("../partials/head") %> 
-    <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+
+    <link rel="stylesheet" href="/styles/modules.css">
 </head>
-<body class="">
+<body class="background-blue">
+    <header>
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="http://localhost:3000">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
 <main>
-    <section class="row fit notFlex">
-        <article class="col-md-10 indexFlex ">
+
+    <section class="big-container">
+        <div class="title-container">
+            <div class="background-orange or-bar"></div>
+            <h1 class="white">Unidades</h1>
+            </div>
+    </article>
+    </section>
+
+    <section class="principal-section">
+        <section class="sub-section">
             <% units.forEach(unit => {%>
+                <div class="false-box background-light-color-box-from-behind">
+                    <div class="background-light-color  div-inside">
+                        
+                      <h5 class="white">
+                        <%= unit.title %>
+                      </h5>
+                      <h6 class="white">
+                        ID: <%= unit.id %>
+                      </h6>
+                      <h6 class="white">
+                        Modulo: <%= unit.id_modulo %>
+                      </h6>
+                      <a class="background-orange  white" href="http://localhost:3000/unit/<%= unit.id%>">
+                        <button class="background-orange white">
+                            Iniciar
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                <!---
             
                 <div class="p-3 justBorderIndex  bg-light tripCard">
                     <div>
@@ -19,13 +61,14 @@
                        
                         </button>
                         <p  height="fit-content" 
-                        class="text-card">Descripcion de la unidad :<%= unit.description %>/10 </p>
+                        class="text-card">Descripcion de la unidad :<%= unit.description %> </p>
                         <p  height="fit-content" 
                         class="text-card">ID de la unidad :<%= unit.id %></p>
                         <p  height="fit-content" 
                         class="text-card">Pertenece al modulo :<%= unit.id_modulo %> </p>
                     </div>
                 </div>
+            -->
             <% }); %>
         </article>
     </section>

@@ -7,7 +7,8 @@ const { Op } = require("sequelize");
 
 module.exports = {
 
-    showAllUnit : (req,res)=>{
+    showAllUnit : async (req,res)=>{
+
         db.Units.findAll().then((units) => {
             res.render("unit/units", { units })
         })
