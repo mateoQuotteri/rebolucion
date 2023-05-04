@@ -3,7 +3,6 @@
     <head>
         <%-include ("./partials/head") %> 
         <link rel="stylesheet" href="/styles/register.css">
-        <script src="/js/userRegister.js"></script>
 </head>
 <body class="background-blue">
     <main >
@@ -35,26 +34,7 @@
             placeholder="Apellido" id="lastname" name="lastname"
             value="<%= locals.old && old.lastname %>" >
             </div>
-            <div class="input-flex-container">
-            <input class="login-input phoneNumber" id="phone"type="string" name="phone"
-             placeholder="Telefono"
-             value="<%= locals.old && old.phone %>" >
-            
-             
-          
-
-            
-            <input type="text" required class="login-input"placeholder="Pais" id="country
-            " name="country" value="<%= locals.old && old.country %>" > 
-            </div>
-            <div class="input-flex-container">
-
-            <input type="text" required class="login-input"placeholder="Estado o Provincia" 
-            id="state" name="state" value="<%= locals.old && old.state %>" > 
            
-            <input type="text" required class="login-input"placeholder="Ciudad" id="city
-            " name="city" value="<%= locals.old && old.city %>" > 
-        </div>
                 <input type="password" required class="login-input" 
             placeholder="Contraseña" id="password" name="password"
             value="<%= locals.old && old.password %>" >
@@ -89,38 +69,7 @@
                             </div>
                                 <% } %>
 
-           <% if (locals.errors && errors.phone) { %>
-            <div class="error-container background-button-error">
-                                    <p class="error orange"  >
-                                        <%= errors.phone.msg %>
-                                    </p>
-                                </div>
-                                    <% } %>
-
-           <% if (locals.errors && errors.country) { %>
-            <div class="error-container background-button-error">
-                                        <p class="error orange"  >
-                                            <%= errors.country.msg %>
-                                        </p>
-                                    </div>
-                                        <% } %>
-
-           <% if (locals.errors && errors.state) { %>
-            <div class="error-container background-button-error">
-                                            <p class="error orange"  >
-                                                <%= errors.state.msg %>
-                                            </p>
-                                        </div>
-                                            <% } %>
-
-           <% if (locals.errors && errors.city) { %>
-            <div class="error-container background-button-error">
-                                                <p class="error orange"  >
-                                                    <%= errors.city.msg %>
-                                                </p>
-            </div>
-                                                <% } %>
-
+         
            <% if (locals.errors && errors.password) { %>
             <div class="error-container background-button-error">
                                                     <p class="error orange"  >

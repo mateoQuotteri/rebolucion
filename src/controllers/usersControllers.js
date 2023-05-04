@@ -27,10 +27,6 @@ module.exports = {
             name: user.name,
             lastname : user.lastname,
             password: bcrypt.hashSync(req.body.password, 10),
-            country : user.country,
-            state : user.state,
-            city : user.city,
-           phone: Number(req.body.phone),
            
         }).then((user) => {
             delete user.rePassword
@@ -131,7 +127,9 @@ module.exports = {
             celular: req.body.phone,
             city : req.body.city,
             state : req.body.state,
-            country : req.body.country
+            country : req.body.country,
+            phone : Number(req.body.phone)
+            
         },
         {
             where: { id: req.session.loggedUser.id },
