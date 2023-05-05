@@ -12,6 +12,8 @@ const editionDataValidation = require("../validations/editionDataValidation")
 router.get("/register", guestMiddleware ,userController.register)
 router.post("/register", registerValidation, reEmailMiddleware, userController.createNewUser)
 
+
+
 router.get("/login",  guestMiddleware ,userController.showLogin)
 router.post("/login",  loginValidation ,userController.login)
 
