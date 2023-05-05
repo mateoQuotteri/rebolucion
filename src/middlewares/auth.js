@@ -12,18 +12,40 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://localhost:3000/google/callback",
     passReqToCallback   : true
   },
-  function(req, accessToken, refreshToken, profile, done) {
-    /*User.findOrCreate({ googleId: profile.id }, function (err, user) {
-      return done(err, user);
-    });*/
-    db.Users.create({
-        email: profile.email,
-        name: profile.given_name,
-        lastname : profile.family_name,
-        password: profile.sub,
-       
-    }).then(() => {
-        req.session.loggedUser = profile;
-    })
+  function async (req, accessToken, refreshToken, profile, done) {
+   /* const newUser = {
+      id: profile.id,
+      firstName: profile.name.givenName,
+      lastName: profile.name.familyName,
+      
+  }*/
+  // User.findOrCreate({ googleId: profile.id }, (err, user) => {
+  //     return cb(err, user);
+  //   });
+
+  db.Users.create({
+    email: profile.email,
+    name: profile.name.givenName,
+    lastname : profile.name.familyName,
+    password : "123456"
+   
+}).then((user) => {
+
+    done(null, user)
+  
+  
 }
-));
+  
+)  
+}
+
+)
+
+);
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});

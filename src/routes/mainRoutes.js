@@ -15,15 +15,17 @@ router.get("/aviso", authMiddleware ,mainController.aviso)
 router.get("/contact-us", authMiddleware,mainController.contact)
 router.get("/adminpanel", authMiddleware, adminMiddleware, mainController.showAdminPanel)
 
-router.get("/auth/google" , passport.authenticate("google" ,{scope: ["email" , "profile"] }))
+router.get("/auth/google" , passport.authenticate("google" ,{scope: ["email" , "profile"] }, ))
 
 router.get("/google/callback", passport.authenticate(
     "google",
     {
-        successRedirect : "/",
         failureRedirect : "/auth/failure"
      }
-))
+), function (req,res) {
+    res.send("Hola")
+}
+)
 
 router.get("auth/failure", (req,res)=>{
     res.send("some was wrong")

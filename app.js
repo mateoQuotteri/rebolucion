@@ -8,6 +8,8 @@ const unitRoutes = require("./src/routes/unitRoutes")
 const bodyParser = require('body-parser')
 const userAuth = require("./src/middlewares/userAuth")
 let session = require("express-session")
+const passport = require("passport")
+
 
 app.listen(3000, () => {
   console.log("rebolucion is starting");
@@ -19,15 +21,19 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}))
  app.use(express.json())
 
-
+ 
+ 
  app.use(
-  session({
-      secret: "mensaje secreto",
-      resave: false,
-      saveUninitialized: false,
-  })
-)
-
+   session({
+     secret: "mensaje secreto",
+     resave: false,
+     saveUninitialized: false,
+    })
+    )
+    
+    
+     app.use(passport.initialize())
+     app.use(passport.session())
 app.use(userAuth)
 
 // parse application/x-www-form-urlencoded
