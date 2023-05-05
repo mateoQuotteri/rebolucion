@@ -33,8 +33,12 @@ app.use(express.urlencoded({extended:false}))
     
     
      app.use(passport.initialize())
-     app.use(passport.session())
-app.use(userAuth)
+     // init passport on every route call.app.use(passport.session()) 
+     app.use(passport.session())   
+     // allow passport to use "express-session".
+
+
+     app.use(userAuth)
 
 // parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded())

@@ -22,18 +22,15 @@ passport.use(new GoogleStrategy({
   // User.findOrCreate({ googleId: profile.id }, (err, user) => {
   //     return cb(err, user);
   //   });
-
+console.log(profile);
   db.Users.create({
     email: profile.email,
     name: profile.name.givenName,
     lastname : profile.name.familyName,
-    password : "123456"
+    password : "123456",
    
 }).then((user) => {
-
     done(null, user)
-  
-  
 }
   
 )  
@@ -43,7 +40,13 @@ passport.use(new GoogleStrategy({
 
 );
 passport.serializeUser(function(user, done) {
-  done(null, user);
+ // console.log("aqui : "+ user.id)
+ return done(null, {
+  id: user.id,
+  name: user.name.givenName,
+  lastname: user.name.familyName
+})
+  
 });
 
 passport.deserializeUser(function(user, done) {
