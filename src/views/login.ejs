@@ -4,7 +4,7 @@
     <%-include ("./partials/head") %> 
     
     <link rel="stylesheet" href="/styles/login.css">
-    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 </head>
 <body class="background-blue">
     <main >
@@ -32,7 +32,11 @@
         placeholder="Contraseña" id="password" name="password"
         value="<%= locals.old && old.password %>">
 
-        <a href="http://localhost:3000/auth/google">Inicia con Google</a>
+        <a href="http://localhost:3000/auth/google" class="google-button-container">
+            <button type="button" class="login-with-google-btn" >
+                Sign in with Google
+              </button>
+        </a>
 
         <% if (locals.errors && errors.password) { %>
             <div class="error-container background-button-error">
