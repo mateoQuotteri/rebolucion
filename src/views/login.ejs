@@ -31,6 +31,9 @@
         <input type="password" required class="login-input background-white" 
         placeholder="Contraseña" id="password" name="password"
         value="<%= locals.old && old.password %>">
+
+        <a href="http://localhost:3000/auth/google">Inicia con Google</a>
+
         <% if (locals.errors && errors.password) { %>
             <div class="error-container background-button-error">
                 <p class="error orange">

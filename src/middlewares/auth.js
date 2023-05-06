@@ -12,25 +12,26 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://localhost:3000/google/callback",
     passReqToCallback   : true
   },
+
   function async (req, accessToken, refreshToken, profile, done) {
-   /* const newUser = {
-      id: profile.id,
-      firstName: profile.name.givenName,
-      lastName: profile.name.familyName,
-      
-  }*/
-  // User.findOrCreate({ googleId: profile.id }, (err, user) => {
-  //     return cb(err, user);
-  //   });
+    //const user = await db.Users.findOne({ where: { email: profile && password : profile.id } })
+   
 console.log(profile);
+
+req.session.loggedUser.name = profile.name.givenName;
+req.session.loggedUser.lastname = profile.name.familyName;
+req.session.loggedUser.email = profile.email;
+
+
   db.Users.create({
     email: profile.email,
     name: profile.name.givenName,
     lastname : profile.name.familyName,
-    password : "123456",
+    password : profile.id,
    
-}).then((user) => {
-    done(null, user)
+}
+).then((user) => {
+   return done(null, user)
 }
   
 )  
