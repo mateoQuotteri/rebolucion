@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <%-include ("./partials/head") %> 
+    <link rel="stylesheet" href="/styles/login.css">
+
         <link rel="stylesheet" href="/styles/register.css">
 </head>
 <body class="background-blue">
@@ -45,7 +47,11 @@
             value="<%= locals.old && old.password %>" >
 
 
-            <a href="http://localhost:3000/auth/google">Registrate con Google</a>
+            <a href="http://localhost:3000/auth/google" class="google-button-container">
+                <button type="button" class="login-with-google-btn" >
+                    Sign in with Google
+                  </button>
+            </a>
 
 
 
