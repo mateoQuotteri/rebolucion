@@ -5,6 +5,8 @@ const mainController = require("../controllers/mainController")
 const authMiddleware = require("../middlewares/authMiddleware")
 const adminMiddleware = require("../middlewares/adminMiddleware");
 const passport = require("passport")
+const db = require("../database/models")
+
 const auth = require("../middlewares/auth")
 
 router.get("/", mainController.index)
@@ -22,8 +24,12 @@ router.get("/google/callback", passport.authenticate(
     {
         failureRedirect : "/auth/failure"
      }
-),passport.authenticate('session'), function (req,res) {
+),passport.authenticate('session'), async function (req,res) {
+    const id = req.session.passport.user;
+    const userLogged = await db.Users.findOne({ where: { id: id } })
+    req.session.loggedUser =  userLogged
     console.log(req.session.loggedUser);
+
     res.redirect("/")
 }
 )

@@ -18,15 +18,13 @@ passport.use(new GoogleStrategy({
    
 console.log(profile);
 
-req.session.loggedUser.name = profile.name.givenName;
-req.session.loggedUser.lastname = profile.name.familyName;
-req.session.loggedUser.email = profile.email;
+
 
 
   db.Users.create({
     email: profile.email,
-    name: profile.name.givenName,
-    lastname : profile.name.familyName,
+    name: profile.given_name,
+    lastname : profile.family_name,
     password : profile.id,
    
 }
@@ -40,16 +38,30 @@ req.session.loggedUser.email = profile.email;
 )
 
 );
-passport.serializeUser(function(user, done) {
- // console.log("aqui : "+ user.id)
- return done(null, {
-  id: user.id,
-  name: user.name.givenName,
-  lastname: user.name.familyName
-})
-  
+passport.serializeUser(async function(user, done) {
+  done(null, user.id);
 });
 
-passport.deserializeUser(function(user, done) {
-  done(null, user);
+passport.deserializeUser(async function(id, done) {
+  await db.Users.findByPk(id).then(user => {
+      done(null, user);
+  });
 });
+
+
+/*
+
+    passport.serializeUser: este método se llama cuando el usuario inicia sesión y se utiliza 
+    para serializar al usuario, lo que significa que se toma la información del usuario y se guarda en la sesión. En este método, se debe elegir qué información del usuario se quiere guardar en la sesión, como su ID, nombre, correo electrónico, etc.
+
+    passport.deserializeUser: este método se llama cuando el usuario hace una solicitud al 
+    servidor y Passport.js necesita obtener la información del usuario de la sesión. Este método toma la información serializada del usuario que se guardó en la sesión y la convierte en un objeto de usuario que se puede utilizar en la aplicación.
+
+    passport.authenticate: este método se utiliza para autenticar a los usuarios en las rutas 
+    protegidas de la aplicación. Si un usuario intenta acceder a una ruta protegida y no ha iniciado sesión, Passport.js redirigirá al usuario a la página de inicio de sesión. Si el usuario ha iniciado sesión correctamente, Passport.js permitirá que el usuario acceda a la ruta protegida.
+
+
+
+En resumen, passport.serializeUser se utiliza para guardar
+ la información del usuario en la sesión, passport.deserializeUser se utiliza para recuperar la información del usuario de la sesión y
+ passport.authenticate se utiliza para autenticar a los usuarios en las rutas protegidas. */
