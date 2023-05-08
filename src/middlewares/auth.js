@@ -26,7 +26,8 @@ const user = await db.Users.findOne({ where: { email: profile.email } })
 
 console.log("este es el id google" + idGoogle);
 
-if (user && bcrypt.compareSync(idGoogle, user.password)) {
+if (user) {
+  console.log("HOla");
     return done(null, user)
 }
 
@@ -37,7 +38,7 @@ if (user && bcrypt.compareSync(idGoogle, user.password)) {
     email: profile.email,
     name: profile.given_name,
     lastname : profile.family_name,
-    password : bcrypt.hashSync(profile.id, 10),
+    googleID :idGoogle,
 
    
 }

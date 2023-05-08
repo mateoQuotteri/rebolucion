@@ -69,7 +69,7 @@
                             <button class="background-orange white">Editar datos</button>
                         </a>
 
-                        <a href="http://localhost:3000/user/my-profile/edit/my-password">
+                        <a  href="http://localhost:3000/user/my-profile/edit/my-password" <% if (locals.loggedUser.googleID) { %> style=" display: none;"    <% } %>>
                             <button class="background-orange white">Cambiar contraseña</button>
                         </a>
                     </div>
