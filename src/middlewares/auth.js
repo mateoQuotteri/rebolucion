@@ -1,6 +1,8 @@
 const db = require("../database/models")
 const passport = require("passport")
 const GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+const bcrypt = require("bcryptjs")
+
 
 
 const GOOGLE_CLIENT_ID ="219187070770-8etp7aglnutn7ne64q52ppvt7c79gkq9.apps.googleusercontent.com";
@@ -13,19 +15,30 @@ passport.use(new GoogleStrategy({
     passReqToCallback   : true
   },
 
-  function async (req, accessToken, refreshToken, profile, done) {
+ async function  (req, accessToken, refreshToken, profile, done) {
     //const user = await db.Users.findOne({ where: { email: profile && password : profile.id } })
    
 console.log(profile);
 
+const idGoogle = profile.id
+
+const user = await db.Users.findOne({ where: { email: profile.email } })
+
+console.log("este es el id google" + idGoogle);
+
+if (user && bcrypt.compareSync(idGoogle, user.password)) {
+    return done(null, user)
+}
 
 
 
-  db.Users.create({
+
+   db.Users.create({
     email: profile.email,
     name: profile.given_name,
     lastname : profile.family_name,
-    password : profile.id,
+    password : bcrypt.hashSync(profile.id, 10),
+
    
 }
 ).then((user) => {
