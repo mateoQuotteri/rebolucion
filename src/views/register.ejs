@@ -46,81 +46,81 @@
             placeholder="Repita su contraseña" id="rePassword" name="rePassword"
             value="<%= locals.old && old.password %>" >
 
-
-            <a href="http://localhost:3000/auth/google" class="google-button-container">
-                <button type="button" class="login-with-google-btn" >
-                    Sign in with Google
-                  </button>
-            </a>
-
-
-
+            
+            
+            
             
             <!--MOSTRAR MSJ SI HAY ERRORES-->
-
-
-           <% if (locals.errors && errors.email) { %>
-            <div class="error-container background-button-error">
-                        <p class="error orange"  >
-                            <%= errors.email.msg %>
-                        </p>
+            
+            
+            <% if (locals.errors && errors.email) { %>
+                <div class="error-container background-button-error">
+                    <p class="error orange"  >
+                        <%= errors.email.msg %>
+                    </p>
                     </div>
-                        <% } %>
-           <% if (locals.errors && errors.name) { %>
-            <div class="error-container background-button-error">
+                    <% } %>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="error-container background-button-error">
                             <p class="error orange"  >
                                 <%= errors.name.msg %>
                             </p>
                         </div>
-                            <% } %>
+                        <% } %>
            <% if (locals.errors && errors.lastname) { %>
             <div class="error-container background-button-error">
                                 <p class="error orange"  >
                                     <%= errors.lastname.msg %>
                                 </p>
                             </div>
+                            <% } %>
+                            
+                            
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="error-container background-button-error">
+                                    <p class="error orange"  >
+                                        <%= errors.password.msg %>
+                                    </p>
+                                </div>
                                 <% } %>
-
-         
-           <% if (locals.errors && errors.password) { %>
-            <div class="error-container background-button-error">
-                                                    <p class="error orange"  >
-                                                        <%= errors.password.msg %>
-                                                    </p>
-                                                </div>
-                                                    <% } %>
-           <% if (locals.errors && errors.rePassword) { %>
-            <div class="error-container background-button-error">
-                                                        <p class="error orange"  >
-                                                            <%= errors.rePassword.msg %>
-                                                        </p>
-                                                    </div>
+                                <% if (locals.errors && errors.rePassword) { %>
+                                    <div class="error-container background-button-error">
+                                        <p class="error orange"  >
+                                            <%= errors.rePassword.msg %>
+                                        </p>
+                                    </div>
                                                         <% } %>
 
                                                         <% if (locals.reEmailError) { %>
                                                             <div class="error-container background-button-error">
-                                                            <p class="orange error"><%= locals.reEmailError.msg %>
-                                                            </p>
-                                                        </div>
-                                                          <% } %>
-
-
-            <!---FIN ERRORES-->
-
-            <p class="white p-from-login ">Si ya tienes cuenta 
-                <a class="lightblue" href="/user/login">inicia sesion</a></p>
-           
-                <div class="btn-container">
-
+                                                                <p class="orange error"><%= locals.reEmailError.msg %>
+                                                                </p>
+                                                            </div>
+                                                            <% } %>
+                                                            
+                                                            
+                                                            <!---FIN ERRORES-->
+                                                            
+                                                                        <a href="http://localhost:3000/auth/google" class="google-button-container">
+                                                                            <button type="button" class="login-with-google-btn" >
+                                                                                Sign in with Google
+                                                                              </button>
+                                                                        </a>
+                                                            
+                                                            <p class="white p-from-login ">Si ya tienes cuenta 
+                                                                <a class="lightblue" href="/user/login">inicia sesion</a></p>
+                                                                
+                                                                <div class="btn-container">
+                                                                    
                     <input type="button" id="showPass"  
-                                class=" button  background-orange white " >
-
+                    class=" button  background-orange white " >
+                    
                     <input type="submit" 
                     name="sumbit" class="button blue background-orange "id="" 
                     value="➜">
-
-        
-                        </div>
+                    
+                    
+                </div>
         </form>
     </div>
 </section>

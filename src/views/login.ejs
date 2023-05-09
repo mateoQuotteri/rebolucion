@@ -31,13 +31,7 @@
         <input type="password" required class="login-input background-white" 
         placeholder="Contraseña" id="password" name="password"
         value="<%= locals.old && old.password %>">
-
-        <a href="http://localhost:3000/auth/google" class="google-button-container">
-            <button type="button" class="login-with-google-btn" >
-                Sign in with Google
-              </button>
-        </a>
-
+        
         <% if (locals.errors && errors.password) { %>
             <div class="error-container background-button-error">
                 <p class="error orange">
@@ -51,18 +45,24 @@
                         <%= errors.email.msg %>
                     </p>
                 </div>
+                <% } %>
+                <% if (locals.erorrOnLogin) { %>
+                    <div class="error-container background-button-error">
+                        <p class="orange error"><%= locals.erorrOnLogin.msg %>
+                        </p>
+                    </div>
                     <% } %>
-                    <% if (locals.erorrOnLogin) { %>
-                        <div class="error-container background-button-error">
-                            <p class="orange error"><%= locals.erorrOnLogin.msg %>
-                            </p>
-                        </div>
-                        <% } %>
+                    
+                            <a href="http://localhost:3000/auth/google" class="google-button-container">
+                                <button type="button" class="login-with-google-btn" >
+                                    Sign in with Google
+                                  </button>
+                            </a>
+                    
+                    
+                    <p class="white p-from-login ">Si aun no tienes cuenta <a 
+                        class="a-from-register lightblue" href="/user/register">create una</a></p>
                         
-                        
-                        <p class="white p-from-login ">Si aun no tienes cuenta <a 
-                            class="a-from-register lightblue" href="/user/register">create una</a></p>
-                            
                             <div class="btn-container">
                                
                                 

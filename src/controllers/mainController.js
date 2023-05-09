@@ -45,5 +45,7 @@ aviso : (req,res)=>{
 showAdminPanel : (req,res)=>{
     res.render("adminPanel")
 },
-
+errorGoogleAuth : (req,res)=>{
+    res.render("errorAuth")
+},
 }
