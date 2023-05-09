@@ -64,8 +64,8 @@
                     <input type="text" readonly value="<%= locals.loggedUser.city  %>">
 
 
-                    <div class="container-ofButtons">
-                        <a href="http://localhost:3000/user/my-profile/edit">
+                    <div class="container-ofButtons" class="">
+                        <a href="http://localhost:3000/user/my-profile/edit" <% if (locals.loggedUser.googleID) { %> style=" width : 55%;"    <% } %>> 
                             <button class="background-orange white">Editar datos</button>
                         </a>
 

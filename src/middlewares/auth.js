@@ -17,17 +17,17 @@ passport.use(new GoogleStrategy({
 
  async function  (req, accessToken, refreshToken, profile, done) {
     //const user = await db.Users.findOne({ where: { email: profile && password : profile.id } })
-   
-console.log(profile);
 
-const idGoogle = profile.id
 
-const user = await db.Users.findOne({ where: { email: profile.email } })
-
-console.log("este es el id google" + idGoogle);
-
-if (user) {
-  console.log("HOla");
+    
+    const idGoogle = profile.id
+    console.log("este es el id google "  + idGoogle);
+    
+    const user = await db.Users.findOne({ where: { email: profile.email } })
+    
+    if (user) {
+  console.log("este es el user " + user);
+ 
     return done(null, user)
 }
 
