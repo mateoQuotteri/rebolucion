@@ -35,7 +35,7 @@ router.get("/google/callback", passport.authenticate(
 }
 )
 
-router.get("auth/failure", mainController.errorGoogleAuth)
+router.get("/auth/failure", mainController.errorGoogleAuth)
 
 
 
