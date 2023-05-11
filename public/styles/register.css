@@ -111,11 +111,19 @@ main{
       
   }
 
-  #showPass{
+  .showPass{
    background-image: url(../images/eye-solid.svg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: 1.5em;  
+  }
+
+  .eye-x{
+   background-image: url(../images/eye-slash-solid.svg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 1.5em;  
+ 
   }
   .error-container{
    padding: .5em .3em .5em .3em;
