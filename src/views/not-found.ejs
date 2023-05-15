@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="/styles/notFound.css">
 </head>
 <body class="background-blue">
-    <main>
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <main class="hidden" id="main">
 
        
         <section class="error-container">
@@ -42,4 +45,6 @@
     </main>
 
 </body>
+<script src="/js/loading.js"></script>
+
 </html>

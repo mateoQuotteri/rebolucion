@@ -8,7 +8,11 @@
     <title>Aviso</title>
 </head>
 <body class="background-blue">
-  <header>
+  <div class="loading" id="loading">
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+  <header class="hidden" id="header">
     <!--INICIO DEL HEADER -->
     <section class="button-of-header-container">
      <a class="background-orange"href="http://localhost:3000">
@@ -20,7 +24,7 @@
 <!--FIN DEL HEADER-->
 </header>
 
-    <main>
+    <main class="hidden" id="main">
 
       <!--
         Producto de inversión de alto riesgo
@@ -92,4 +96,6 @@ Muchos criptoactivos pueden verse carentes de la liquidez necesaria para poder d
     </footer>
 
 </body>
+<script src="/js/loadingWithHeader.js"></script>
+
 </html>

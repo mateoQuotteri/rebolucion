@@ -10,7 +10,10 @@
     <title>Error en Autenticacion</title>
 </head>
 <body class="background-blue">
-    <main>
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <main class="hidden" id="main">
         <div>
             <i class="fa-solid fa-triangle-exclamation orange"></i>
             <h3 class="white">¡Hubo un error a la hora de realizar la autenticación!</h3>
@@ -23,4 +26,6 @@
 
     </main>
 </body>
+<script src="/js/loading.js"></script>
+
 </html>
