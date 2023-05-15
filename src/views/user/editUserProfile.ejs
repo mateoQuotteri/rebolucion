@@ -9,7 +9,10 @@
 </head>
 
     <body class="background-blue">
-        <main >
+      <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+        <main class="hidden" id="main" >
             <section class="big-container bg-color-blue-dark ">
                 <div class="false-box background-light-color-box-from-behind">
                     <form action="/user/my-profile/edit?_method=PUT" method="POST" class="form background-light-color"id="formulario" 
@@ -101,6 +104,7 @@
     </main>
     </body>
 
+<script src="/js/loading.js"></script>
   
 
 </html>
