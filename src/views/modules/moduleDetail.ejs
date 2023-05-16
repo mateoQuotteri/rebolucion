@@ -12,7 +12,10 @@
 
   </head>
 <body class="background-blue">
-    <header>
+  <div class="loading" id="loading">
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+    <header class="hidden" id="header">
         <!--INICIO DEL HEADER -->
         <section class="button-of-header-container">
          <a class="background-orange"href="http://localhost:3000/module">
@@ -24,7 +27,7 @@
     <!--FIN DEL HEADER-->
     </header>
    
-    <main>
+    <main class="hidden" id="main">
 
       <section class="big-container" >
         <h1 class="white"><%= module.title %></h1>
@@ -96,6 +99,8 @@
       </footer>
     
 </body>
+<script src="/js/loadingWithHeader.js"></script>
+
 </html>
 
 <!--<section style="display: block;" >
