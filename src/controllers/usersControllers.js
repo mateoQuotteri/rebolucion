@@ -107,7 +107,7 @@ module.exports = {
          })
      }
     },
-    editMyProfile: (req, res) => {
+    editMyProfile: async (req, res) => {
         const errors = validationResult(req)
         console.log(errors)
        if (!errors.isEmpty()) {
@@ -117,6 +117,28 @@ module.exports = {
            })
            return
        }
+
+       const phoneOfUser = req.body.phone;
+      const phoneToNumber = Number(phoneOfUser);
+
+      
+      if(isNaN(phoneToNumber)){
+        const userId = req.session.loggedUser.id
+
+
+        const user = await  db.Users.findOne({ where: { id: userId } })
+        console.log("Es NAN");
+        res.locals.phoneIsNaN = {
+            msg :'El celular colocado no es un numero.'
+        };
+       return res.render("user/editUserProfile", {
+        user , res.locals.phoneIsNaN
+     }
+       // res.locals.phoneIsNaN , user
+    )
+    }else {
+        console.log("No fue Nan Genio");
+    }
 
 
     db.Users.update(
