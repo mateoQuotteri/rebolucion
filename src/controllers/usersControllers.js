@@ -132,8 +132,10 @@ module.exports = {
             msg :'El celular colocado no es un numero.'
         };
        return res.render("user/editUserProfile", {
-        user , res.locals.phoneIsNaN
-     }
+        phoneIsNaN : res.locals.phoneIsNaN ,
+            user
+        }  
+    
        // res.locals.phoneIsNaN , user
     )
     }else {
