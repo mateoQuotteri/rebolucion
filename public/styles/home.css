@@ -265,7 +265,6 @@ display: none;
   align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  margin-bottom: .5em;
 
 }
 
@@ -279,14 +278,11 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1em;
     padding-bottom: 1em;
   }
 .btn-container a{
-    width: 45%;
+    width: 60%;
     height: 20%;
-    margin: 0 10px;
     border-radius: .5em;
     border: none;
     padding: .8em;
@@ -294,11 +290,12 @@ display: none;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-  }
- 
-  .btn-container .extra-button{
-      border: none;
-      background-color: transparent;
+}
+
+.btn-container .extra-button{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
   }
 
 
@@ -311,15 +308,13 @@ display: none;
         height: 65vh;
         
  } 
- .btn-container a{
-    width: 35%;
-   
-  }
+ 
 }
  
  @media(min-width: 680px){
     .video-container{
         height: 70vh;
+        margin-bottom: 1.3em;
  } 
 
 .video-container iframe{
@@ -331,18 +326,14 @@ display: none;
  @media(min-width: 768px){
     .video-container{
         height: 80vh;
-  margin-bottom: 2em;
+        margin-bottom: 0em;
 
  } 
  .btn-container {
     padding: 2em;
     margin-top: 1.8em; 
-    margin-bottom: 1.8em;   
+    margin-bottom: 1em;   
 
-  }
- .btn-container a{
-    width: 25%;
-   
   }
 
 }
@@ -350,17 +341,11 @@ display: none;
 @media(min-width: 1000px){
     .video-container{
         height: 90vh;
-        margin-bottom: 10em;
  } 
  .video-container iframe{
     width: 50%;
   }
-  .btn-container a{
-    width: 20%
-  }
-  .btn-container{
-    margin-top: 2em;
-  }
+ 
 
 
 }
@@ -371,7 +356,8 @@ display: none;
 
 
 @media(min-width:1280px){
-  
+
+
 }
 
 
@@ -381,3 +367,63 @@ display: none;
 /*INICIO ACCORDION*/
 
 /*FIN ACORDION*/
+
+.client-info-container{
+  width: 100%;
+  margin-top: 1.2em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;/*ACA ES*/
+  gap: 2em;
+ 
+
+}
+.client-info-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.client-info-div h6{
+  font-size: 1.8em;
+  text-align: center;
+  width: 85%;
+}
+
+.client-info-div p{
+    text-align: center;
+    width: 75%;
+    padding: .1em;
+  }
+
+.client-info-div a{
+    width: 50%;
+    padding: .5em;
+    border-radius: .5em;
+
+  }
+
+  .client-info-div button{
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: center;
+  }
+
+  @media(min-width: 900px){
+  
+    .client-info-container{
+        flex-direction: row;/*ACA ES*/
+        gap: 2em;
+   
+       height: 40vh;
+      
+      }
+      .client-info-div{
+        width: 40%;
+      }
+      
+}
