@@ -1,6 +1,6 @@
 
 
-window.onload = function () {
+
 
     
     
@@ -9,7 +9,7 @@ window.onload = function () {
     const button = document.getElementById("showPass")
     
     button.addEventListener("click", function () {
-        console.log(button.className);
+        console.log("Hola");
         if(button.className.includes("showPass")) {
       button.classList.add("eye-x");
       button.classList.remove("showPass")
@@ -25,5 +25,5 @@ window.onload = function () {
             password.type = "password";
         }
     })
-    }
+
     
