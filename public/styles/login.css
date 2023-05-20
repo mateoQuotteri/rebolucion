@@ -4,7 +4,7 @@ main{
     justify-content: start;
     align-items: center;
     align-content: center;
-    height: 100vh;
+    height: 120vh;
 }
 .section{
    width: 100%;
@@ -139,7 +139,7 @@ main{
      padding-left: .3em;
    font-weight: bolder;
    margin: 0px !important;
-   font-size: 10px;
+   font-size: 12px;
    text-align: left;
    width: 100%;
  }
@@ -161,7 +161,10 @@ main{
       width: 3%;
   }
   .error{
- font-size: 12px;
+ font-size: 13px;
+}
+main{
+   height: 110vh;
 }
    
 }
@@ -181,6 +184,7 @@ main{
      .login-input{
       border-radius: .7em;
      }
+   
 }
 
 @media(min-width: 768px){
@@ -199,6 +203,12 @@ main{
 
    .p-from-login  {
       padding-top: .6em;
+   }
+   main{
+      height: 100vh;
+   }
+   .big-container{
+      height: 90%;
    }
  }
    
