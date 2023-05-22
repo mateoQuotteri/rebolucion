@@ -427,3 +427,63 @@ display: none;
       }
       
 }
+
+/*rebolucion info container   {
+        
+      }*/
+.rebolucion-info-container{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:.5em;
+        margin-top: .8em;
+        padding: .5em;
+      }
+
+      .rebolucion-info-container h5 {
+       font-size: 2em;
+       width: 75%;
+       text-align: center;
+       font-weight: bold; 
+      }
+
+      .rebolucion-info-container div {
+       width: 100%; 
+       display: flex;
+       justify-content: center;
+       align-self: center;
+       flex-direction: column;  
+    }
+
+    .rebolucion-info-container div .number {
+     font-size: 1.8em; 
+     font-weight: bold;
+    }
+
+    .rebolucion-info-container div p {
+        width: 100%;
+        text-align: center;  
+       }
+
+       @media(min-width: 768px){
+        
+        .rebolucion-info-container{
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 1em 0 1em 0;
+          }
+          .rebolucion-info-container div {
+            width: 30%; 
+            margin-top: 1em;  
+         }
+    }
+
+    @media(min-width: 900px){
+        
+        .rebolucion-info-container{
+            margin-top: .2em;
+          }
+        
+    }
