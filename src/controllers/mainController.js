@@ -48,4 +48,7 @@ showAdminPanel : (req,res)=>{
 errorGoogleAuth : (req,res)=>{
     res.render("errorAuth")
 },
+showResources : (req,res)=>{
+    res.render("resources")
+},
 }
