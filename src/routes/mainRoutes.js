@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const mainController = require("../controllers/mainController")
-// const userController = require("../controllers/usersControllers")
+const userController = require("../controllers/usersControllers")
 /*const productController = require("../controllers/productsControllers")*/
 const authMiddleware = require("../middlewares/authMiddleware")
 const adminMiddleware = require("../middlewares/adminMiddleware");
@@ -14,8 +14,6 @@ router.get("/", mainController.index)
 /*router.get("/adminpanel", mainController.admin)*/
 
 router.get("/aviso", authMiddleware ,mainController.aviso)
-
-router.get("/resources" , mainController.showResources)
 
 router.get("/contact-us", authMiddleware,mainController.contact)
 router.get("/adminpanel", authMiddleware, adminMiddleware, mainController.showAdminPanel)
@@ -38,5 +36,7 @@ router.get("/google/callback", passport.authenticate(
 )
 
 router.get("/auth/failure", mainController.errorGoogleAuth)
+
+
 
 module.exports = router
