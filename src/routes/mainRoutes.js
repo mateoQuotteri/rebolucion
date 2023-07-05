@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const express = require("express")
 const router = express.Router()
 const mainController = require("../controllers/mainController")
@@ -36,6 +37,9 @@ router.get("/google/callback", passport.authenticate(
 )
 
 router.get("/auth/failure", mainController.errorGoogleAuth)
+
+
+router.get("/resources", mainController.showResources)
 
 
 
