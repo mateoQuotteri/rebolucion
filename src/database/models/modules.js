@@ -7,6 +7,8 @@ module.exports = (sequelize, dataTypes) => {
         difficulty : { type: dataTypes.INTEGER },
         image : { type: dataTypes.TEXT },
         video : { type: dataTypes.STRING },
+        id_teacher : { type: dataTypes.INTEGER },
+
 
     }
 

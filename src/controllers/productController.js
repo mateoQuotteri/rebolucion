@@ -40,7 +40,8 @@ module.exports = {
             image : imageFile.filename,
             difficulty : newProduct.difficulty,
             units : newProduct.units,
-            video : newProduct.video
+            video : newProduct.video,
+            id_teacher : newProduct.id_teacher
         })
             .then((p) => {
                 return res.redirect("/module")
@@ -55,13 +56,20 @@ module.exports = {
             raw : true,
             nest : true
         })
+        
         const unitsOfModule = await db.Units.findAll({
             where: {id_modulo: idSearched}
             })
 
+            console.log(module.id_teacher);
+
+            const teacher = await db.Teachers.findOne({
+                where: { id: module.id_teacher },
+            })
+            console.log(teacher);
         if (module) {
             res.render("modules/moduleDetail", {
-               module , unitsOfModule
+               module , unitsOfModule , teacher
             })
         } else {
             res.render("not-found")

@@ -3,12 +3,6 @@ module.exports = (sequelize, dataTypes) => {
         id: { autoIncrement: true, primaryKey: true, type: dataTypes.INTEGER },
         email: { type: dataTypes.STRING },
         name: { type: dataTypes.STRING },
-        lastname :  { type: dataTypes.STRING },
-        celular: { type: dataTypes.INTEGER },
-        password: { type: dataTypes.STRING },
-        city : { type: dataTypes.STRING },
-        state : { type: dataTypes.STRING },
-        country : { type: dataTypes.STRING },
 
     }
 
