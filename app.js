@@ -5,13 +5,14 @@ const mainRoutes = require("./src/routes/mainRoutes");
 const userRoutes = require("./src/routes/userRoutes");
 const productRoutes = require("./src/routes/productRoutes");
 const unitRoutes = require("./src/routes/unitRoutes")
+const teacherRoutes = require("./src/routes/teacherRoutes")
 const bodyParser = require('body-parser')
 const userAuth = require("./src/middlewares/userAuth")
 let session = require("express-session")
 const passport = require("passport")
+const PORT = process.env.PORT || 3000
 
-
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("rebolucion is starting");
 });
 app.set('views', __dirname + '/src/views');
@@ -52,6 +53,7 @@ app.use('/', mainRoutes);
 app.use('/user', userRoutes)
 app.use('/module', productRoutes)
 app.use("/unit", unitRoutes)
+app.use("/teacher", teacherRoutes)
 
 app.use((req, res, next) => {
   res.status(404).render("not-found")

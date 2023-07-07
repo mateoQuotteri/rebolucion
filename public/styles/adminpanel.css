@@ -11,6 +11,7 @@ body .container {
     height: 55vh;
     display: flex;
 flex-direction: column;
+gap: 1em;
     justify-content: space-around;
     align-items: center;
 }
