@@ -8,7 +8,10 @@ const unitRoutes = require("./src/routes/unitRoutes")
 const teacherRoutes = require("./src/routes/teacherRoutes")
 const bodyParser = require('body-parser')
 const userAuth = require("./src/middlewares/userAuth")
-let session = require("express-session")
+
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const passport = require("passport")
 const PORT = process.env.PORT || 3000
 
@@ -24,13 +27,17 @@ app.use(express.urlencoded({extended:false}))
 
  
  
- app.use(
-   session({
-     secret: "mensaje secreto",
-     resave: false,
-     saveUninitialized: false,
-    })
-    )
+ const sessionStore = new SequelizeStore({
+  db: sequelize, // Objeto Sequelize que representa tu conexión a la base de datos
+  table: 'sessions', // Nombre de la tabla para almacenar las sesiones
+});
+
+app.use(session({
+  secret: 'my-secret-key',
+  resave: false,
+  saveUninitialized: false,
+  store: sessionStore,
+}));
     
     
      app.use(passport.initialize())
