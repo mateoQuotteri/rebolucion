@@ -54,6 +54,12 @@ app.use(session({
 
 // parse application/json
 //  app.use(bodyParser.json())
+const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
+  dialect: 'mysql', // Elige tu dialecto de base de datos adecuado, como 'mysql', 'postgres', 'sqlite', etc.
+  // Otras opciones de configuración según tus necesidades
+});
+
 
 app.use(methodOverride("_method"));
 
