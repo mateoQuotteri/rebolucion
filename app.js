@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 
 // Crear objeto sequelize antes de utilizarlo en sessionStore
 const sequelize = new Sequelize('database', 'username', 'password', {
-  host: 'localhost',
+  host:  process.env.PORT ||'localhost',
   dialect: 'mysql',
   // Otras opciones de configuración según tus necesidades
 });
