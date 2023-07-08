@@ -16,6 +16,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const passport = require("passport");
 const PORT = process.env.PORT || 3000;
 
+new Sequelize(dburl, { operatorsAliases: { lt: Sequelize.Op.lt } })
 // Crear objeto sequelize antes de utilizarlo en sessionStore
 const sequelize = new Sequelize('database', 'username', 'password', {
   host: 'localhost',
