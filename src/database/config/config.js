@@ -1,5 +1,8 @@
-require('dotenv').config(); // Cargar variables de entorno desde .env
-
+const DB_USER = process.env.DB_USER;
+const DB_USERNAME = process.env.DB_USERNAME;
+const DB_PASS = process.env.DB_PASS;
+const DB_PORT = process.env.DB_PORT;
+const DB_HOST = process.env.DB_HOST;
 
 module.exports = {
   "development": {
