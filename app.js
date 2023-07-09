@@ -9,7 +9,7 @@ const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
 const { Sequelize } = require('sequelize');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
