@@ -23,8 +23,8 @@ const sequelize = new Sequelize('database', 'username', 'password', {
   // Otras opciones de configuración según tus necesidades
 });
 
-app.listen(PORT, () => {
-  console.log("rebolucion is starting");
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log('Servidor iniciado en el puerto', process.env.PORT || 3000);
 });
 
 app.set('views', __dirname + '/src/views');
