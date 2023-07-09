@@ -37,7 +37,19 @@ const sessionStore = new SequelizeStore({
   db: sequelize,
   table: 'sessions',
 });
+const config = require('./config'); // Asegúrate de que el archivo de configuración esté en la ruta correcta
 
+const newSequelize = new Sequelize(
+  config.development.database,
+  config.development.username,
+  config.development.password,
+  {
+    host: config.development.host,
+    port: config.development.port,
+    dialect: 'mysql',
+    // Otras opciones de configuración según tus necesidades
+  }
+);
 app.use(session({
   secret: 'my-secret-key',
   resave: false,
@@ -48,21 +60,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(userAuth);
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT,
-});
-// Conectar a la base de datos
-connection.connect((error) => {
-  if (error) {
-    console.error('Error al conectar a la base de datos:', error);
-  } else {
-    console.log('Conexión exitosa a la base de datos');
-  }
-});
+
 
 app.use(methodOverride("_method"));
 
