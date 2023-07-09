@@ -9,22 +9,21 @@ const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
 const { Sequelize } = require('sequelize');
-const mysql = require('mysql2');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const passport = require("passport");
 const PORT = process.env.PORT || 3000;
 
-// Crear objeto sequelize antes de utilizarlo en sessionStore
-const sequelize = new Sequelize('database', 'username', 'password', {
-  host:  process.env.PORT ||'localhost',
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
   dialect: 'mysql',
   // Otras opciones de configuración según tus necesidades
 });
 
-app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
-  console.log('Servidor iniciado en el puerto', process.env.PORT || 3000);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log('Servidor iniciado en el puerto', PORT);
 });
 
 app.set('views', __dirname + '/src/views');
@@ -37,19 +36,7 @@ const sessionStore = new SequelizeStore({
   db: sequelize,
   table: 'sessions',
 });
-const config = require('./src/database/config/config');
 
-const newSequelize = new Sequelize(
-  config.development.database,
-  config.development.username,
-  config.development.password,
-  {
-    host: config.development.host,
-    port: config.development.port,
-    dialect: 'mysql',
-    // Otras opciones de configuración según tus necesidades
-  }
-);
 app.use(session({
   secret: 'my-secret-key',
   resave: false,
@@ -60,7 +47,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(userAuth);
-
 
 app.use(methodOverride("_method"));
 
