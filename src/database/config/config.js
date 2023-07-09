@@ -6,7 +6,8 @@ module.exports = {
     "username": process.env.DB_USERNAME || "root",
     "password": process.env.DB_PASS || "123456",
     "database": process.env.DB_USER || "rebolucion_db",
-    "host": "127.0.0.1",
+    "host": process.env.DB_HOST || "127.0.0.1",
+    "port": process.env.DB_PORT,
     "dialect": "mysql"
   },
   "test": {
