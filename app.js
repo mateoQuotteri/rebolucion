@@ -9,7 +9,7 @@ const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
 const { Sequelize } = require('sequelize');
-
+const mysql = require('mysql');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -48,6 +48,21 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(userAuth);
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+});
+// Conectar a la base de datos
+connection.connect((error) => {
+  if (error) {
+    console.error('Error al conectar a la base de datos:', error);
+  } else {
+    console.log('Conexión exitosa a la base de datos');
+  }
+});
 
 app.use(methodOverride("_method"));
 
