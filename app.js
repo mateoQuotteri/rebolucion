@@ -37,7 +37,7 @@ const sessionStore = new SequelizeStore({
   db: sequelize,
   table: 'sessions',
 });
-const config = require('./config'); // Asegúrate de que el archivo de configuración esté en la ruta correcta
+const config = require('./src/database/config/config');
 
 const newSequelize = new Sequelize(
   config.development.database,
