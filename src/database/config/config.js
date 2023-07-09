@@ -1,14 +1,11 @@
-const DB_USER = process.env.DB_USER;
-const DB_USERNAME = process.env.DB_USERNAME;
-
-const DB_PASS = process.env.DB_PASS;
+require('dotenv').config(); // Cargar variables de entorno desde .env
 
 
 module.exports = {
   "development": {
-    "username": DB_USERNAME || "root",
-    "password": DB_PASS || "123456",
-    "database":  DB_USER ||"rebolucion_db",
+    "username": process.env.DB_USERNAME || "root",
+    "password": process.env.DB_PASS || "123456",
+    "database": process.env.DB_USER || "rebolucion_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
