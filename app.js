@@ -16,12 +16,33 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const passport = require("passport");
 const PORT = process.env.PORT || 3000;
+const sequelize = new Sequelize(
+  process.env.MYSQLDATABASE,
+  process.env.MYSQL_USER,
+  process.env.MYSQLPASSWORD,
+  {
+    host: process.env.MYSQLHOST,
+    dialect: 'mysql'
+  }
+  );
 
-
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log('Servidor iniciado en el puerto', PORT);
-});
+  // Verificar conexión a la base de datos
+  sequelize.authenticate()
+  .then(() => {
+    console.log('Conexión establecida con la base de datos.');
+  })
+  .catch(err => {
+    console.error('No se pudo conectar a la base de datos:', err);
+  });
+  
+  // Configurar sequelize en tu aplicación
+  app.set('sequelize', sequelize);
+  
+  
+  
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log('Servidor iniciado en el puerto', PORT);
+  });
 
 app.set('views', __dirname + '/src/views');
 app.set('view engine', 'ejs');
