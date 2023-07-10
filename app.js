@@ -8,12 +8,7 @@ const unitRoutes = require("./src/routes/unitRoutes");
 const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
-const {Sequelize} = require("sequelize");
-
-
 const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
 const passport = require("passport");
 const PORT = process.env.PORT || 3000;
 
@@ -29,10 +24,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const sessionStore = new SequelizeStore({
-  db: sequelize,
-  table: 'sessions',
-});
+
 
 app.use(session({
   secret: 'my-secret-key',
