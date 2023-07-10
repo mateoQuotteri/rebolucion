@@ -1,7 +1,4 @@
-const {Sequelize} = require("sequelize");
 
-
-module.exports = sequelize;
 
 module.exports ={
   "development": {
