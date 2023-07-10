@@ -16,15 +16,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const passport = require("passport");
 const PORT = process.env.PORT || 3000;
-const sequelize = new Sequelize(
-  process.env.MYSQLDATABASE,
-  process.env.MYSQL_USER,
-  process.env.MYSQLPASSWORD,
-  {
-    host: process.env.MYSQLHOST,
-    dialect: 'mysql'
-  }
-  );
+const sequelize = new Sequelize({
+  database: process.env.MYSQLDATABASE,
+  username: process.env.MYSQL_USER,
+  password: process.env.MYSQLPASSWORD,
+  host: process.env.MYSQLHOST,
+  dialect: 'mysql'
+});
 
   // Verificar conexión a la base de datos
   sequelize.authenticate()
