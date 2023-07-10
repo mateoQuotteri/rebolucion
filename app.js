@@ -8,19 +8,14 @@ const unitRoutes = require("./src/routes/unitRoutes");
 const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
-const { Sequelize } = require('sequelize');
+
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const passport = require("passport");
 const PORT = process.env.PORT || 3000;
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  dialect: 'mysql',
-  // Otras opciones de configuración según tus necesidades
-});
+
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log('Servidor iniciado en el puerto', PORT);
