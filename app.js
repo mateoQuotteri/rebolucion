@@ -9,6 +9,7 @@ const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
 const {Sequelize} = require("sequelize");
+const path = require('path');
 require('dotenv').config({path: path.join(__dirname, '../','.env')});
 
 const session = require('express-session');
