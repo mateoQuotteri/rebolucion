@@ -8,7 +8,12 @@ const unitRoutes = require("./src/routes/unitRoutes");
 const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
+const {Sequelize} = require("sequelize");
+
+
 const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const passport = require("passport");
 const PORT = process.env.PORT || 3000;
 
@@ -28,9 +33,6 @@ app.use(express.json());
 
 app.use(session({
   secret: 'my-secret-key',
-  resave: false,
-  saveUninitialized: false,
-  store: sessionStore,
 }));
 
 app.use(passport.initialize());
