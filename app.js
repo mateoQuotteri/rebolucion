@@ -39,9 +39,8 @@ const sequelize = new Sequelize({
   
   
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(process.env.MYSQLDATABASE);
-    console.log('Servidor iniciado en el puerto', PORT);
 
+    console.log('Servidor iniciado en el puerto', PORT);
   });
 
 app.set('views', __dirname + '/src/views');
