@@ -11,7 +11,6 @@ const userAuth = require("./src/middlewares/userAuth");
 const {Sequelize} = require("sequelize");
 const path = require('path');
 require('dotenv').config({path: path.join(__dirname, '../','.env')});
-
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
