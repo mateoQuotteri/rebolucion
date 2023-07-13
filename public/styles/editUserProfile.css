@@ -4,7 +4,7 @@ main{
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 100vh;
+    height: 120vh;
 }
 .big-container{
     display: flex;
