@@ -204,9 +204,7 @@ main{
    .p-from-login  {
       padding-top: .6em;
    }
-   main{
-      height: 100vh;
-   }
+ 
    .big-container{
       height: 90%;
    }
