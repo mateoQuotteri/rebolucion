@@ -77,10 +77,11 @@ main{
 }
 .input-flex-container input{
    width: 45%; 
+   padding: .5em;
    
 }
  .login-input{
-     padding: .1em;
+     padding: .5em;
      outline: none;
      border-radius: .5em;
      width: 100%;
@@ -208,7 +209,16 @@ main{
    .input-flex-container::placeholder{
       padding-left: .5em;   
    }
-
+   .input-flex-container input{
+      padding: .1em;
+      
+   }
+    .login-input{
+        padding: .1em;
+        outline: none;
+        border-radius: .5em;
+        width: 100%;
+   }
 }
 
 
