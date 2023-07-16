@@ -5,7 +5,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 3em;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .false-box{
-    width: 100%;
+    width: 85%;
     height: 75%;
     position: relative;
     margin-bottom: 1.5em;
@@ -96,7 +96,7 @@ margin-bottom: .6em;
 
 .container-ofButtons{
     margin-top: 1em;
-    width: 120%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -209,6 +209,17 @@ form button i{
 
 
 @media(min-width: 1024px){
+    .principal-section{
+        width: 90%;
+    }
+    .false-box{
+        width: 85%;
+    
+    }
+    
+.container-ofButtons{
+    width: 120%;
+}
 }
 
 
