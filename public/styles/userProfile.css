@@ -172,7 +172,6 @@ form button i{
         width: 140%;
     }
     .container-ofButtons{
-        flex-direction: row;
         align-items: center;
         gap: .5em;
     }
