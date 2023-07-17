@@ -184,6 +184,9 @@ form button i{
     .container-ofButtons a button{
       height: 6em;
     }
+    form button{
+        width: 80%;
+    }
 
 }
 @media(min-width: 650px){

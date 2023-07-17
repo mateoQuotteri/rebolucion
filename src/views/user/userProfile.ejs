@@ -68,11 +68,11 @@
 
 
                     <div class="container-ofButtons" class="">
-                        <a href="https://rebolucion-production.up.railway.app/user/my-profile/edit" <% if (locals.loggedUser.googleID) { %> style=" width : 55%;"    <% } %>> 
+                        <a href="https://rebolucion-production.up.railway.app/user/my-profile/edit" <% if (isGoogleUser) { %> style=" width : 55%;"    <% } %>> 
                             <button class="background-orange white">Editar datos</button>
                         </a>
 
-                        <a  href="https://rebolucion-production.up.railway.app/user/my-profile/edit/my-password" <% if (locals.loggedUser.googleID) { %> style=" display: none;"    <% } %>>
+                        <a  href="https://rebolucion-production.up.railway.app/user/my-profile/edit/my-password" <% if (isGoogleUser) { %> style=" display: none;"    <% } %>>
                             <button class="background-orange white">Cambiar contraseña</button>
                         </a>
                     </div>

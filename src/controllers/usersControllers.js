@@ -72,11 +72,13 @@ module.exports = {
     },
     showMyProfile: (req, res) => { 
        const user =req.session.loggedUser;
-
-       console.log(user);
+       let isGoogleUser = false
+       if (user.googleId) {
+        isGoogleUser = true
+       }
        if (user) {
         res.render("user/userProfile", {
-           user
+           user , isGoogleUser
         })
     } else {
         res.render("not-found")
