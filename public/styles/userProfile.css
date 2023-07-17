@@ -172,12 +172,14 @@ form button i{
         width: 140%;
     }
     .container-ofButtons{
+        flex-direction: row;
         align-items: center;
+        flex-wrap: wrap;
         gap: .5em;
     }
     
     .container-ofButtons a{
-        width: 50%;
+        width: 80%;
     }
     .container-ofButtons a button{
       height: 6em;
