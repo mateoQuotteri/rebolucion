@@ -1,7 +1,7 @@
 .principal-section{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 3em;
@@ -9,6 +9,9 @@
     margin: 0 auto;
 }
 
+ h1{
+    text-align: center;
+}
 .principal-section h2{
     text-align: center;
     flex-basis: 100%;
@@ -120,7 +123,7 @@ margin-bottom: .6em;
     border-radius: 1em;
 }
 form{
-    width: 100%;
+    width: 135%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +131,7 @@ form{
 }
 form button{
     padding: 1em;
-    width: 65%;
+    width: 100%;
     text-align: center;
     border: none;
     padding: 1em 1.5em 1em 1.5em;
@@ -185,7 +188,7 @@ form button i{
       height: 6em;
     }
     form button{
-        width: 80%;
+        width: 52%;
     }
 
 }
@@ -213,16 +216,15 @@ form button i{
 
 
 @media(min-width: 1024px){
-    .principal-section{
-        width: 90%;
-    }
-    .false-box{
-        width: 85%;
-    
-    }
+   
+  
     
 .container-ofButtons{
     width: 140%;
+}
+
+form button{
+    width: 82%;
 }
 }
 

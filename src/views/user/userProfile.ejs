@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="/styles/aviso.css">
     <link rel="stylesheet" href="/styles/userProfile.css">
     <title>Mi perfil</title>
-</head>
-<body class="background-blue">
+</head><body class="background-blue">
     <div class="loading" id="loading">
         <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
@@ -23,13 +22,12 @@
     <!--FIN DEL HEADER-->
     </header>
     <main class="hidden" id="main">
-        <section class="big-container">
-            <div class="title-container">
-                <div class="background-orange or-bar"></div>
-                <h1 class="white">Mi perfil</h1>
-                </div>
-        </section>
+        
     <section>
+
+        <div>
+            <h1 class="white">Mi perfil</h1>
+        </div>
 
         <section class="principal-section">
             
@@ -43,36 +41,36 @@
                     </div>
 
                     <div class="name-container">
-                        <h3 class="white">¡Hola, <%= locals.loggedUser.name  %>!</h3>
+                        <h3 class="white">¡Hola, Mateo!</h3>
                     </div>
                       <label class="white"for="">Nombre:</label>
-                    <input type="text" readonly value="<%= locals.loggedUser.name  %>">
+                    <input type="text" readonly value="<%= Mateo  %>">
 
                     <label class="white"for="">Apellido:</label>
-                    <input type="text" readonly value="<%= locals.loggedUser.lastname  %>">
+                    <input type="text" readonly value="<%= Quotteri  %>">
 
                     <label class="white"for="">Email:</label>
-                    <input type="text" readonly value="<%= locals.loggedUser.email  %>">
+                    <input type="text" readonly value="<%= quotterimateo@gmail.com  %>">
 
                     <label class="white"for="">Celular:</label>
-                    <input type="text" readonly value="<%= locals.loggedUser.phone  %>">
+                    <input type="text" readonly value="<%= 11-39569894  %>">
 
                     <label class="white"for="">País:</label>
-                    <input type="text" readonly value="<%= locals.loggedUser.country  %>">
+                    <input type="text" readonly value="<%= Argentina  %>">
 
                     <label class="white"for="">Estado o Provincia:</label>
-                    <input type="text" readonly value="<%= locals.loggedUser.state  %>">
+                    <input type="text" readonly value="<%= Buenos Aires  %>">
                     
                     <label class="white"for="">Ciudad:</label>
-                    <input type="text" readonly value="<%= locals.loggedUser.city  %>">
+                    <input type="text" readonly value="<%= Lanus oeste  %>">
 
 
                     <div class="container-ofButtons" class="">
-                        <a href="https://rebolucion-production.up.railway.app/user/my-profile/edit" <% if (locals.loggedUser.googleID) { %> style=" width : 55%;"    <% } %>> 
+                        <a href="https://rebolucion-production.up.railway.app/user/my-profile/edit"> 
                             <button class="background-orange white">Editar datos</button>
                         </a>
 
-                        <a  href="https://rebolucion-production.up.railway.app/user/my-profile/edit/my-password" <% if (locals.loggedUser.googleID) { %> style=" display: none;"    <% } %>>
+                        <a  href="https://rebolucion-production.up.railway.app/user/my-profile/edit/my-password" >
                             <button class="background-orange white">Cambiar contraseña</button>
                         </a>
                     </div>
@@ -87,21 +85,7 @@
               </div>
             
         </section>
-        <!--
-    <h2 style="display: block;">Mis datos:</h2>
-    <h4 style="display: block;">Email: <%= locals.loggedUser.email  %></h4>
-    <h4 style="display: block;">Nombre:<%= locals.loggedUser.name  %></h4>
-    <h4 style="display: block;">Apellido:<%= locals.loggedUser.lastname  %></h4>
-    <h4 style="display: block;">Celular: <%= locals.loggedUser.phone  %></h4>
-    <h4 style="display: block;">Ciudad:<%= locals.loggedUser.city  %></h4>
-    <h4 style="display: block;">Estado o provincia: <%= locals.loggedUser.state  %></h4>
-    <h4 style="display: block;">Pais:<%= locals.loggedUser.country  %></h4>
-
-    <button><a href="/user/my-profile/edit/">Editar datos</a></button>
-    <button><a href="/user/my-profile/edit/my-password">Cambiar contraseña</a></button>
-    <button><a href="/user/my-profile/logout">Cerrar session</a></button>
-
-    -->
+ 
 </section>
 </main>
 </body>
