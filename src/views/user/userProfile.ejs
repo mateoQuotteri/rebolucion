@@ -30,61 +30,53 @@
         </div>
 
         <section class="principal-section">
-            
-              <div class="false-box background-light-color-box-from-behind">
-                <div class="background-light-color  div-inside">
 
-                    <div class="icon-container">
-                        <div class="icon">
-                            <i class=" orange fa-solid fa-user"></i>
-                        </div>
-                    </div>
+            <div class="false-box background-light-color-box-from-behind">
 
-                    <div class="name-container">
-                        <h3 class="white">¡Hola, Mateo!</h3>
-                    </div>
-                      <label class="white"for="">Nombre:</label>
-                    <input type="text" readonly value="<%= Mateo  %>">
+                  </div>
 
-                    <label class="white"for="">Apellido:</label>
-                    <input type="text" readonly value="<%= Quotteri  %>">
+                  <div class="name-container">
+                      <h3 class="white">¡Hola, <%= locals.loggedUser.name  %>!</h3>
+             
+                  </div>
+                    <label class="white"for="">Nombre:</label>
+                  <input type="text" readonly value="<%= locals.loggedUser.name  %>">
+               
 
-                    <label class="white"for="">Email:</label>
-                    <input type="text" readonly value="<%= quotterimateo@gmail.com  %>">
+                  <label class="white"for="">Apellido:</label>
+                  <input type="text" readonly value="<%= locals.loggedUser.lastname  %>">
 
-                    <label class="white"for="">Celular:</label>
-                    <input type="text" readonly value="<%= 11-39569894  %>">
+                  <label class="white"for="">Email:</label>
+                  <input type="text" readonly value="<%= locals.loggedUser.email  %>">
 
-                    <label class="white"for="">País:</label>
-                    <input type="text" readonly value="<%= Argentina  %>">
+                  <label class="white"for="">Celular:</label>
+                  <input type="text" readonly value="<%= locals.loggedUser.phone  %>">
 
-                    <label class="white"for="">Estado o Provincia:</label>
-                    <input type="text" readonly value="<%= Buenos Aires  %>">
-                    
-                    <label class="white"for="">Ciudad:</label>
-                    <input type="text" readonly value="<%= Lanus oeste  %>">
+                  <label class="white"for="">País:</label>
+                  <input type="text" readonly value="<%= locals.loggedUser.country  %>">
+
+                  <label class="white"for="">Estado o Provincia:</label>
+                  <input type="text" readonly value="<%= locals.loggedUser.state  %>">
+
+                  <label class="white"for="">Ciudad:</label>
+                  <input type="text" readonly value="<%= locals.loggedUser.city  %>">
 
 
-                    <div class="container-ofButtons" class="">
-                        <a href="https://rebolucion-production.up.railway.app/user/my-profile/edit"> 
-                            <button class="background-orange white">Editar datos</button>
-                        </a>
+                  <div class="container-ofButtons" class="">
+                      <a href="https://rebolucion-production.up.railway.app/user/my-profile/edit" <% if (locals.loggedUser.googleID) { %> style=" width : 55%;"    <% } %>> 
+                      <a href="https://rebolucion-production.up.railway.app/user/my-profile/edit"> 
+                          <button class="background-orange white">Editar datos</button>
+                      </a>
 
-                        <a  href="https://rebolucion-production.up.railway.app/user/my-profile/edit/my-password" >
-                            <button class="background-orange white">Cambiar contraseña</button>
-                        </a>
-                    </div>
+                      <a  href="https://rebolucion-production.up.railway.app/user/my-profile/edit/my-password" <% if (locals.loggedUser.googleID) { %> style=" display: none;"    <% } %>>
+                      <a  href="https://rebolucion-production.up.railway.app/user/my-profile/edit/my-password" >
+                          <button class="background-orange white">Cambiar contraseña</button>
+                      </a>
+                  </div>
 
-                    <form action="/user/my-profile?_method=DELETE" method="POST"  
-                    enctype="">
-                        <button  class="background-orange" type="submit">
-                            <i class="fa-solid fa-right-from-bracket white"></i>
-                        </button>
-                    </form>
-                </div>
-              </div>
-            
-        </section>
+            </div>
+
+      </section>
  
 </section>
 </main>
