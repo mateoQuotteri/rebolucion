@@ -511,3 +511,15 @@ display: none;
         text-align: center;
         font-weight: bold;
       }
+
+      @media(min-width: 900px){
+        
+        .feedback-h6{
+            font-size: 1.8em;
+          }
+        
+          .feedback{
+            font-size: 1.8em;
+          }
+        
+    }
