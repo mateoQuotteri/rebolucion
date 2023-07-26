@@ -377,6 +377,7 @@ display: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;/*ACA ES*/
   gap: 2em;
  
@@ -389,11 +390,24 @@ display: none;
   flex-direction: column;
 }
 
+.client-info-container h6{
+    font-size: 1em;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .feedback{
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+  }
 .client-info-div h6{
   font-size: 1.8em;
   text-align: center;
   width: 85%;
 }
+
+  
 
 .client-info-div p{
     text-align: center;
