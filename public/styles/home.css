@@ -503,7 +503,7 @@ display: none;
     .feedback-h6{
         font-size: 1em;
         text-align: center;
-        flex-basis: 100%;
+        width: 100%;
       }
     
       .feedback{
