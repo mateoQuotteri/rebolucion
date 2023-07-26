@@ -392,17 +392,7 @@ display: none;
   flex-direction: column;
 }
 
-.client-info-container h6{
-    font-size: 1em;
-    text-align: center;
-    flex-basis: 100%;
-  }
 
-  .feedback{
-    font-size: 1em;
-    text-align: center;
-    font-weight: bold;
-  }
 .client-info-div h6{
   font-size: 1.8em;
   text-align: center;
@@ -505,3 +495,19 @@ display: none;
           }
         
     }
+
+
+
+    /*FEEDBACK*/
+
+    .feedback-h6{
+        font-size: 1em;
+        text-align: center;
+        flex-basis: 100%;
+      }
+    
+      .feedback{
+        font-size: 1em;
+        text-align: center;
+        font-weight: bold;
+      }
