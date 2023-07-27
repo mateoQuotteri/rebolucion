@@ -515,11 +515,11 @@ display: none;
       @media(min-width: 900px){
         
         .feedback-h6{
-            font-size: 1.8em;
+            font-size: 1.2em;
           }
         
           .feedback{
-            font-size: 1.8em;
+            font-size: 1.2em;
           }
         
     }
