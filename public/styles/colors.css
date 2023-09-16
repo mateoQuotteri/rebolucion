@@ -4,7 +4,7 @@
  
 }
 .white{
-    color: #ffffff;
+    color: #f1f2f4;
 }
 .orange {
     color: #F09102;
@@ -14,16 +14,16 @@
     color:#00FFF6;
 }
 .blue{
-    color: #06071A;
+    color: #390d40;
 }
 .background-orange{
     background-color:  #F09102
 }
 .background-white{
-    background-color:  #ffffff
+    background-color:  #f1f2f4
 }
 .background-blue{
-    background-color: #06071A;
+    background-color:  #390d40;
 }
 .background-blueForButtons{
     background-color:   rgba(6, 7, 26, 0.4);
