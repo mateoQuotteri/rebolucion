@@ -4,9 +4,9 @@ module.exports = {
     index : (req,res)=>{
 
         const thingsToLearn= [{
-            name: "Web3",
+            name: "Herramientas",
             image: "web3Card.png",
-            icon : "fa-sharp fa-solid fa-globe",
+            icon : "fa-solid fa-gear"
            },
            {
             name: "Blockchain",
@@ -14,9 +14,9 @@ module.exports = {
             icon : "fa-solid fa-cubes",
            },
            {
-            name: "Contratos inteligentes",
+            name: "Habilidades digitales",
             image: "contratoCard.png",
-            icon : "fa-solid fa-file-contract"
+            icon :"fa-solid fa-user-tie"
            },
            {
             name: "DeFi",
