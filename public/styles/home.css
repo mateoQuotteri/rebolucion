@@ -265,7 +265,7 @@ display: none;
 }
 
 .video-container iframe{
-  width: 100%;
+  width: 80%;
   height: 90%;
 }
 
@@ -316,7 +316,7 @@ display: none;
  } 
 
 .video-container iframe{
-    width: 80%;
+    width: 85%;
     height: 100%;
   }
  }
@@ -341,7 +341,7 @@ display: none;
         height: 90vh;
  } 
  .video-container iframe{
-    width: 85%;
+    width: 100%;
   }
  
 
