@@ -54,12 +54,7 @@ display: none;
     .button-container button{
         padding: 1.4em;
        }
-       .container-mobile-image{
-        display: none;
-    }
-    .container-mobile-image img{
-        display: none;
-    }
+    
        .phrase-container{
         display: block;
         width: 100%;
