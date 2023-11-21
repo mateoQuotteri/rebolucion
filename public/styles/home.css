@@ -304,6 +304,7 @@ display: none;
  @media(min-width: 560px){
     .video-container{
         height: 65vh;
+        margin-bottom: 1em;
         
  } 
  
@@ -339,6 +340,7 @@ display: none;
 @media(min-width: 1000px){
     .video-container{
         height: 90vh;
+        width: 100%;
  } 
  .video-container iframe{
     width: 100%;
