@@ -339,7 +339,7 @@ display: none;
 
 @media(min-width: 1000px){
     .video-container{
-        height: 90vh;
+        height: 110vh;
         width: 100%;
  } 
  .video-container iframe{
