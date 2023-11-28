@@ -3,7 +3,7 @@ module.exports = {
       const resources = [
         {
           name: "Bitcoin",
-          url: "http://localhost:3000/resources/bitcoin",
+          url: "https://rebolucion-production.up.railway.app/resources/bitcoin",
           ready: true,
           icon: "fa-brands fa-bitcoin",
         },
