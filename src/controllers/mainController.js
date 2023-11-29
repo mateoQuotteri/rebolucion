@@ -80,6 +80,12 @@ module.exports = {
         ready: false,
         icon: "fa-solid fa-square-poll-vertical",
       },
+      {
+        name: "Marketing Digital",
+        url: "",
+        ready: false,
+        icon: "fa-solid fa-bullseye",
+      },
     ];
     res.render("resources", { resources: resources });
   },
