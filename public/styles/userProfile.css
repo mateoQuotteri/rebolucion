@@ -30,7 +30,7 @@
 
 .false-box{
     width: 100%;
-    height: 75%;
+    height: 85%;
     position: relative;
     margin-bottom: 1.5em;
     border-radius: .8em;
@@ -99,7 +99,7 @@ margin-bottom: .6em;
 
 .container-ofButtons{
     margin-top: 1em;
-    width: 90%;
+    width: 55%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -123,7 +123,7 @@ margin-bottom: .6em;
     border-radius: 1em;
 }
 form{
-    width: 135%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +131,7 @@ form{
 }
 form button{
     padding: 1em;
-    width: 100%;
+    width: 150%;
     text-align: center;
     border: none;
     padding: 1em 1.5em 1em 1.5em;
@@ -161,6 +161,7 @@ form button i{
 }
 
 @media(min-width: 600px){
+
     .false-box{
         width: 100%;    
     }
@@ -175,6 +176,7 @@ form button i{
         width: 140%;
     }
     .container-ofButtons{
+        width: 75%;
         flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
@@ -188,7 +190,7 @@ form button i{
       height: 6em;
     }
     form button{
-        width: 52%;
+        width: 70%;
     }
 
 }
