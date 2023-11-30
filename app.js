@@ -5,6 +5,7 @@ const mainRoutes = require("./src/routes/mainRoutes");
 const userRoutes = require("./src/routes/userRoutes");
 const productRoutes = require("./src/routes/productRoutes");
 const unitRoutes = require("./src/routes/unitRoutes");
+const resourcesRoutes = require("./src/routes/resourcesRoutes")
 const teacherRoutes = require("./src/routes/teacherRoutes");
 const bodyParser = require('body-parser');
 const userAuth = require("./src/middlewares/userAuth");
@@ -67,6 +68,7 @@ app.use('/user', userRoutes);
 app.use('/module', productRoutes);
 app.use("/unit", unitRoutes);
 app.use("/teacher", teacherRoutes);
+app.use("/resources" , resourcesRoutes)
 
 app.use((req, res, next) => {
   res.status(404).render("not-found");
